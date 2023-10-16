@@ -1,0 +1,10 @@
+.inputs {
+  display: flex;
+}
+.container{
+  border-radius: 1px;
+  border-style:solid;
+}
+#content{
+  margin: 10px;
+}

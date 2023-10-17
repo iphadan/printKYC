@@ -8,3 +8,55 @@
 #content{
   margin: 10px;
 }
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 210mm; /* A4 width */
+  height: 297mm; /* A4 height */
+  margin: 0 auto;
+  padding: 20mm; /* Adjust the padding as needed */
+  box-sizing: border-box;
+}
+
+/* Add additional CSS styles for the content and other elements as needed */
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  margin-left: 20px;
+}
+
+.title h4 {
+  margin: 0;
+  font-size: 18px;
+}
+form {
+  margin-bottom: 20px;
+}
+.title h6 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer {
+  margin-top: 20px;
+}
+
+/* Adjust the font size and other styles as needed */
+h4 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+/* Add any other custom styles as required */

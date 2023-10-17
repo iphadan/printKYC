@@ -13,26 +13,23 @@
       <div id="content" >
       
         <div class="header">
-          <img width="200px" src="../assets/logo.svg" alt="img">
+       <div><img width="auto" src="../assets/logo.svg" alt="img"></div>   
           <div class="title">
             <h4>Baankii Hojii Gamtaa Oromiyaa</h4>
             <h6>የኦሮሚያ ኅብረት ሥራ ባንክ</h6>
           </div>
-          <div class="upper-left">
-
-
-            
-          </div>
+        
       <div class="photo">
         Photo 
         Attach here
       </div>
       
         </div>
-        <h4><p>  Account Opening Form /የሂሣብ መክፈቻ ቅጽ  </p></h4>
+        <h4 class="underline"> Account Opening Form /የሂሣብ መክፈቻ ቅጽ </h4>
         <form #kycForm="ngForm">
           <label for="branch">  የባንክ ቅርንጫፍ/ Bank Branch  </label>
-   <input id="branch" type="text" name="branch" [(ngModel)]="formFields['branch']"><label for="customerNumber">  የደንበኛው መለያ ቁጥር/customer No.  </label><input type="text" id="customerNumber"  name="customerNumber" [(ngModel)]="formFields['customerNumber']" ><br>
+   <input id="branch" type="text" name="branch"  maxlength="100">
+   <label for="customerNumber">  የደንበኛው መለያ ቁጥር/customer No.  </label><input type="text" id="customerNumber"  name="customerNumber"  maxlength="100"><br>
       
            <label for="accountNumber">  የባንክ ሂሣብ ቁጥር/Account Number  </label> <input type="text" id="accountNumber" name="accountNumber" [(ngModel)]="formFields['accountNumber']">
         <label for="fullName">  ስም ከነ አያት/የድርጅት ስም  </label>  <input type="text" id="fullName" name="fullName" [(ngModel)]="formFields['fullName']"><br>
@@ -63,7 +60,7 @@
       <label for="nationality">  ዜግነት/Nationality  </label>   <input type="text" name="nationality" id="nationality"><br>
       <label for="dob">  የትውልድ ቀን/Date of Birth (for Individual)  </label>   <input type="date" name="dob" id="dob">
       
-       <label for="oes">  የድርጅት ምስረታ ቀን(Organization Establishment Date)  </label>  <input type="date" name="oes" id="oes">> <br>
+       <label for="oes">  የድርጅት ምስረታ ቀን(Organization Establishment Date)  </label>  <input type="date" name="oes" id="oes"> <br>
  <label for="occupation">  የሥራ ዓይነት/Occupation  </label>        <input type="text" name="occupation" id="occupation">
       <label for="position">  የሥራ ሃላፊነት/Position  </label>   <input type="text" name="position" id="position">
       

@@ -1,17 +1,27 @@
-.input {
-  display: flex;
-  margin: 10px;
+input {
+ 
+
+  height:100px;
+ 
+  font-size: 30px;
+  padding: 0px;
+  margin-top: 5px;
+
+
+  border-style: hidden;
+
+
+
+
+
+
   
 }
-.container{
-  border-radius: 1px;
-  
-  margin: 40px;
-}
+
 
 #content{
   margin: 40px;
-  font-size: large;
+ 
 }
 .header{
   display: flex;
@@ -20,13 +30,54 @@
 }
 .div
 {
-  border-style:ridge;
+  border-style:solid;
+  border-color: black;
 }
 .title{
-  margin-left: 20px;
+  font-size: 35px;
+  text-align: center;
 }
+
+/* Increase font size for specific elements */
+
+
+p {
+  font-size: 24px; /* Increase the font size to 14 pixels */
+}
+
+/* Increase spacing between elements */
+.container {
+  padding: 30mm; /* Increase the padding to create more spacing */
+}
+
+
+label{
+  font-size: 44px;
+  margin: 10px;
+}
+/* Adjust other styles as needed */
+
 .photo{
-  border: 2px;
-  border-style: solid;
-  margin-left: 550px;
+  position:sticky;
+  top: 20px;
+  left: 20px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+.underline{
+  text-align: center;
+  text-decoration: underline;
+  font-size: 35px;
 }

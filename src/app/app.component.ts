@@ -59,13 +59,15 @@ export class AppComponent {
    
   generatePDF()  {
     const contentElement = this.content.nativeElement;
-    contentElement.style.fontSize = '40 px'
+
+    ;
     html2canvas(contentElement).then((canvas) => {
-      const imgWidth = 208;
+      const imgWidth = 220;
       const imgHeight = (canvas.height * imgWidth) / canvas.width;
 
       const contentDataURL = canvas.toDataURL('image/png');
       const pdf = new jsPDF('p', 'mm', 'a4');
+      
       let position = 0;
       pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight);
       pdf.save('test.pdf');

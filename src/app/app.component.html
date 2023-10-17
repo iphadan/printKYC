@@ -5,76 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KYC</title>
 </head>
-<body>
-  <div class="container">
-<div id="content" #content>
-
-  <div class="header">
-    <img width="100px" src="../assets/logo.svg" alt="img">
-    <div class="title">
-      <h4>Baankii Hojii Gamtaa Oromiyaa</h4>
-      <h6>የኦሮሚያ ኅብረት ሥራ ባንክ</h6>
-    </div>
+<body >
+  <div class="div" #content>
 
 
-  </div>
-  <h3><h3><p>Account Opening Form /የሂሣብ መክፈቻ ቅጽ</p></h3></h3>
-  <form #kycForm="ngForm">
-    የባንክ ቅርንጫፍ/ Bank Branch<input type="text" name="branch" [(ngModel)]="formFields['branch']">የደንበኛው መለያ ቁጥር/customer No.<input type="text" name="customerNumber" [(ngModel)]="formFields['customerNumber']" ><br>
+    <div class="container" >
+      <div id="content" >
+      
+        <div class="header">
+          <img width="200px" src="../assets/logo.svg" alt="img">
+          <div class="title">
+            <h4>Baankii Hojii Gamtaa Oromiyaa</h4>
+            <h6>የኦሮሚያ ኅብረት ሥራ ባንክ</h6>
+          </div>
+          <div class="upper-left">
 
-     የባንክ ሂሣብ ቁጥር/Account Number<input type="text" name="accountNumber" [(ngModel)]="formFields['accountNumber']">
-    ስም ከነ አያት/የድርጅት ስም<input type="text" name="full Name" [(ngModel)]="formFields['fullName']"><br>
+
+            
+          </div>
+      <div class="photo">
+        Photo 
+        Attach here
+      </div>
+      
+        </div>
+        <h4><p>  Account Opening Form /የሂሣብ መክፈቻ ቅጽ  </p></h4>
+        <form #kycForm="ngForm">
+          <label for="branch">  የባንክ ቅርንጫፍ/ Bank Branch  </label>
+   <input id="branch" type="text" name="branch" [(ngModel)]="formFields['branch']"><label for="customerNumber">  የደንበኛው መለያ ቁጥር/customer No.  </label><input type="text" id="customerNumber"  name="customerNumber" [(ngModel)]="formFields['customerNumber']" ><br>
+      
+           <label for="accountNumber">  የባንክ ሂሣብ ቁጥር/Account Number  </label> <input type="text" id="accountNumber" name="accountNumber" [(ngModel)]="formFields['accountNumber']">
+        <label for="fullName">  ስም ከነ አያት/የድርጅት ስም  </label>  <input type="text" id="fullName" name="fullName" [(ngModel)]="formFields['fullName']"><br>
+          
+         
+      
+       <label for="city">  ከተማ/City  </label>       <input type="text" name="city" id="city" [(ngModel)]="formFields['city']">
+      
+       <label for="subCity">  ክ/ከተማ/Sub-city  </label>  <input type="text" name="subCity" id="subCity" [(ngModel)]="formFields['subCity']">
+       <label for="kebele">  ቀበሌ/ወረዳ/Kebele/Woreda  </label>  <input type="text" name="kebele"  id="kebele" [(ngModel)]="formFields['kebele']"><br>
+      
+       <label for="houseNo">  የቤትቁ. /H.No  </label>  <input type="text" name="houseNo"  id="houseNo" [(ngModel)]="formFields['houseNo']">
+        <label for="telephone">  የቤት ስልክ/ Res. Tel  </label><input type="text" name="telephone" id="telephone">
+        <label for="mobileNumber">  የተንቀሳቃሽ ስልክ/Mobile  </label>
+        <input type="text" ID="mobileNumber"  name="mobileNumber"><br>
+      
+      <label for="officeTelephone">  የቢሮ ስልክ/Off.Tel  </label>   <input  type="text" id="officeTelephone" name="officeTelephone">
+        <label for="posta">  የፖ.ሣ.ቁ. / P.O.Box  </label> <input type="text" name="posta" id="posta">
+       <label for="email">  ኢ-ሜይል/ Email  </label>  <input id="email" type="text" name="email"><br>
+      
+      <label for="idNo">  የመ. ዓይነት/ID type  </label>    <input type="text" name="idNo" id="idNo">
+      <label for="idRegistrationNumber">  የመ.ቁ. /የምዝገባ ቁ./ID No. /Registration No  </label>
+         <input type="text" id="idRegistrationNumber" name="idRegistrationNumber">
+        <label for="tillNo">  ታ.መ.ቁ./TIN No  </label> የ<input type="text" name="tillNo" id="tillNo"><br>
+       <label for="issuedBy">  የሰጠው አካል/Issued by  </label>  <input type="text" name="issuedBy" id="issuedBy">
+        
+      <label for="gender">  ጾታ/Gende  </label>   <input type="text" name="gender" id="gender">
+      <label for="nationality">  ዜግነት/Nationality  </label>   <input type="text" name="nationality" id="nationality"><br>
+      <label for="dob">  የትውልድ ቀን/Date of Birth (for Individual)  </label>   <input type="date" name="dob" id="dob">
+      
+       <label for="oes">  የድርጅት ምስረታ ቀን(Organization Establishment Date)  </label>  <input type="date" name="oes" id="oes">> <br>
+ <label for="occupation">  የሥራ ዓይነት/Occupation  </label>        <input type="text" name="occupation" id="occupation">
+      <label for="position">  የሥራ ሃላፊነት/Position  </label>   <input type="text" name="position" id="position">
+      
+       <label for="monthlyIncome">  ወርሀዊ ገቢ/Average Monthly Income  </label>  <input type="text" name="monthlyIncome" id="monthlyIncome"><br>
+    <label for="annualIncome">  ዓመታዊ ገቢ /Average Annual Income  </label>      <input type="text" name="annualIncome" id="annualIncome">
+     <label for="tinNo">  የታ.መ.ቁ./TIN No  </label>    <input type="text" id="tinNo" name="tinNo"><br>
+      <label for="accountType">  የሂሳቡ ዓይነት /Account Type/Saving/Cheque/Mobile wallet  </label>   <input type="text" id="accountType" name="accountType">
+      
     
-   
-
-   ከተማ/City<input type="text" name="city" [(ngModel)]="formFields['city']">
-   ክ/ከተማ/Sub-city<input type="text" name="subCity" [(ngModel)]="formFields['subCity']">
-   ቀበሌ/ወረዳ/Kebele/Woreda<input type="text" name="kebele" [(ngModel)]="formFields['kebele']"><br>
-
-   የቤትቁ. /H.No<input type="text" name="houseNo" [(ngModel)]="formFields['houseNo']">
-   የቤት ስልክ/ Res. Tel<input type="text" name="telephone">
-   የተንቀሳቃሽ ስልክ/Mobile<input type="text" name="mobileNumber">
-
-   የቢሮ ስልክ/Off.Tel<input type="officeTelephone">
-   የፖ.ሣ.ቁ. / P.O.Box<input type="text" name="posta">
-   ኢ-ሜይል/ Email<input type="text" name="email">
-
-   የመ. ዓይነት/ID type <input type="text" name="idNo">
-   የመ.ቁ. /የምዝገባ ቁ./ID No. /Registration No<input type="text" name="idRegistrationNumber">
-   የታ.መ.ቁ./TIN No<input type="text" name="tillNo">
-   የሰጠው አካል/Issued by<input type="text" name="issuedBy">
-   
-
-   ጾታ/Gende<input type="text" name="gender">
-   ዜግነት/Nationality<input type="text" name="nationality">
-   የትውልድ ቀን/Date of Birth (for Individual)<input type="date" name="dob">
-
-   የድርጅት ምስረታ ቀን(Organization Establishment
-   Date)<input type="date" name="oes">
-   የሥራ ዓይነት/Occupation<input type="text" name="occupation">
-   የሥራ ሃላፊነት/Position<input type="text" name="position">
-
-   ወርሀዊ ገቢ/Average Monthly Income<input type="text" name="monthlyIncome">
-   ዓመታዊ ገቢ /Average Annual Income <input type="text" name="annualIncome">
-   የታ.መ.ቁ./TIN No<input type="text" name="tinNo">
-   የሂሳቡ ዓይነት /Account Type/Saving/Cheque/Mobile wallet<input type="text" name="accountType">
-
-   ፊርማ /Signature
-
-   
-  </form>
-
-</div>
-   
+      
+         
+        </form>
+      
+      </div>
+         
+       
+      <p>Note:-TIN shall be compulsory only for business persons, fax shall be optional for all types of depositors, at least one</p> 
+         <p>telephone number (home, mobile or office) is compulsory. All other fields shall be compulsory.</p>
+        </div>
 
 
+    
   </div>
+ 
   <div class="footer">
     
-   <p>Note:-TIN shall be compulsory only for business persons, fax shall be optional for all types of depositors, at least one</p> 
-  <p>telephone number (home, mobile or office) is compulsory. All other fields shall be compulsory.</p>
-
-  </div>
+    
+ 
+   </div>
   <button (click)="previewPDF()">Preview</button>
    <button (click)="generatePDF()">Print</button>
 

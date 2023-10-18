@@ -20,47 +20,46 @@
           </div>
         
       <div class="photo">
-        Photo 
-        Attach here
+        <input type="file" name="" id="">
       </div>
       
         </div>
         <h4 class="underline"> Account Opening Form /የሂሣብ መክፈቻ ቅጽ </h4>
         <form #kycForm="ngForm">
           <label for="branch">  የባንክ ቅርንጫፍ/ Bank Branch  </label>
-   <input id="branch" type="text" name="branch"  maxlength="100">
-   <label for="customerNumber">  የደንበኛው መለያ ቁጥር/customer No.  </label><input type="text" id="customerNumber"  name="customerNumber"  maxlength="100"><br>
+   <input id="branch" type="text" name="branch"  maxlength="100" style="width: 300px;">
+   <label for="customerNumber" style="font-size:large;">  የደንበኛው መለያ ቁጥር/customer No.  </label><input type="text" id="customerNumber"  name="customerNumber"   style="width: 170px;"><br>
       
-           <label for="accountNumber">  የባንክ ሂሣብ ቁጥር/Account Number  </label> <input type="text" id="accountNumber" name="accountNumber" [(ngModel)]="formFields['accountNumber']">
-        <label for="fullName">  ስም ከነ አያት/የድርጅት ስም  </label>  <input type="text" id="fullName" name="fullName" [(ngModel)]="formFields['fullName']"><br>
+           <label for="accountNumber">  የባንክ ሂሣብ ቁጥር/Account Number  </label> <input type="text" id="accountNumber" name="accountNumber" style="width: 370px;"><br>
+        <label for="fullName">  ስም ከነ አያት/የድርጅት ስም  </label>  <input type="text" id="fullName" name="fullName" style="width: 600px;"><br>
           
          
       
-       <label for="city">  ከተማ/City  </label>       <input type="text" name="city" id="city" [(ngModel)]="formFields['city']">
+       <label for="city">  ከተማ/City  </label>       <input type="text" name="city" id="city" >
       
-       <label for="subCity">  ክ/ከተማ/Sub-city  </label>  <input type="text" name="subCity" id="subCity" [(ngModel)]="formFields['subCity']">
-       <label for="kebele">  ቀበሌ/ወረዳ/Kebele/Woreda  </label>  <input type="text" name="kebele"  id="kebele" [(ngModel)]="formFields['kebele']"><br>
+       <label for="subCity">  ክ/ከተማ/Sub-city  </label>  <input type="text" name="subCity" id="subCity" ><br>
+       <label for="kebele">  ቀበሌ/ወረዳ/Kebele/Woreda  </label>  <input type="text" name="kebele"  id="kebele" >
       
-       <label for="houseNo">  የቤትቁ. /H.No  </label>  <input type="text" name="houseNo"  id="houseNo" [(ngModel)]="formFields['houseNo']">
+       <label for="houseNo">  የቤትቁ. /H.No  </label>  <input type="text" name="houseNo"  id="houseNo" ><br>
         <label for="telephone">  የቤት ስልክ/ Res. Tel  </label><input type="text" name="telephone" id="telephone">
         <label for="mobileNumber">  የተንቀሳቃሽ ስልክ/Mobile  </label>
         <input type="text" ID="mobileNumber"  name="mobileNumber"><br>
       
       <label for="officeTelephone">  የቢሮ ስልክ/Off.Tel  </label>   <input  type="text" id="officeTelephone" name="officeTelephone">
-        <label for="posta">  የፖ.ሣ.ቁ. / P.O.Box  </label> <input type="text" name="posta" id="posta">
-       <label for="email">  ኢ-ሜይል/ Email  </label>  <input id="email" type="text" name="email"><br>
+        <label for="posta">  የፖ.ሣ.ቁ. / P.O.Box  </label> <input type="text" name="posta" id="posta"><br>
+       <label for="email">  ኢ-ሜይል/ Email  </label>  <input id="email" type="text" name="email" style="width: 470px;">
       
       <label for="idNo">  የመ. ዓይነት/ID type  </label>    <input type="text" name="idNo" id="idNo">
       <label for="idRegistrationNumber">  የመ.ቁ. /የምዝገባ ቁ./ID No. /Registration No  </label>
          <input type="text" id="idRegistrationNumber" name="idRegistrationNumber">
-        <label for="tillNo">  ታ.መ.ቁ./TIN No  </label> የ<input type="text" name="tillNo" id="tillNo"><br>
-       <label for="issuedBy">  የሰጠው አካል/Issued by  </label>  <input type="text" name="issuedBy" id="issuedBy">
+        <label for="tillNo">  ታ.መ.ቁ./TIN No  </label> <input type="text" name="tillNo" id="tillNo"><br>
+       <label for="issuedBy">  የሰጠው አካል/Issued by  </label>  <input type="text" name="issuedBy" id="issuedBy" style="width: 500px;"><br>
         
-      <label for="gender">  ጾታ/Gende  </label>   <input type="text" name="gender" id="gender">
-      <label for="nationality">  ዜግነት/Nationality  </label>   <input type="text" name="nationality" id="nationality"><br>
+      <label for="gender">  ጾታ/Gende  </label>   <input type="text" name="gender" id="gender" style="width: 100px;">
+      <label for="nationality">  ዜግነት/Nationality  </label>   <input type="text" name="nationality" id="nationality"style="width: 150px;">
       <label for="dob">  የትውልድ ቀን/Date of Birth (for Individual)  </label>   <input type="date" name="dob" id="dob">
       
-       <label for="oes">  የድርጅት ምስረታ ቀን(Organization Establishment Date)  </label>  <input type="date" name="oes" id="oes"> <br>
+       <label for="oes">  የድርጅት ምስረታ ቀን(Organization Establishment Date)  </label>  <input type="date" name="oes" id="oes"> 
  <label for="occupation">  የሥራ ዓይነት/Occupation  </label>        <input type="text" name="occupation" id="occupation">
       <label for="position">  የሥራ ሃላፊነት/Position  </label>   <input type="text" name="position" id="position">
       
@@ -68,17 +67,25 @@
     <label for="annualIncome">  ዓመታዊ ገቢ /Average Annual Income  </label>      <input type="text" name="annualIncome" id="annualIncome">
      <label for="tinNo">  የታ.መ.ቁ./TIN No  </label>    <input type="text" id="tinNo" name="tinNo"><br>
       <label for="accountType">  የሂሳቡ ዓይነት /Account Type/Saving/Cheque/Mobile wallet  </label>   <input type="text" id="accountType" name="accountType">
-      
-    
-      
-         
+      <h4>የሚፈልጉትን የኢ-ፐይመንት አገልግሎት ይምረጡ/would you select/tick the E-payments you prefer to use?</h4>
+      <div class="atm">ኤ.ቲ.ኤም ካርድ/ATM --------------- እፈልጋለሁ <input type="checkbox" id="atm"> አልፈልግም <input type="checkbox" id="atm"> </div>
+      <div class="mobile">ሞባይል ባንኪንግ/Mobile Banking   ---------------  እፈልጋለሁ <input type="checkbox"> አልፈልግም <input type="checkbox"> </div>
+      <div class="internet"> ኢንተርኔት ባንኪንግ/Internet Banking --------------- እፈልጋለሁ <input type="checkbox"> አልፈልግም <input type="checkbox"></div>
+      የመጀመሪያ ተቀማጭ/Initial Deposit (Optional) <input type="text" name="initial" id="initial">
+      ነባር ሂሳብ/Existing Account Yes <input type="checkbox"> No <input type="checkbox">
+      <div class="signature" >     ሂሳቡን የከፈተችው/ው ስም እና ፊርማ/Name and Signature of maker _________________________________________ <br><br><br>
+      ሂሳቡን ያረጋገጠችው/ው ስም እና ፊርማ/Name and Signature Checker _________________________________________</div>
+ 
         </form>
       
       </div>
          
-       
-      <p>Note:-TIN shall be compulsory only for business persons, fax shall be optional for all types of depositors, at least one</p> 
+       <div class="footer" style="font-weight: bolder;"> 
+<p>Note:-TIN shall be compulsory only for business persons, fax shall be optional for all types of depositors, at least one</p> 
          <p>telephone number (home, mobile or office) is compulsory. All other fields shall be compulsory.</p>
+
+       </div>
+      
         </div>
 
 

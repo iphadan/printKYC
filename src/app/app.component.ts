@@ -62,7 +62,7 @@ export class AppComponent {
 
     ;
     html2canvas(contentElement).then((canvas) => {
-      const imgWidth = 220;
+      const imgWidth = 208;
       const imgHeight = (canvas.height * imgWidth) / canvas.width;
 
       const contentDataURL = canvas.toDataURL('image/png');

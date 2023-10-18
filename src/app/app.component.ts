@@ -14,7 +14,8 @@ export class AppComponent {
   title = 'PrintKYC';
   formFields: { [key: string]: string } = {};
 
-
+  selectedFile: any;
+  imageURL: string="";
   previewVisible = false; // Indicates whether the preview is visible
   pdfPreviewUrl!: string; // Holds the URL of the PDF preview
 
@@ -59,20 +60,37 @@ export class AppComponent {
    
   generatePDF()  {
     const contentElement = this.content.nativeElement;
+    
 
     ;
     html2canvas(contentElement).then((canvas) => {
       const imgWidth = 208;
-      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+      const imgHeight = 250;
+      
 
       const contentDataURL = canvas.toDataURL('image/png');
       const pdf = new jsPDF('p', 'mm', 'a4');
+      pdf.setFont('bold','1000')
       
-      let position = 0;
+      let position = 10;
       pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight);
       pdf.save('test.pdf');
-      contentElement.style.fontSize = '';
+      
     });
+  }
+
+
+
+
+  onFileSelected(event: any) {
+    if (event.target.files && event.target.files[0]) {
+      const file = event.target.files[0];
+      this.selectedFile = file;
+      const reader = new FileReader();
+      reader.onload = (e) => (this.imageURL = reader.result as string);
+
+      reader.readAsDataURL(file);
+    }
   }
 
 }

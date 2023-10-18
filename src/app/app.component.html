@@ -19,16 +19,38 @@
             <h6>የኦሮሚያ ኅብረት ሥራ ባንክ</h6>
           </div>
         
-      <div class="photo">
-        <input type="file" name="" id="">
-      </div>
+          <div class="photo-container md:w-1/2 m-4">
+            <div class="photo-preview">
+              <img
+                *ngIf="imageURL; else noImage"
+                [src]="imageURL"
+              
+              />
+              <ng-template #noImage>
+              
+              </ng-template>
+            </div>
+            <div class="form-group">
+              <input
+              
+                type="file"
+              
+                class="noPrint"
+                id="photo"
+                name="photo"
+                accept="image/*"
+                (change)="onFileSelected($event)"
+                [required]="true"
+              />
+            </div>
+          </div>
       
         </div>
         <h4 class="underline"> Account Opening Form /የሂሣብ መክፈቻ ቅጽ </h4>
-        <form #kycForm="ngForm">
+        <form >
           <label for="branch">  የባንክ ቅርንጫፍ/ Bank Branch  </label>
-   <input id="branch" type="text" name="branch"  maxlength="100" style="width: 300px;">
-   <label for="customerNumber" style="font-size:large;">  የደንበኛው መለያ ቁጥር/customer No.  </label><input type="text" id="customerNumber"  name="customerNumber"   style="width: 170px;"><br>
+   <input id="branch" type="text" name="branch"  maxlength="100" style="width: 200px;">
+   <label for="customerNumber" style="font-size:large;">  የደንበኛው መለያ ቁጥር/customer No.  </label><input type="text" id="customerNumber"  name="customerNumber"   style="width: 120px;"><br>
       
            <label for="accountNumber">  የባንክ ሂሣብ ቁጥር/Account Number  </label> <input type="text" id="accountNumber" name="accountNumber" style="width: 370px;"><br>
         <label for="fullName">  ስም ከነ አያት/የድርጅት ስም  </label>  <input type="text" id="fullName" name="fullName" style="width: 600px;"><br>
@@ -47,25 +69,26 @@
       
       <label for="officeTelephone">  የቢሮ ስልክ/Off.Tel  </label>   <input  type="text" id="officeTelephone" name="officeTelephone">
         <label for="posta">  የፖ.ሣ.ቁ. / P.O.Box  </label> <input type="text" name="posta" id="posta"><br>
-       <label for="email">  ኢ-ሜይል/ Email  </label>  <input id="email" type="text" name="email" style="width: 470px;">
+       <label for="email">  ኢ-ሜይል/ Email  </label>  <input id="email" type="text" name="email" style="width: 390px;">
       
-      <label for="idNo">  የመ. ዓይነት/ID type  </label>    <input type="text" name="idNo" id="idNo"><br>
+      <label for="idNo">  የመ. ዓይነት/ID type  </label>    <input type="text" name="idNo" id="idNo" style="width: 150px;"><br>
       <label for="idRegistrationNumber">  የመ.ቁ. /የምዝገባ ቁ./ID No. /Registration No  </label>
          <input type="text" id="idRegistrationNumber" name="idRegistrationNumber">
-        <label for="tillNo">  ታ.መ.ቁ./TIN No  </label> <input type="text" name="tillNo" id="tillNo"><br>
+        <label for="tillNo">  ታ.መ.ቁ./TIN No  </label> <input type="text" name="tillNo" id="tillNo" style="width: 130px;"><br>
        <label for="issuedBy">  የሰጠው አካል/Issued by  </label>  <input type="text" name="issuedBy" id="issuedBy" style="width: 500px;"><br>
         
-      <label for="gender">  ጾታ/Gende  </label>   <input type="text" name="gender" id="gender" style="width: 100px;">
-      <label for="nationality">  ዜግነት/Nationality  </label>   <input type="text" name="nationality" id="nationality"style="width: 150px;">
-      <label for="dob">  የትውልድ ቀን/Date of Birth (for Individual)  </label>   <input type="date" name="dob" id="dob"><br>
+      <label for="gender">  ጾታ/Gende  </label>   <input type="text" name="gender" id="gender" style="width: 70px;">
+      <label for="nationality">  ዜግነት/Nationality  </label>   <input type="text" name="nationality" id="nationality"style="width: 100px;">
+      <label for="dob">የትውልድ ቀን/DOB(for Individual)</label>   <input type="date" name="dob" id="dob"><br>
       
-       <label for="oes">  የድርጅት ምስረታ ቀን(Organization Establishment Date)  </label>  <input type="date" name="oes" id="oes"> 
- <label for="occupation">  የሥራ ዓይነት/Occupation  </label>        <input type="text" name="occupation" id="occupation"><br>
+       <label for="oes">የድርጅት ምስረታ ቀን(Org Establishment Date)</label>  <input type="date" name="oes" id="oes" style="width: 100px;"> 
+ <label for="occupation">የሥራ ዓይነት/Occupation</label>        <input type="text" name="occupation" id="occupation" style="width: 150px;"><br>
       <label for="position">  የሥራ ሃላፊነት/Position  </label>   <input type="text" name="position" id="position">
+      <label for="employer">  ቀጣሪ ድርጅት/Employer</label>   <input type="text" name="employer" id="employer">
       
        <label for="monthlyIncome">  ወርሀዊ ገቢ/Average Monthly Income  </label>  <input type="text" name="monthlyIncome" id="monthlyIncome"><br>
     <label for="annualIncome">  ዓመታዊ ገቢ /Average Annual Income  </label>      <input type="text" name="annualIncome" id="annualIncome">
-     <label for="tinNo">  የታ.መ.ቁ./TIN No  </label>    <input type="text" id="tinNo" name="tinNo"><br>
+  
       <label for="accountType">  የሂሳቡ ዓይነት /Account Type/Saving/Cheque/Mobile wallet  </label>   <input type="text" id="accountType" name="accountType">
       <div class="signature">ፊርማ /Signature _________________________________________</div>
       <h4>የሚፈልጉትን የኢ-ፐይመንት አገልግሎት ይምረጡ/would you select/tick the E-payments you prefer to use?</h4>
@@ -74,32 +97,26 @@
       <div class="internet"> ኢንተርኔት ባንኪንግ/Internet Banking --------------- እፈልጋለሁ <input type="checkbox"> አልፈልግም <input type="checkbox"></div>
       የመጀመሪያ ተቀማጭ/Initial Deposit (Optional) <input type="text" name="initial" id="initial">
       ነባር ሂሳብ/Existing Account Yes <input type="checkbox"> No <input type="checkbox">
+      
       <div class="signature" >     ሂሳቡን የከፈተችው/ው ስም እና ፊርማ/Name and Signature of maker _________________________________________ <br><br><br>
       ሂሳቡን ያረጋገጠችው/ው ስም እና ፊርማ/Name and Signature Checker _________________________________________</div>
  
         </form>
-      
-      </div>
-         
        <div class="footer" style="font-weight: bolder;"> 
 <p>Note:-TIN shall be compulsory only for business persons, fax shall be optional for all types of depositors, at least one</p> 
          <p>telephone number (home, mobile or office) is compulsory. All other fields shall be compulsory.</p>
 
        </div>
+      </div>
+         
+      
       
         </div>
 
 
     
   </div>
- 
-  <div class="footer">
-    
-    
- 
-   </div>
-  <button (click)="previewPDF()">Preview</button>
-   <button (click)="generatePDF()">Print</button>
+
 
 </body>
 </html>

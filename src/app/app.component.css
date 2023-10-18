@@ -1,31 +1,38 @@
 input{
-  font-size:large;
+  font-size:medium;
   border: none;
-margin-bottom: 10px;
-text-align: center;
+margin-bottom: 1px;
+
 font-weight: bolder;
-  
+  letter-spacing: 1px;
+
+
 }
 
 #content{
+<<<<<<< HEAD
  
   font-size: 22px;
   word-spacing: 5px;
 
+=======
+  
+  font-size: 20px;
+
+
+  
+>>>>>>> f51b7fbe9d16603f18601a4a524c72cc2fc4cdc2
  
 }
 .header{
   display: flex;
+  margin: 0px;
 
    
 }
-.div
-{
-  border-style:solid;
-  border-color: black;
-}
+
 .title{
-  font-size: 35px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -34,26 +41,27 @@ font-weight: bolder;
 
 
 /* Increase spacing between elements */
-.container {
-  padding: 30mm; /* Increase the padding to create more spacing */
-}
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f51b7fbe9d16603f18601a4a524c72cc2fc4cdc2
 /* Adjust other styles as needed */
 
 .photo{
   position:sticky;
   top: 20px;
   left: 20px;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   border: 1px solid black;
   padding: 10px;
 }
 
 .photo img {
-  width: 100%;
-  height: 100%;
+  width: 20%;
+  height: 2%;
   object-fit: cover;
 }
 .header{
@@ -63,8 +71,38 @@ font-weight: bolder;
 .underline{
   text-align: center;
   text-decoration: underline;
-  font-size: 35px;
+  font-size: 20px;
 }
 p{
+<<<<<<< HEAD
   font-size:medium;
 }
+=======
+  font-size:smaller;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.photo-container {
+  width: 150px;
+  height: 150px;
+}
+
+.photo-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  padding: 0px;
+  height: calc(100% - 46px);
+}
+
+.photo-preview img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+>>>>>>> f51b7fbe9d16603f18601a4a524c72cc2fc4cdc2

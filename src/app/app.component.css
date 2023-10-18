@@ -94,8 +94,3 @@ p{
   max-height: 100%;
 }
 
-@media print {
-  .noPrint {
-    display: none !important;
-  }
-}

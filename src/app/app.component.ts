@@ -63,7 +63,7 @@ export class AppComponent {
     ;
     html2canvas(contentElement).then((canvas) => {
       const imgWidth = 208;
-      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+      const imgHeight = 250
 
       const contentDataURL = canvas.toDataURL('image/png');
       const pdf = new jsPDF('p', 'mm', 'a4');

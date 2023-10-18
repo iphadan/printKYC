@@ -8,7 +8,10 @@ font-weight: bolder;
 }
 
 #content{
-  margin: 40px;
+ 
+  font-size: 22px;
+  word-spacing: 5px;
+
  
 }
 .header{
@@ -29,9 +32,6 @@ font-weight: bolder;
 /* Increase font size for specific elements */
 
 
-p {
-  font-size: 24px; /* Increase the font size to 14 pixels */
-}
 
 /* Increase spacing between elements */
 .container {
@@ -39,10 +39,6 @@ p {
 }
 
 
-#content{
-  font-size: 30px;
-  
-}
 /* Adjust other styles as needed */
 
 .photo{

@@ -14,7 +14,7 @@ export class AppComponent {
   title = 'PrintKYC';
   formFields: { [key: string]: string } = {};
 
-  selectedFile: any;
+selectedFile: any;
   imageURL: string="";
   previewVisible = false; // Indicates whether the preview is visible
   pdfPreviewUrl!: string; // Holds the URL of the PDF preview
@@ -60,23 +60,17 @@ export class AppComponent {
    
   generatePDF()  {
     const contentElement = this.content.nativeElement;
-    
+
 
     ;
     html2canvas(contentElement).then((canvas) => {
       const imgWidth = 208;
-<<<<<<< HEAD
       const imgHeight = 250
-=======
-      const imgHeight = 250;
-      
->>>>>>> f51b7fbe9d16603f18601a4a524c72cc2fc4cdc2
 
       const contentDataURL = canvas.toDataURL('image/png');
       const pdf = new jsPDF('p', 'mm', 'a4');
-      pdf.setFont('bold','1000')
       
-      let position = 10;
+      let position = 0;
       pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight);
       pdf.save('test.pdf');
       

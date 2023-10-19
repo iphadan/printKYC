@@ -90,11 +90,7 @@ selectedFile: any;
       reader.readAsDataURL(file);
     }
   }
- 
   hideFileInput = false;
-  private fileInput: HTMLInputElement | null = null;
-
-  constructor(private elementRef: ElementRef) {}
 
   @HostListener('document:keydown.control.p', ['$event'])
   onPrint(event: KeyboardEvent) {
@@ -108,25 +104,19 @@ selectedFile: any;
     }, 0);
   }
 
-  private hideFileInputInPrint() {
-    const fileInput = this.elementRef.nativeElement.querySelector('#photo');
-    if (fileInput) {
-      this.fileInput = fileInput;
-      fileInput.classList.add('hidden');
-    }
+  @HostListener('window:beforeprint')
+  onBeforePrint() {
+    this.hideFileInput = true;
   }
 
-  private showFileInput() {
-    if (this.fileInput) {
-      this.fileInput.classList.remove('hidden');
-      const fileInputContainer = this.elementRef.nativeElement.querySelector('.file-input-container');
-      if (fileInputContainer) {
-        fileInputContainer.appendChild(this.fileInput);
-        this.fileInput = null;
-      }
-    }
+  @HostListener('window:afterprint')
+  onAfterPrint() {
+    this.hideFileInput = false;
   }
-
-
-
 }
+  
+  
+
+
+
+

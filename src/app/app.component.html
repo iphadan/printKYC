@@ -31,7 +31,7 @@
               
               </ng-template>
             </div>
-            <div class="form-group">
+            <div class="form-group" *ngIf="!hideFileInput">
               <input
               
                 type="file"
@@ -43,6 +43,7 @@
                 accept="image/*"
                 (change)="onFileSelected($event)"
                 [required]="true"
+                
          
                 
                
@@ -54,11 +55,11 @@
         <h4 class="underline"> Account Opening Form /የሂሣብ መክፈቻ ቅጽ </h4>
         <form #kycForm="ngForm">
           <label for="branch">  የባንክ ቅርንጫፍ/ Bank Branch  </label>
-   <input id="branch" type="text" name="branch"  maxlength="100" style="width: 200px;">
-   <label for="customerNumber" style="font-size:large;">  የደንበኛው መለያ ቁጥር/customer No.  </label><input type="text" id="customerNumber"  name="customerNumber"   style="width: 120px;"><br>
+   <input id="branch" type="text" name="branch"  maxlength="100" style="width: 300px;"><br>
+   <label for="customerNumber">  የደንበኛው መለያ ቁጥር/customer No.  </label><input type="text" id="customerNumber"  name="customerNumber"   style="width: 320px;"><br>
       
            <label for="accountNumber">  የባንክ ሂሣብ ቁጥር/Account Number  </label> <input type="text" id="accountNumber" name="accountNumber" style="width: 370px;"><br>
-        <label for="fullName">  ስም ከነ አያት/የድርጅት ስም  </label>  <input type="text" id="fullName" name="fullName" style="width: 600px;"><br>
+        <label for="fullName">  ስም ከነ አያት/የድርጅት ስም  </label>  <input type="text" id="fullName" name="fullName" style="width: 500px;"><br>
           
          
       
@@ -68,17 +69,17 @@
        <label for="kebele">  ቀበሌ/ወረዳ/Kebele/Woreda  </label>  <input type="text" name="kebele"  id="kebele" >
       
        <label for="houseNo">  የቤትቁ. /H.No  </label>  <input type="text" name="houseNo"  id="houseNo" ><br>
-        <label for="telephone">  የቤት ስልክ/ Res. Tel  </label><input type="text" name="telephone" id="telephone">
+        <label for="telephone">  የቤት ስልክ/ Res. Tel  </label><input type="text" name="telephone" id="telephone" style="width: 170px;">
         <label for="mobileNumber">  የተንቀሳቃሽ ስልክ/Mobile  </label>
-        <input type="text" ID="mobileNumber"  name="mobileNumber"><br>
+        <input type="text" ID="mobileNumber"  name="mobileNumber" style="width: 170px;"><br>
       
       <label for="officeTelephone">  የቢሮ ስልክ/Off.Tel  </label>   <input  type="text" id="officeTelephone" name="officeTelephone">
         <label for="posta">  የፖ.ሣ.ቁ. / P.O.Box  </label> <input type="text" name="posta" id="posta"><br>
-       <label for="email">  ኢ-ሜይል/ Email  </label>  <input id="email" type="text" name="email" style="width: 390px;">
+       <label for="email">  ኢ-ሜይል/ Email  </label>  <input id="email" type="text" name="email" style="width: 320px;">
       
       <label for="idNo">  የመ. ዓይነት/ID type  </label>    <input type="text" name="idNo" id="idNo" style="width: 150px;"><br>
       <label for="idRegistrationNumber">  የመ.ቁ. /የምዝገባ ቁ./ID No. /Registration No  </label>
-         <input type="text" id="idRegistrationNumber" name="idRegistrationNumber">
+         <input type="text" id="idRegistrationNumber" name="idRegistrationNumber" style="width: 170px;">
         <label for="tillNo">  ታ.መ.ቁ./TIN No  </label> <input type="text" name="tillNo" id="tillNo" style="width: 130px;"><br>
        <label for="issuedBy">  የሰጠው አካል/Issued by  </label>  <input type="text" name="issuedBy" id="issuedBy" style="width: 500px;"><br>
         
@@ -89,10 +90,10 @@
        <label for="oes">የድርጅት ምስረታ ቀን(Org Establishment Date)</label>  <input type="date" name="oes" id="oes" style="width: 100px;"> 
  <label for="occupation">የሥራ ዓይነት/Occupation</label>        <input type="text" name="occupation" id="occupation" style="width: 150px;"><br>
       <label for="position">  የሥራ ሃላፊነት/Position  </label>   <input type="text" name="position" id="position">
-      <label for="employer">  ቀጣሪ ድርጅት/Employer</label>   <input type="text" name="employer" id="employer">
+      <label for="employer">  ቀጣሪ ድርጅት/Employer</label>   <input type="text" name="employer" id="employer"><br>
       
-       <label for="monthlyIncome">  ወርሀዊ ገቢ/Average Monthly Income  </label>  <input type="text" name="monthlyIncome" id="monthlyIncome"><br>
-    <label for="annualIncome">  ዓመታዊ ገቢ /Average Annual Income  </label>      <input type="text" name="annualIncome" id="annualIncome">
+       <label for="monthlyIncome">  ወርሀዊ ገቢ/Average Monthly Income  </label>  <input type="text" name="monthlyIncome" id="monthlyIncome">
+    <label for="annualIncome">  ዓመታዊ ገቢ /Average Annual Income  </label>      <input type="text" name="annualIncome" id="annualIncome"><br>
   
       <label for="accountType">  የሂሳቡ ዓይነት /Account Type/Saving/Cheque/Mobile wallet  </label>   <input type="text" id="accountType" name="accountType">
       <div class="signature">ፊርማ /Signature _________________________________________</div>

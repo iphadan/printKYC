@@ -6,6 +6,7 @@
   <title>KYC</title>
 </head>
 <body >
+  
   <div class="div" #content>
 
 
@@ -55,7 +56,7 @@
         <h4 class="underline"> Account Opening Form /የሂሣብ መክፈቻ ቅጽ </h4>
         <form #kycForm="ngForm">
           <label for="branch">  የባንክ ቅርንጫፍ/ Bank Branch  </label>
-   <input id="branch" type="text" name="branch"  maxlength="100" style="width: 300px;"><br>
+   <input id="branch" type="text" name="branch"  maxlength="100" style="width: 400px;"><br>
    <label for="customerNumber">  የደንበኛው መለያ ቁጥር/customer No.  </label><input type="text" id="customerNumber"  name="customerNumber"   style="width: 320px;"><br>
       
            <label for="accountNumber">  የባንክ ሂሣብ ቁጥር/Account Number  </label> <input type="text" id="accountNumber" name="accountNumber" style="width: 370px;"><br>
@@ -84,12 +85,12 @@
        <label for="issuedBy">  የሰጠው አካል/Issued by  </label>  <input type="text" name="issuedBy" id="issuedBy" style="width: 500px;"><br>
         
       <label for="gender">  ጾታ/Gende  </label>   <input type="text" name="gender" id="gender" style="width: 70px;">
-      <label for="nationality">  ዜግነት/Nationality  </label>   <input type="text" name="nationality" id="nationality"style="width: 100px;">
-      <label for="dob">የትውልድ ቀን/DOB(for Individual)</label>   <input type="date" name="dob" id="dob"><br>
+      <label for="nationality">  ዜግነት/Nationality  </label>   <input type="text" name="nationality" id="nationality"style="width: 100px;"><br>
+      <label for="dob">የትውልድ ቀን/DOB(for Individual)</label>   <input type="date" name="dob" id="dob">
       
        <label for="oes">የድርጅት ምስረታ ቀን(Org Establishment Date)</label>  <input type="date" name="oes" id="oes" style="width: 100px;"> 
  <label for="occupation">የሥራ ዓይነት/Occupation</label>        <input type="text" name="occupation" id="occupation" style="width: 150px;"><br>
-      <label for="position">  የሥራ ሃላፊነት/Position  </label>   <input type="text" name="position" id="position" style="width: 150px"><br>
+      <label for="position">  የሥራ ሃላፊነት/Position  </label>   <input type="text" name="position" id="position" style="width: 400px"><br>
       <label for="employer">  ቀጣሪ ድርጅት/Employer</label>   <input type="text" name="employer" id="employer" style="width: 400px"><br>
       
        <label for="monthlyIncome">  ወርሀዊ ገቢ/Average Monthly Income  </label>  <input type="text" name="monthlyIncome" id="monthlyIncome" style="width: 400px"><br>
@@ -101,13 +102,14 @@
       <div class="atm">ኤ.ቲ.ኤም ካርድ/ATM --------------- እፈልጋለሁ <input type="checkbox" id="atm"> አልፈልግም <input type="checkbox" id="atm"> </div>
       <div class="mobile">ሞባይል ባንኪንግ/Mobile Banking   ---------------  እፈልጋለሁ <input type="checkbox"> አልፈልግም <input type="checkbox"> </div>
       <div class="internet"> ኢንተርኔት ባንኪንግ/Internet Banking --------------- እፈልጋለሁ <input type="checkbox"> አልፈልግም <input type="checkbox"></div>
-      የመጀመሪያ ተቀማጭ/Initial Deposit (Optional) <input type="text" name="initial" id="initial">
+     <label for="initial">የመጀመሪያ ተቀማጭ/Initial Deposit (Optional) </label> <input type="text" name="initial" id="initial" style="width: 150px" >
       ነባር ሂሳብ/Existing Account Yes <input type="checkbox"> No <input type="checkbox">
       
       <div class="signature" >     ሂሳቡን የከፈተችው/ው ስም እና ፊርማ/Name and Signature of maker _________________________________________ <br><br>
       ሂሳቡን ያረጋገጠችው/ው ስም እና ፊርማ/Name and Signature Checker _________________________________________</div>
  
         </form>
+        <button type="button" id="printBtn" *ngIf="!hideFileInput" style="margin-left: 100%;color: black;background-color: rgb(16, 138, 245);width: 100px;font-size: larger;font-weight: bolder;" ngModel (click)="onPrint($event)">Print</button>
        <div class="footer" style="font-weight: bolder;"> 
 <p>Note:-TIN shall be compulsory only for business persons, fax shall be optional for all types of depositors, at least one</p> 
          <p>telephone number (home, mobile or office) is compulsory. All other fields shall be compulsory.</p>
@@ -122,6 +124,7 @@
 
     
   </div>
+ 
 
 
 </body>

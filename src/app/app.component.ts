@@ -93,7 +93,7 @@ selectedFile: any;
   hideFileInput = false;
 
   @HostListener('document:keydown.control.p', ['$event'])
-  onPrint(event: KeyboardEvent) {
+  onPrint(event: KeyboardEvent | MouseEvent) {
     event.preventDefault(); // Prevent default browser print behavior
     this.hideFileInput = true;
 

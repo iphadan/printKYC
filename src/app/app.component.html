@@ -24,6 +24,7 @@
               <img
                 *ngIf="imageURL; else noImage"
                 [src]="imageURL"
+                style="width: 150px;"
               
               />
               <ng-template #noImage>
@@ -35,13 +36,16 @@
               
                 type="file"
                 class="form-control"
-                
+         
                 class="noPrint"
                 id="photo"
                 name="photo"
                 accept="image/*"
                 (change)="onFileSelected($event)"
                 [required]="true"
+         
+                
+               
               />
             </div>
           </div>

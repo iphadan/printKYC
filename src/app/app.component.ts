@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { NgForm, FormsModule } from '@angular/forms';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
@@ -90,5 +90,43 @@ selectedFile: any;
       reader.readAsDataURL(file);
     }
   }
+ 
+  hideFileInput = false;
+  private fileInput: HTMLInputElement | null = null;
+
+  constructor(private elementRef: ElementRef) {}
+
+  @HostListener('document:keydown.control.p', ['$event'])
+  onPrint(event: KeyboardEvent) {
+    event.preventDefault(); // Prevent default browser print behavior
+    this.hideFileInput = true;
+
+    // Wait for the next event loop cycle to ensure the DOM is updated
+    setTimeout(() => {
+      window.print();
+      this.hideFileInput = false;
+    }, 0);
+  }
+
+  private hideFileInputInPrint() {
+    const fileInput = this.elementRef.nativeElement.querySelector('#photo');
+    if (fileInput) {
+      this.fileInput = fileInput;
+      fileInput.classList.add('hidden');
+    }
+  }
+
+  private showFileInput() {
+    if (this.fileInput) {
+      this.fileInput.classList.remove('hidden');
+      const fileInputContainer = this.elementRef.nativeElement.querySelector('.file-input-container');
+      if (fileInputContainer) {
+        fileInputContainer.appendChild(this.fileInput);
+        this.fileInput = null;
+      }
+    }
+  }
+
+
 
 }

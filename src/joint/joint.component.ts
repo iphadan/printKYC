@@ -1,14 +1,17 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { NgForm, FormsModule } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-joint',
+  templateUrl: './joint.component.html',
+  styleUrls: ['./joint.component.css']
 })
-export class AppComponent {
+export class JointComponent {
+
+
+
   @ViewChild('kycForm', { static: false }) kycForm!: NgForm;
   [x: string]: any;
   title = 'PrintKYC';
@@ -90,21 +93,7 @@ selectedFile: any;
       reader.readAsDataURL(file);
     }
   }
-
-
   hideFileInput = false;
-hideJoint=false;
-
-onChangeButton(){
-  if (this.hideJoint === false){
-    this.hideJoint=true
-    console.log("clicked")
-  }
-  else{
-    this.hideJoint=false
-  }
-  
-}
 
   @HostListener('document:keydown.control.p', ['$event'])
   onPrint(event: KeyboardEvent | MouseEvent) {
@@ -127,10 +116,8 @@ onChangeButton(){
   onAfterPrint() {
     this.hideFileInput = false;
   }
+
+
+
+
 }
-  
-  
-
-
-
-

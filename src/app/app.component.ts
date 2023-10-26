@@ -13,6 +13,7 @@ export class AppComponent {
   [x: string]: any;
   title = 'PrintKYC';
   formFields: { [key: string]: string } = {};
+ 
 
 selectedFile: any;
   imageURL: string="";
@@ -93,12 +94,14 @@ selectedFile: any;
 
 
   hideFileInput = false;
-hideJoint=false;
+  hideFileInputt = false;
+hideJoint=true;
 
 onChangeButton(){
   if (this.hideJoint === false){
     this.hideJoint=true
     console.log("clicked")
+    console.log(this.kycForm.value["customerNumber"]);
   }
   else{
     this.hideJoint=false

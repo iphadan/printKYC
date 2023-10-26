@@ -36,7 +36,7 @@
               
             </div>
             <div class="form-group" *ngIf="!hideFileInput">
-              <input
+              <input ngModel required
               
                 type="file"
                 class="form-control"
@@ -53,153 +53,203 @@
                
               />
             </div>
+            
           </div>
+          
+
+          
       
         </div>
-        <h4 class="underline"> Account Opening Form /የሂሣብ መክፈቻ ቅጽ </h4>
+     
+        <h4 > Account Opening Form /የሂሣብ መክፈቻ ቅጽ </h4>
         <form #kycForm="ngForm">
           <label for="branch">  የባንክ ቅርንጫፍ/ Bank Branch  </label>
-   <input id="branch" type="text" name="branch"  maxlength="100" style="width: 400px;"><br>
-   <label for="customerNumber">  የደንበኛው መለያ ቁጥር/customer No.  </label><input type="text" id="customerNumber"  name="customerNumber"   style="width: 320px;"><br>
+   <input ngModel required id="branch" type="text" name="branch"  maxlength="100" style="width: 400px;"><br>
+   <label for="customerNumber">  የደንበኛው መለያ ቁጥር/customer No.  </label><input ngModel required type="text" id="customerNumber"  name="customerNumber"   style="width: 320px;"><br>
       
-           <label for="accountNumber">  የባንክ ሂሣብ ቁጥር/Account Number  </label> <input type="text" id="accountNumber" name="accountNumber" style="width: 370px;"><br>
-        <label for="fullName">  ስም ከነ አያት/የድርጅት ስም  </label>  <input type="text" id="fullName" name="fullName" style="width: 500px;"><br>
+           <label for="accountNumber">  የባንክ ሂሣብ ቁጥር/Account Number  </label> <input ngModel required type="text" id="accountNumber" name="accountNumber" style="width: 370px;"><br>
+        <label for="fullName">  ስም ከነ አያት/የድርጅት ስም  </label>  <input ngModel required type="text" id="fullName" name="fullName" style="width: 500px;"><br>
           
          
       
-       <label for="city">  ከተማ/City  </label>       <input type="text" name="city" id="city" >
+       <label for="city">  ከተማ/City  </label>       <input ngModel required type="text" name="city" id="city" >
       
-       <label for="subCity">  ክ/ከተማ/Sub-city  </label>  <input type="text" name="subCity" id="subCity" ><br>
-       <label for="kebele">  ቀበሌ/ወረዳ/Kebele/Woreda  </label>  <input type="text" name="kebele"  id="kebele" >
+       <label for="subCity">  ክ/ከተማ/Sub-city  </label>  <input ngModel required type="text" name="subCity" id="subCity" ><br>
+       <label for="kebele">  ቀበሌ/ወረዳ/Kebele/Woreda  </label>  <input ngModel required type="text" name="kebele"  id="kebele" >
       
-       <label for="houseNo">  የቤትቁ. /H.No  </label>  <input type="text" name="houseNo"  id="houseNo" ><br>
-        <label for="telephone">  የቤት ስልክ/ Res. Tel  </label><input type="text" name="telephone" id="telephone" style="width: 170px;">
+       <label for="houseNo">  የቤትቁ. /H.No  </label>  <input ngModel required type="text" name="houseNo"  id="houseNo" ><br>
+        <label for="telephone">  የቤት ስልክ/ Res. Tel  </label><input ngModel required type="text" name="telephone" id="telephone" style="width: 170px;">
         <label for="mobileNumber">  የተንቀሳቃሽ ስልክ/Mobile  </label>
-        <input type="text" ID="mobileNumber"  name="mobileNumber" style="width: 170px;"><br>
+        <input ngModel required type="text" ID="mobileNumber"  name="mobileNumber" style="width: 170px;"><br>
       
-      <label for="officeTelephone">  የቢሮ ስልክ/Off.Tel  </label>   <input  type="text" id="officeTelephone" name="officeTelephone">
-        <label for="posta">  የፖ.ሣ.ቁ. / P.O.Box  </label> <input type="text" name="posta" id="posta"><br>
-       <label for="email">  ኢ-ሜይል/ Email  </label>  <input id="email" type="text" name="email" style="width: 420px;"><br>
+      <label for="officeTelephone">  የቢሮ ስልክ/Off.Tel  </label>   <input ngModel required  type="text" id="officeTelephone" name="officeTelephone">
+        <label for="posta">  የፖ.ሣ.ቁ. / P.O.Box  </label> <input ngModel required type="text" name="posta" id="posta"><br>
+       <label for="email">  ኢ-ሜይል/ Email  </label>  <input ngModel required id="email" type="text" name="email" style="width: 420px;"><br>
       
-      <label for="idNo">  የመ. ዓይነት/ID type  </label>    <input type="text" name="idNo" id="idNo" style="width: 150px;"><br>
+      <label for="idNo">  የመ. ዓይነት/ID type  </label>    <input ngModel required type="text" name="idNo" id="idNo" style="width: 150px;"><br>
       <label for="idRegistrationNumber">  የመ.ቁ. /የምዝገባ ቁ./ID No. /Registration No  </label>
-         <input type="text" id="idRegistrationNumber" name="idRegistrationNumber" style="width: 170px;">
-        <label for="tillNo">  ታ.መ.ቁ./TIN No  </label> <input type="text" name="tillNo" id="tillNo" style="width: 130px;"><br>
-       <label for="issuedBy">  የሰጠው አካል/Issued by  </label>  <input type="text" name="issuedBy" id="issuedBy" style="width: 500px;"><br>
+         <input ngModel required type="text" id="idRegistrationNumber" name="idRegistrationNumber" style="width: 170px;">
+        <label for="tillNo">  ታ.መ.ቁ./TIN No  </label> <input ngModel required type="text" name="tillNo" id="tillNo" style="width: 130px;"><br>
+       <label for="issuedBy">  የሰጠው አካል/Issued by  </label>  <input ngModel required type="text" name="issuedBy" id="issuedBy" style="width: 500px;"><br>
         
-      <label for="gender">  ጾታ/Gende  </label>   <input type="text" name="gender" id="gender" style="width: 70px;">
-      <label for="nationality">  ዜግነት/Nationality  </label>   <input type="text" name="nationality" id="nationality"style="width: 100px;"><br>
-      <label for="dob">የትውልድ ቀን/DOB(for Individual)</label>   <input type="date" name="dob" id="dob">
+      <label for="gender">  ጾታ/Gende  </label>   <select name="gender" id="gender">
+        <option value="male" id="male" name="male" [selected]="true">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <label for="nationality">  ዜግነት/Nationality  </label>   <input ngModel required type="text" name="nationality" id="nationality"style="width: 100px;"><br>
+      <label for="dob">የትውልድ ቀን/DOB(for Individual)</label>   <input ngModel required type="date" name="dob" id="dob">
       
-       <label for="oes">የድርጅት ምስረታ ቀን(Org Establishment Date)</label>  <input type="date" name="oes" id="oes" style="width: 100px;"> 
- <label for="occupation">የሥራ ዓይነት/Occupation</label>        <input type="text" name="occupation" id="occupation" style="width: 150px;"><br>
-      <label for="position">  የሥራ ሃላፊነት/Position  </label>   <input type="text" name="position" id="position" style="width: 400px"><br>
-      <label for="employer">  ቀጣሪ ድርጅት/Employer</label>   <input type="text" name="employer" id="employer" style="width: 400px"><br>
+       <label for="oes">የድርጅት ምስረታ ቀን(Org Establishment Date)</label>  <input ngModel required type="date" name="oes" id="oes" style="width: 100px;"> 
+ <label for="occupation">የሥራ ዓይነት/Occupation</label>        <input ngModel required type="text" name="occupation" id="occupation" style="width: 150px;"><br>
+      <label for="position">  የሥራ ሃላፊነት/Position  </label>   <input ngModel required type="text" name="position" id="position" style="width: 400px"><br>
+      <label for="employer">  ቀጣሪ ድርጅት/Employer</label>   <input ngModel required type="text" name="employer" id="employer" style="width: 400px"><br>
       
-       <label for="monthlyIncome">  ወርሀዊ ገቢ/Average Monthly Income  </label>  <input type="text" name="monthlyIncome" id="monthlyIncome" style="width: 400px"><br>
-    <label for="annualIncome">  ዓመታዊ ገቢ /Average Annual Income  </label>      <input type="text" name="annualIncome" id="annualIncome" style="width: 400px"><br>
+       <label for="monthlyIncome">  ወርሀዊ ገቢ/Average Monthly Income  </label>  <input ngModel required type="text" name="monthlyIncome" id="monthlyIncome" style="width: 400px"><br>
+    <label for="annualIncome">  ዓመታዊ ገቢ /Average Annual Income  </label>      <input ngModel required type="text" name="annualIncome" id="annualIncome" style="width: 400px"><br>
   
-      <label for="accountType">  የሂሳቡ ዓይነት /Account Type/Saving/Cheque/Mobile wallet  </label>   <input type="text" id="accountType" name="accountType"><br><br>
+      <label for="accountType">  የሂሳቡ ዓይነት /Account Type/Saving/Cheque/Mobile wallet  </label> <select   id="accountType" name="accountType" ><option value="saving" id="saving" [selected]="true">Saving</option>
+        <option value="saving">Mobile Wallet</option>
+        <option value="saving">Cheque</option>
+      
+      </select>  <br><br>
       <div class="signature">ፊርማ /Signature _________________________________________</div>
       <div class="joint" *ngIf="!hideJoint" ngModel >
-        <h6 class="underline" style="font-size: small;">የበጥምር ለሚከፈቱ ሂሣቦች/ For Joint and/or Account</h6>
-        <p style="text-align: center; text-decoration: underline;font-size: small;font-weight: bold ;">የ2ኛ አመልካች /2nd Applicant</p>
-                        <label for="fullName">  ስም ከነ አያት/የድርጅት ስም  </label>  <input type="text" id="fullName" name="fullName" style="width: 500px;"><br>
+        <h6 style="font-size: small;">የበጥምር ለሚከፈቱ ሂሣቦች/ For Joint and/or Account</h6>
+        <p style="text-align: center; text-decoration: underline;font-size: smaller;font-weight: bold ;">የ2ኛ አመልካች /2nd Applicant</p>
+                        <label for="fullName">  ስም ከነ አያት/የድርጅት ስም  </label>  <input ngModel required type="text" id="fullName" name="fullName" style="width: 500px;"><br>
                
               
            
-            <label for="city">  ከተማ/City  </label>       <input type="text" name="city" id="city" >
+            <label for="city">  ከተማ/City  </label>       <input ngModel required type="text" name="city" id="city" >
            
-            <label for="subCity">  ክ/ከተማ/Sub-city  </label>  <input type="text" name="subCity" id="subCity" ><br>
-            <label for="kebele">  ቀበሌ/ወረዳ/Kebele/Woreda  </label>  <input type="text" name="kebele"  id="kebele" >
+            <label for="subCity">  ክ/ከተማ/Sub-city  </label>  <input ngModel required type="text" name="subCity" id="subCity" ><br>
+            <label for="kebele">  ቀበሌ/ወረዳ/Kebele/Woreda  </label>  <input ngModel required type="text" name="kebele"  id="kebele" >
            
-            <label for="houseNo">  የቤትቁ. /H.No  </label>  <input type="text" name="houseNo"  id="houseNo" ><br>
-             <label for="telephone">  የቤት ስልክ/ Res. Tel  </label><input type="text" name="telephone" id="telephone" style="width: 170px;">
+            <label for="houseNo">  የቤትቁ. /H.No  </label>  <input ngModel required type="text" name="houseNo"  id="houseNo" ><br>
+             <label for="telephone">  የቤት ስልክ/ Res. Tel  </label><input ngModel required type="text" name="telephone" id="telephone" style="width: 170px;">
              <label for="mobileNumber">  የተንቀሳቃሽ ስልክ/Mobile  </label>
-             <input type="text" ID="mobileNumber"  name="mobileNumber" style="width: 170px;"><br>
+             <input ngModel required type="text" ID="mobileNumber"  name="mobileNumber" style="width: 170px;"><br>
            
-           <label for="officeTelephone">  የቢሮ ስልክ/Off.Tel  </label>   <input  type="text" id="officeTelephone" name="officeTelephone">
-             <label for="posta">  የፖ.ሣ.ቁ. / P.O.Box  </label> <input type="text" name="posta" id="posta"><br>
-            <label for="email">  ኢ-ሜይል/ Email  </label>  <input id="email" type="text" name="email" style="width: 420px;"><br>
+           <label for="officeTelephone">  የቢሮ ስልክ/Off.Tel  </label>   <input ngModel required  type="text" id="officeTelephone" name="officeTelephone">
+             <label for="posta">  የፖ.ሣ.ቁ. / P.O.Box  </label> <input ngModel required type="text" name="posta" id="posta"><br>
+            <label for="email">  ኢ-ሜይል/ Email  </label>  <input ngModel required id="email" type="text" name="email" style="width: 420px;"><br>
            
-           <label for="idNo">  የመ. ዓይነት/ID type  </label>    <input type="text" name="idNo" id="idNo" style="width: 150px;"><br>
+           <label for="idNo">  የመ. ዓይነት/ID type  </label>    <input ngModel required type="text" name="idNo" id="idNo" style="width: 150px;"><br>
            <label for="idRegistrationNumber">  የመ.ቁ. /የምዝገባ ቁ./ID No. /Registration No  </label>
-              <input type="text" id="idRegistrationNumber" name="idRegistrationNumber" style="width: 170px;">
-             <label for="tillNo">  ታ.መ.ቁ./TIN No  </label> <input type="text" name="tillNo" id="tillNo" style="width: 130px;"><br>
-            <label for="issuedBy">  የሰጠው አካል/Issued by  </label>  <input type="text" name="issuedBy" id="issuedBy" style="width: 500px;"><br>
+              <input ngModel required type="text" id="idRegistrationNumber" name="idRegistrationNumber" style="width: 170px;">
+             <label for="tillNo">  ታ.መ.ቁ./TIN No  </label> <input ngModel required type="text" name="tillNo" id="tillNo" style="width: 130px;"><br>
+            <label for="issuedBy">  የሰጠው አካል/Issued by  </label>  <input ngModel required type="text" name="issuedBy" id="issuedBy" style="width: 500px;"><br>
              
-           <label for="gender">  ጾታ/Gende  </label>   <input type="text" name="gender" id="gender" style="width: 70px;">
-           <label for="nationality">  ዜግነት/Nationality  </label>   <input type="text" name="nationality" id="nationality"style="width: 100px;"><br>
-           <label for="dob">የትውልድ ቀን/DOB(for Individual)</label>   <input type="date" name="dob" id="dob">
+           <label for="gender">  ጾታ/Gende  </label>   <select name="gender" id="gender">
+            <option value="male" id="male" name="male" [selected]="true">Male</option>
+            <option value="female">Female</option>
+          </select>
+           <label for="nationality">  ዜግነት/Nationality  </label>   <input ngModel required type="text" name="nationality" id="nationality"style="width: 100px;"><br>
+           <label for="dob">የትውልድ ቀን/DOB(for Individual)</label>   <input ngModel required type="date" name="dob" id="dob">
            
-            <label for="oes">የድርጅት ምስረታ ቀን(Org Establishment Date)</label>  <input type="date" name="oes" id="oes" style="width: 100px;"> 
-      <label for="occupation">የሥራ ዓይነት/Occupation</label>        <input type="text" name="occupation" id="occupation" style="width: 150px;"><br>
-           <label for="position">  የሥራ ሃላፊነት/Position  </label>   <input type="text" name="position" id="position" style="width: 400px"><br>
-           <label for="employer">  ቀጣሪ ድርጅት/Employer</label>   <input type="text" name="employer" id="employer" style="width: 400px"><br>
+            <label for="oes">የድርጅት ምስረታ ቀን(Org Establishment Date)</label>  <input ngModel required type="date" name="oes" id="oes" style="width: 100px;"> 
+      <label for="occupation">የሥራ ዓይነት/Occupation</label>        <input ngModel required type="text" name="occupation" id="occupation" style="width: 150px;"><br>
+           <label for="position">  የሥራ ሃላፊነት/Position  </label>   <input ngModel required type="text" name="position" id="position" style="width: 400px"><br>
+           <label for="employer">  ቀጣሪ ድርጅት/Employer</label>   <input ngModel required type="text" name="employer" id="employer" style="width: 400px"><br>
            
-            <label for="monthlyIncome">  ወርሀዊ ገቢ/Average Monthly Income  </label>  <input type="text" name="monthlyIncome" id="monthlyIncome" style="width: 400px"><br>
-         <label for="annualIncome">  ዓመታዊ ገቢ /Average Annual Income  </label>      <input type="text" name="annualIncome" id="annualIncome" style="width: 400px"><br>
+            <label for="monthlyIncome">  ወርሀዊ ገቢ/Average Monthly Income  </label>  <input ngModel required type="text" name="monthlyIncome" id="monthlyIncome" style="width: 400px"><br>
+         <label for="annualIncome">  ዓመታዊ ገቢ /Average Annual Income  </label>      <input ngModel required type="text" name="annualIncome" id="annualIncome" style="width: 400px"><br>
        
-           <label for="accountType">  የሂሳቡ ዓይነት /Account Type/Saving/Cheque/Mobile wallet  </label>   <input type="text" id="accountType" name="accountType"><br><br>
+           <label for="accountType">  የሂሳቡ ዓይነት /Account Type/Saving/Cheque/Mobile wallet  </label>   <input ngModel required type="text" id="accountType" name="accountType"><br><br>
            <div class="signature">ፊርማ /Signature _________________________________________</div>
 
-           <p style="text-align: center; text-decoration: underline;font-size: small;font-weight: bold ;">የ3ኛ አመልካች /2nd Applicant</p>
-           <label for="fullName">  ስም ከነ አያት/የድርጅት ስም  </label>  <input type="text" id="fullName" name="fullName" style="width: 500px;"><br>
+           <p style="text-align: center; text-decoration: underline;font-size: smaller;font-weight: bold ;">የ3ኛ አመልካች /2nd Applicant</p>
+           <label for="fullName">  ስም ከነ አያት/የድርጅት ስም  </label>  <input ngModel required type="text" id="fullName" name="fullName" style="width: 500px;"><br>
   
  
 
-<label for="city">  ከተማ/City  </label>       <input type="text" name="city" id="city" >
+<label for="city">  ከተማ/City  </label>       <input ngModel required type="text" name="city" id="city" >
 
-<label for="subCity">  ክ/ከተማ/Sub-city  </label>  <input type="text" name="subCity" id="subCity" ><br>
-<label for="kebele">  ቀበሌ/ወረዳ/Kebele/Woreda  </label>  <input type="text" name="kebele"  id="kebele" >
+<label for="subCity">  ክ/ከተማ/Sub-city  </label>  <input ngModel required type="text" name="subCity" id="subCity" ><br>
+<label for="kebele">  ቀበሌ/ወረዳ/Kebele/Woreda  </label>  <input ngModel required type="text" name="kebele"  id="kebele" >
 
-<label for="houseNo">  የቤትቁ. /H.No  </label>  <input type="text" name="houseNo"  id="houseNo" ><br>
-<label for="telephone">  የቤት ስልክ/ Res. Tel  </label><input type="text" name="telephone" id="telephone" style="width: 170px;">
+<label for="houseNo">  የቤትቁ. /H.No  </label>  <input ngModel required type="text" name="houseNo"  id="houseNo" ><br>
+<label for="telephone">  የቤት ስልክ/ Res. Tel  </label><input ngModel required type="text" name="telephone" id="telephone" style="width: 170px;">
 <label for="mobileNumber">  የተንቀሳቃሽ ስልክ/Mobile  </label>
-<input type="text" ID="mobileNumber"  name="mobileNumber" style="width: 170px;"><br>
+<input ngModel required type="text" ID="mobileNumber"  name="mobileNumber" style="width: 170px;"><br>
 
-<label for="officeTelephone">  የቢሮ ስልክ/Off.Tel  </label>   <input  type="text" id="officeTelephone" name="officeTelephone">
-<label for="posta">  የፖ.ሣ.ቁ. / P.O.Box  </label> <input type="text" name="posta" id="posta"><br>
-<label for="email">  ኢ-ሜይል/ Email  </label>  <input id="email" type="text" name="email" style="width: 420px;"><br>
+<label for="officeTelephone">  የቢሮ ስልክ/Off.Tel  </label>   <input ngModel required  type="text" id="officeTelephone" name="officeTelephone">
+<label for="posta">  የፖ.ሣ.ቁ. / P.O.Box  </label> <input ngModel required type="text" name="posta" id="posta"><br>
+<label for="email">  ኢ-ሜይል/ Email  </label>  <input ngModel required id="email" type="text" name="email" style="width: 420px;"><br>
 
-<label for="idNo">  የመ. ዓይነት/ID type  </label>    <input type="text" name="idNo" id="idNo" style="width: 150px;"><br>
+<label for="idNo">  የመ. ዓይነት/ID type  </label>    <input ngModel required type="text" name="idNo" id="idNo" style="width: 150px;"><br>
 <label for="idRegistrationNumber">  የመ.ቁ. /የምዝገባ ቁ./ID No. /Registration No  </label>
- <input type="text" id="idRegistrationNumber" name="idRegistrationNumber" style="width: 170px;">
-<label for="tillNo">  ታ.መ.ቁ./TIN No  </label> <input type="text" name="tillNo" id="tillNo" style="width: 130px;"><br>
-<label for="issuedBy">  የሰጠው አካል/Issued by  </label>  <input type="text" name="issuedBy" id="issuedBy" style="width: 500px;"><br>
+ <input ngModel required type="text" id="idRegistrationNumber" name="idRegistrationNumber" style="width: 170px;">
+<label for="tillNo">  ታ.መ.ቁ./TIN No  </label> <input ngModel required type="text" name="tillNo" id="tillNo" style="width: 130px;"><br>
+<label for="issuedBy">  የሰጠው አካል/Issued by  </label>  <input ngModel required type="text" name="issuedBy" id="issuedBy" style="width: 500px;"><br>
 
-<label for="gender">  ጾታ/Gende  </label>   <input type="text" name="gender" id="gender" style="width: 70px;">
-<label for="nationality">  ዜግነት/Nationality  </label>   <input type="text" name="nationality" id="nationality"style="width: 100px;"><br>
-<label for="dob">የትውልድ ቀን/DOB(for Individual)</label>   <input type="date" name="dob" id="dob">
+<label for="gender">  ጾታ/Gende  </label>   <select name="gender" id="gender">
+  <option value="male" id="male" name="male" [selected]="true">Male</option>
+  <option value="female">Female</option>
+</select>
+<label for="nationality">  ዜግነት/Nationality  </label>   <input ngModel required type="text" name="nationality" id="nationality"style="width: 100px;"><br>
+<label for="dob">የትውልድ ቀን/DOB(for Individual)</label>   <input ngModel required type="date" name="dob" id="dob">
 
-<label for="oes">የድርጅት ምስረታ ቀን(Org Establishment Date)</label>  <input type="date" name="oes" id="oes" style="width: 100px;"> 
-<label for="occupation">የሥራ ዓይነት/Occupation</label>        <input type="text" name="occupation" id="occupation" style="width: 150px;"><br>
-<label for="position">  የሥራ ሃላፊነት/Position  </label>   <input type="text" name="position" id="position" style="width: 400px"><br>
-<label for="employer">  ቀጣሪ ድርጅት/Employer</label>   <input type="text" name="employer" id="employer" style="width: 400px"><br>
+<label for="oes">የድርጅት ምስረታ ቀን(Org Establishment Date)</label>  <input ngModel required type="date" name="oes" id="oes" style="width: 100px;"> 
+<label for="occupation">የሥራ ዓይነት/Occupation</label>        <input ngModel required type="text" name="occupation" id="occupation" style="width: 150px;"><br>
+<label for="position">  የሥራ ሃላፊነት/Position  </label>   <input ngModel required type="text" name="position" id="position" style="width: 400px"><br>
+<label for="employer">  ቀጣሪ ድርጅት/Employer</label>   <input ngModel required type="text" name="employer" id="employer" style="width: 400px"><br>
 
-<label for="monthlyIncome">  ወርሀዊ ገቢ/Average Monthly Income  </label>  <input type="text" name="monthlyIncome" id="monthlyIncome" style="width: 400px"><br>
-<label for="annualIncome">  ዓመታዊ ገቢ /Average Annual Income  </label>      <input type="text" name="annualIncome" id="annualIncome" style="width: 400px"><br>
+<label for="monthlyIncome">  ወርሀዊ ገቢ/Average Monthly Income  </label>  <input ngModel required type="text" name="monthlyIncome" id="monthlyIncome" style="width: 400px"><br>
+<label for="annualIncome">  ዓመታዊ ገቢ /Average Annual Income  </label>      <input ngModel required type="text" name="annualIncome" id="annualIncome" style="width: 400px"><br>
 
-<label for="accountType">  የሂሳቡ ዓይነት /Account Type/Saving/Cheque/Mobile wallet  </label>   <input type="text" id="accountType" name="accountType"><br><br>
+<label for="accountType">  የሂሳቡ ዓይነት /Account Type/Saving/Cheque/Mobile wallet  </label>   <input ngModel required type="text" id="accountType" name="accountType"><br><br>
 <div class="signature">ፊርማ /Signature _________________________________________</div>
-        
+      <h4 >የሂሣብ የማንቀሳቀሻ ትዕዛዝ/ Operation Instruction</h4>
+
+<div class="opInstruction" >
+  
+  <div class="opInstructionBox">
+    በአንድ ፊርማ የሚንቀሳቀስ/Individual Signatory <input ngModel required type="checkbox" name="Individual" id="Individual">
+    <div class="opSignature">
+     ፊርማ /Signature______________
+    </div>
+    
+  </div>
+  <div class="opInstructionBox">
+   በጋራ የሚንቀሳቀስ/Joint Signatories <input ngModel required type="checkbox" name="Individual" id="Individual">
+   <div class="opSignature">
+     ፊርማ /Signature_______________
+    </div>
+  </div>
+   <div class="opInstructionBox">
+     የተለየ ትዕዛዝ/Others <input ngModel required type="checkbox" name="Individual" id="Individual">
+     <div class="opSignature">
+       ፊርማ /Signature_______________
+      </div>
+   </div>
+   
+
+
+
+ </div>
+
+
+
+
       </div>
       <h4>የሚፈልጉትን የኢ-ፐይመንት አገልግሎት ይምረጡ/would you select/tick the E-payments you prefer to use?</h4>
-      <div class="atm">ኤ.ቲ.ኤም ካርድ/ATM --------------- እፈልጋለሁ <input type="checkbox" id="atm"> አልፈልግም <input type="checkbox" id="atm"> </div>
-      <div class="mobile">ሞባይል ባንኪንግ/Mobile Banking   ---------------  እፈልጋለሁ <input type="checkbox"> አልፈልግም <input type="checkbox"> </div>
-      <div class="internet"> ኢንተርኔት ባንኪንግ/Internet Banking --------------- እፈልጋለሁ <input type="checkbox"> አልፈልግም <input type="checkbox"></div>
-     <label for="initial">የመጀመሪያ ተቀማጭ/Initial Deposit (Optional) </label> <input type="text" name="initial" id="initial" style="width: 150px" >
-      ነባር ሂሳብ/Existing Account Yes <input type="checkbox"> No <input type="checkbox">
+      <div class="atm">ኤ.ቲ.ኤም ካርድ/ATM --------------- እፈልጋለሁ <input ngModel required type="checkbox" id="atm"> አልፈልግም <input ngModel required type="checkbox" id="atm"> </div>
+      <div class="mobile">ሞባይል ባንኪንግ/Mobile Banking   ---------------  እፈልጋለሁ <input ngModel required type="checkbox"> አልፈልግም <input ngModel required type="checkbox"> </div>
+      <div class="internet"> ኢንተርኔት ባንኪንግ/Internet Banking --------------- እፈልጋለሁ <input ngModel required type="checkbox"> አልፈልግም <input ngModel required type="checkbox"></div>
+     <label for="initial">የመጀመሪያ ተቀማጭ/Initial Deposit (Optional) </label> <input ngModel required type="text" name="initial" id="initial" style="width: 150px" >
+      ነባር ሂሳብ/Existing Account Yes <input ngModel required type="checkbox"> No <input ngModel required type="checkbox">
       
       
-      <div class="signature" >     ሂሳቡን የከፈተችው/ው ስም እና ፊርማ/Name and Signature of maker _________________________________________ <br><br>
-      ሂሳቡን ያረጋገጠችው/ው ስም እና ፊርማ/Name and Signature Checker _________________________________________</div>
  
         </form>
-        <button type="button" id="printBtn" *ngIf="!hideFileInput" style="margin-left: 100%;color: black;background-color: rgb(16, 138, 245);width: 100px;font-size: larger;font-weight: bolder;" ngModel (click)="onPrint($event)">Print</button>
+        
+      <div class="signature" >     ሂሳቡን የከፈተችው/ው ስም እና ፊርማ/Name and Signature of maker _________________________________________ <br><br>
+      ሂሳቡን ያረጋገጠችው/ው ስም እና ፊርማ/Name and Signature Checker _________________________________________</div>
+        <button *ngIf="!!hideFileInput" id="printBtn" style="margin-left: 100%;color: black;background-color: rgb(16, 138, 245);width: 100px;font-size: larger;font-weight: bolder;"  (click)="onPrint($event)">Print</button>
        <div class="footer" style="font-weight: bolder;"> 
-<p>Note:-TIN shall be compulsory only for business persons, fax shall be optional for all types of depositors, at least one</p> 
-         <p>telephone number (home, mobile or office) is compulsory. All other fields shall be compulsory.</p>
+<!-- <p>Note:-TIN shall be compulsory only for business persons, fax shall be optional for all types of depositors, at least one</p> 
+         <p>telephone number (home, mobile or office) is compulsory. All other fields shall be compulsory.</p> -->
 
        </div>
       </div>

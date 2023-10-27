@@ -145,15 +145,10 @@ border: #000000;
  
 }
 button:hover{
-  background-color: hsl(196, 60%, 41%);
+  background-color: green;
 }
-.btn1{
-  position:fixed;
-    left: 90%;
-    bottom: 10%;
-  }
-  .btn2{
-    position:fixed;
-      left: 80%;
-      bottom: 10%;
-    }
+.btn{
+position:fixed;
+  left: 90%;
+  bottom: 10%;
+}

@@ -210,9 +210,9 @@
           <label for="gender"> ጾታ/Gende </label>
           <select name="gender" id="gender">
             <option value="male" id="male" name="male" [selected]="true">
-              Male
+              &nbsp;&nbsp;Male
             </option>
-            <option value="female">Female</option>
+            <option value="female">&nbsp;&nbsp;Female</option>
           </select>
           <label for="nationality"> ዜግነት/Nationality </label>
           <input
@@ -281,11 +281,11 @@
           <label for="accountType"> የሂሳቡ ዓይነት /Account Type </label>
           <select id="accountType" name="accountType">
             <option value="saving" id="saving" [selected]="true">Saving</option>
-            <option value="saving">Mobile Wallet</option>
-            <option value="saving">Cheque</option>
-          </select>
-          <div class="signature" style="display: contents">
-            ፊርማ /Signature _________________________________________
+            <option value="saving">&nbsp;&nbsp;Mobile Wallet</option>
+            <option value="saving">&nbsp;&nbsp;Cheque</option>
+          </select><br><br>
+          <div >
+            ፊርማ /Signature _______________________&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________
           </div>
 
           <div class="joint" *ngIf="!hideJoint" ngModel>
@@ -345,7 +345,7 @@
               style="width: 140px"
             />
 
-            <label for="houseNo1"> የቤትቁ. /H.No </label>
+            <label for="houseNo1"> የቤትቁ./H.No </label>
             <input
               ngModel
               required
@@ -363,7 +363,7 @@
               id="posta1"
               style="width: 100px"
             /><br />
-            <label for="telephone1"> የቤት ስልክ/ Res. Tel </label
+            <label for="telephone1"> የቤት ስልክ/Res.Tel </label
             ><input
               ngModel
               required
@@ -444,9 +444,9 @@
             <label for="gender1"> ጾታ/Gende </label>
             <select name="gender1" id="gender1">
               <option value="male" id="male1" name="male1" [selected]="true">
-                Male
+                &nbsp;&nbsp; Male
               </option>
-              <option value="female" id="female1" name="female1">Female</option>
+              <option value="female" id="female1" name="female1">&nbsp;&nbsp;Female</option>
             </select>
             <label for="nationality1"> ዜግነት/Nationality </label>
             <input
@@ -517,11 +517,11 @@
               <option value="saving" id="saving1" [selected]="true">
                 Saving
               </option>
-              <option value="saving">Mobile Wallet</option>
-              <option value="saving">Cheque</option>
-            </select>
-            <div class="signature" style="display: contents">
-              ፊርማ /Signature _________________________________________
+              <option value="saving">&nbsp;&nbsp;Mobile Wallet</option>
+              <option value="saving">&nbsp;&nbsp;Cheque</option>
+            </select><br><br>
+            <div >
+              ፊርማ /Signature _______________________&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________
             </div>
 
             <p
@@ -676,9 +676,9 @@
             <label for="gender2"> ጾታ/Gende </label>
             <select name="gender2" id="gender2">
               <option value="male" id="male" name="male" [selected]="true">
-                Male
+                &nbsp;&nbsp; Male
               </option>
-              <option value="female">Female</option>
+              <option value="female">&nbsp;&nbsp;Female</option>
             </select>
             <label for="nationality2"> ዜግነት/Nationality </label>
             <input
@@ -748,11 +748,11 @@
               <option value="saving" id="saving" [selected]="true">
                 Saving
               </option>
-              <option value="saving">Mobile Wallet</option>
-              <option value="saving">Cheque</option>
-            </select>
-            <div class="signature" style="display: contents">
-              ፊርማ /Signature _________________________________________
+              <option value="saving">&nbsp;&nbsp;Mobile Wallet</option>
+              <option value="saving">&nbsp;&nbsp;Cheque</option>
+            </select><br><br>
+            <div >
+              ፊርማ /Signature _______________________&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________
             </div>
             <h4>የሂሣብ የማንቀሳቀሻ ትዕዛዝ/ Operation Instruction</h4>
 
@@ -812,20 +812,25 @@
               የሚፈልጉትን የኢ-ፐይመንት አገልግሎት ይምረጡ/would you select/tick the E-payments
               you prefer to use?
             </h4>
+
+
             <div class="atm"> 
-              ኤ.ቲ.ኤም ካርድ/ATM --------------- እፈልጋለሁ
-              <input ngModel required type="checkbox" id="atm" checked /> አልፈልግም
-              <input ngModel required type="checkbox" id="atm" />
+              <label for="atm">ኤ.ቲ.ኤም ካርድ/ATM </label> <select name="atm" id="atm">
+                <option value="yes"> &nbsp;&nbsp;እፈልጋለሁ</option>
+                <option value="no"> &nbsp;&nbsp;አልፈልግም</option>
+              </select>
             </div>
             <div class="mobile">
-              ሞባይል ባንኪንግ/Mobile Banking --------------- እፈልጋለሁ
-              <input ngModel required type="checkbox" checked/> አልፈልግም
-              <input ngModel required type="checkbox" />
+              <label for="internet">ኤሞባይል ባንኪንግ/Mobile Banking</label> <select name="internet" id="internet">
+                <option value="yes">&nbsp;&nbsp;እፈልጋለሁ</option>
+                <option value="no">&nbsp;&nbsp;አልፈልግም</option>
+              </select>
             </div>
             <div class="internet">
-              ኢንተርኔት ባንኪንግ/Internet Banking --------------- እፈልጋለሁ
-              <input ngModel required type="checkbox" checked/> አልፈልግም
-              <input ngModel required type="checkbox" />
+              <label for="internet">ኤሞባይል ባንኪንግ/Mobile Banking</label> <select name="internet" id="internet">
+                <option value="yes">&nbsp;&nbsp;እፈልጋለሁ</option>
+                <option value="no">&nbsp;&nbsp;አልፈልግም</option>
+              </select>
             </div>
             <label for="initial">የመጀመሪያ ተቀማጭ/Initial Deposit (Optional) </label>
             <input
@@ -836,15 +841,22 @@
               id="initial"
               style="width: 150px"
             />
-            ነባር ሂሳብ/Existing Account Yes
-            <input ngModel required type="checkbox" /> No
-            <input ngModel required type="checkbox" />
+            ነባር ሂሳብ/Existing Account
+
+            <select name="existing" id="existing">
+              <option value="yes">&nbsp;&nbsp;Yes</option>
+              <option value="no">&nbsp;&nbsp;No</option>
+            </select>
+            
           </div>
         </form>
-        <div class="signature">
+        <div class="signature"><br>
           ሂሳቡን የከፈተችው/ው ስም እና ፊርማ/Name and Signature of maker
           _________________________________________ <br /><br />
           ሂሳቡን ያረጋገጠችው/ው ስም እና ፊርማ/Name and Signature Checker
+          _________________________________________  <br /><br />
+
+          የቅርንጫፍ ተቆጣጣሪዋ/ው ስም እና ፊርማ/Branch Controller
           _________________________________________
         </div>
       </div>

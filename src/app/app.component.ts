@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { NgForm, FormsModule } from '@angular/forms';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
@@ -8,13 +8,11 @@ import jsPDF from 'jspdf';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent{
-
+export class AppComponent {
   @ViewChild('kycForm', { static: false }) kycForm!: NgForm;
   [x: string]: any;
   title = 'PrintKYC';
   formFields: { [key: string]: string } = {};
-
 
 
   selectedFile: any;
@@ -101,11 +99,11 @@ export class AppComponent{
   onChangeButton() {
     if (this.hideJoint === false) {
       this.hideJoint = true
-      return
+      console.log("clicked")
+      console.log(this.kycForm.value["customerNumber"]);
     }
     else {
       this.hideJoint = false
-      return
     }
 
   }

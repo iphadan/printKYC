@@ -1,31 +1,37 @@
 input{
-  font-size:medium;
+  font-size:small ;
   border: none;
 margin-bottom: 1px;
 
 font-weight: bolder;
   letter-spacing: 0.5px;
-  background-color: #fcfcfc;
+  background-color:white;
   border: 0;
-  border-bottom: 1px solid rgb(26, 25, 25);
-  text-align: center;
+  /* border-bottom: 1px solid rgb(26, 25, 25); */
+  text-decoration: underline;
+  display: inline-block;
 
 
 }
+label{
+  display: inline-block;
+
+  text-align: end;
+}
 
 #content{
-  
+
   font-size: 14.3px;
 
 
-  
- 
+
+
 }
 .header{
   display: flex;
   margin: 0px;
 
-   
+
 }
 
 .title{
@@ -79,7 +85,7 @@ p{
 
 
 
-  
+
 }
 .form-group input{
   background-color:white;
@@ -114,8 +120,40 @@ p{
     overflow: hidden;
     visibility: hidden;
   }
+  .printBtn{
+    visibility: hidden;
+    overflow: hidden;
+    display: none;
+    height: 0;
+  }
 }
 
 .opInstruction{
   display: flex;
 }
+button {
+  background-color: hsl(196, 89%, 48%);
+border: #000000;
+  border-radius: 100px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 19px;
+  
+ 
+}
+button:hover{
+  background-color: hsl(196, 60%, 41%);
+}
+.btn1{
+  position:fixed;
+    left: 90%;
+    bottom: 10%;
+  }
+  .btn2{
+    position:fixed;
+      left: 80%;
+      bottom: 10%;
+    }

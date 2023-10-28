@@ -147,8 +147,13 @@ border: #000000;
 button:hover{
   background-color: green;
 }
-.btn{
-position:fixed;
-  left: 90%;
-  bottom: 10%;
-}
+.btn1{
+  position:fixed;
+    left: 90%;
+    bottom: 10%;
+  }
+  .btn2{
+    position:fixed;
+      left: 80%;
+      bottom: 10%;
+    }

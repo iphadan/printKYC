@@ -1,6 +1,6 @@
 <body>
 
-  <button type="button" style="margin-left: 45%;" *ngIf="!hideFileInput" ngModel (click)="onChangeButton()">Change Form</button>
+  
 
 
 
@@ -304,7 +304,8 @@
 
 
           </div>
-          <button class="btn" *ngIf="!hideFileInput"  (click)="onPrint($event)">Print</button>
+          <button class="btn1" *ngIf="!hideFileInput"  (click)="onPrint($event)">Print</button>
+          <button class="btn2" type="button"  *ngIf="!hideFileInput" ngModel (click)="onChangeButton()">Add Joint</button>
 
           <div class="card">
 

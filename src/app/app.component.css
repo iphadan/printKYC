@@ -145,7 +145,7 @@ border: #000000;
  
 }
 button:hover{
-  background-color: green;
+  background-color: hsl(196, 84%, 66%);
 }
 .btn1{
   position:fixed;
@@ -156,4 +156,11 @@ button:hover{
     position:fixed;
       left: 80%;
       bottom: 10%;
+    }
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      
+      text-decoration: underline;
     }

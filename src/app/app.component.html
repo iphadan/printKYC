@@ -4,15 +4,27 @@
 
 
 
+<div class="selectLanguage" *ngIf="!hideFileInput">
+  <label for="language">Language</label>
+ <select name="language" id="language" ngModel (change)="onSelect($event)">
+
+  <option value="english" id="english" name="english" [selected]="true">
+    &nbsp;&nbsp;English
+  </option>
+  <option value="Oromic" >  &nbsp;&nbsp;Afaan Oromo</option>
+
+  <option value="Amharic"> &nbsp;&nbsp;Amharic</option>
+</select>  
+</div>
 
 <div class="selectLanguage" *ngIf="!hideFileInput">
 
-<label for="language"> Language</label>
+<label for="language"> ጾታ</label>
 <select name="language" id="language">
   <option value="English" id="english" name="english" [selected]="true">
     &nbsp;&nbsp;English
   </option>
   <option value="Oromic">&nbsp;&nbsp;Afaan Oromo</option>
-  <option value="Amharic">&nbsp;&nbsp;Amharic</option>
+  <option value="Amharic">&nbsp;&nbsp;A</option>
 </select>
 </div>

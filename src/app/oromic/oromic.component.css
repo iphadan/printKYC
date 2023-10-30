@@ -187,3 +187,7 @@ input{
       option{
         font-weight: bolder;
       }
+
+      .date{
+        padding: 20px;
+      }

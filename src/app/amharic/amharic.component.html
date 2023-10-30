@@ -1,0 +1,885 @@
+
+
+
+
+
+
+<div class="div" #content>
+  <div class="container">
+    <div id="content">
+      <div class="header">
+        <div><img width="auto" src="../assets/logo.svg" alt="img" /></div>
+        <div class="title">
+          <h4>Baankii Hojii Gamtaa Oromiyaa</h4>
+          <h6>የኦሮሚያ ኅብረት ሥራ ባንክ</h6>
+        </div>
+
+        <div class="photo-container md:w-1/2 m-4">
+          <div class="photo-preview">
+            <img
+              *ngIf="imageURL; else noImage"
+              [src]="imageURL"
+              style="width: 150px"
+            />
+            <ng-template #noImage> </ng-template>
+          </div>
+          <div class="form-group" *ngIf="!hideFileInput">
+            <input
+              ngModel
+              required
+              type="file"
+              class="form-control"
+              class="noPrint"
+              id="photo"
+              name="photo"
+              accept="image/*"
+              (change)="onFileSelected($event)"
+              [required]="true"
+            />
+          </div>
+        </div>
+      </div>
+<div class="temp">
+<div class="changeLanguage" *ngIf="language === 'English'">
+
+
+
+        <div class="date" style="margin-left: 70%; text-decoration: underline">
+          <label for="date">ቀን</label>
+          <input
+            type="date"
+            name="date"
+            id="date"
+            style="text-decoration: underline; display: flexbox"
+          />
+        </div>
+        <h4 style="text-decoration: underline; text-align: center">
+          የሂሣብ መክፈቻ ቅጽ
+        </h4>
+
+        <form #kycForm="ngForm">
+          <label for="branch"> የባንክ ቅርንጫፍ/</label>
+          <input
+            ngModel
+            required
+            id="branch"
+            type="text"
+            name="branch"
+            maxlength="100"
+            style="width: 200px"
+          />
+          <label for="customerNumber"> የደንበኛው መለያ ቁጥር</label
+          ><input
+            ngModel
+            required
+            type="text"
+            id="customerNumber"
+            name="customerNumber"
+            style="width: 120px"
+          /><br />
+          <label for="fullName">
+            ስም ከነ አያት/የድርጅት ስም
+          </label>
+          <input
+            ngModel
+            required
+            type="text"
+            id="fullName"
+            name="fullName"
+            style="width: 500px"
+          /><br />
+
+          <label for="accountNumber"> የባንክ ሂሣብ ቁጥር </label>
+          <input
+            ngModel
+            required
+            type="text"
+            id="accountNumber"
+            name="accountNumber"
+            style="width: 180px"
+          /><br />
+
+          <label for="city"> ከተማ</label>
+          <input ngModel required type="text" name="city" id="city" />
+
+          <label for="subCity"> ክ/ከተማ</label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="subCity"
+            id="subCity"
+          /><br />
+          <label for="kebele"> ቀበሌ/ወረዳ</label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="kebele"
+            id="kebele"
+            style="width: 140px"
+          />
+
+          <label for="houseNo"> የቤትቁ</label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="houseNo"
+            id="houseNo"
+            style="width: 100px"
+          />
+          <label for="posta"> የፖ.ሣ.ቁ.</label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="posta"
+            id="posta"
+            style="width: 100px"
+          /><br />
+          <label for="telephone"> የቤት ስልክ</label
+          ><input
+            ngModel
+            required
+            type="text"
+            name="telephone"
+            id="telephone"
+            style="width: 110px"
+          />
+          <label for="mobileNumber"> የተንቀሳቃሽ ስልክ </label>
+          <input
+            ngModel
+            required
+            type="text"
+            id="mobileNumber"
+            name="mobileNumber"
+            style="width: 110px"
+          />
+
+          <label for="officeTelephone"> የቢሮ ስልክ </label>
+          <input
+            ngModel
+            required
+            type="text"
+            id="officeTelephone"
+            name="officeTelephone"
+            style="width: 110px"
+          />
+          <br />
+          <label for="email"> ኢ-ሜይል</label>
+          <input
+            ngModel
+            required
+            id="email"
+            type="text"
+            name="email"
+            style="width: 250px"
+          />
+
+          <label for="idNo"> የመ. ዓይነት</label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="idNo"
+            id="idNo"
+            style="width: 150px"
+          /><br />
+          <label for="idRegistrationNumber">
+            የመ.ቁ. /የምዝገባ ቁ.
+          </label>
+          <input
+            ngModel
+            required
+            type="text"
+            id="idRegistrationNumber"
+            name="idRegistrationNumber"
+            style="width: 170px"
+          />
+          <label for="tillNo"> ታ.መ.ቁ.</label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="tillNo"
+            id="tillNo"
+            style="width: 130px"
+          /><br />
+          <label for="issuedBy"> የሰጠው አካል</label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="issuedBy"
+            id="issuedBy"
+            style="width: 500px"
+          /><br />
+
+          <label for="gender"> ጾታ</label>
+          <select name="gender" id="gender">
+            <option value="male" id="male" name="male" [selected]="true">
+              &nbsp;&nbsp;ወንድ
+            </option>
+            <option value="female">&nbsp;&nbsp;ሴት</option>
+          </select>
+          <label for="nationality"> ዜግነት</label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="nationality"
+            id="nationality"
+            style="width: 100px"
+            
+        
+          />
+          <label for="occupation">የሥራ ዓይነት</label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="occupation"
+            id="occupation"
+            style="width: 150px"
+          />
+          <br />
+          <label for="dob">የትውልድ ቀን</label>
+          <input ngModel required type="date" name="dob" id="dob" />
+
+          <label for="oes">የድርጅት ምስረታ ቀን</label>
+          <input
+            ngModel
+            required
+            type="date"
+            name="oes"
+            id="oes"
+            style="width: 100px"
+          />
+          <br />
+
+          <label for="employer"> ቀጣሪ ድርጅት</label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="employer"
+            id="employer"
+            style="width: 400px"
+          /><br />
+
+          <label for="monthlyIncome"> ወርሀዊ ገቢ</label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="monthlyIncome"
+            id="monthlyIncome"
+            style="width: 100px"
+          />
+          <label for="annualIncome"> ዓመታዊ ገቢ </label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="annualIncome"
+            id="annualIncome"
+            style="width: 100px"
+          /><br />
+
+          <label for="accountType"> የሂሳቡ ዓይነት </label>
+          <select id="accountType" name="accountType">
+            <option value="saving" id="saving" [selected]="true">&nbsp;&nbsp;Saving</option>
+            <option value="saving">&nbsp;&nbsp;Mobile Wallet</option>
+            <option value="saving">&nbsp;&nbsp;Cheque</option>
+          </select><br><br>
+          <div >
+            ፊርማ : _______________________&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________
+          </div>
+
+          <div class="joint" *ngIf="!hideJoint" >
+            <h6 style="font-size: small">
+              For Joint and/or Account
+            </h6>
+            <p
+              style="
+                text-align: center;
+                text-decoration: underline;
+                font-size: smaller;
+                font-weight: bold;
+              "
+            >
+              2nd Applicant
+            </p>
+            <label for="fullName1">
+              ስም ከነ አያት/የድርጅት ስም:
+            </label>
+            <input
+              ngModel
+              required
+              type="text"
+              id="fullName1"
+              name="fullName1"
+              style="width: 500px"
+            /><br />
+
+            <label for="accountNumber1"> የባንክ ሂሣብ ቁጥር:</label>
+            <input
+              ngModel
+              required
+              type="text"
+              id="accountNumber1"
+              name="accountNumber1"
+              style="width: 180px"
+            /><br />
+
+            <label for="city1"> ከተማ:</label>
+            <input ngModel required type="text" name="city1" id="city1" />
+
+            <label for="subCity1"> ክ/ከተማ: </label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="subCity1"
+              id="subCity1"
+            /><br />
+            <label for="kebele1"> ቀበሌ/ወረዳ: </label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="kebele1"
+              id="kebele1"
+              style="width: 140px"
+            />
+
+            <label for="houseNo1"> የቤትቁ.: </label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="houseNo1"
+              id="houseNo1"
+              style="width: 100px"
+            />
+            <label for="posta1"> የፖ.ሣ.ቁ. : </label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="posta1"
+              id="posta1"
+              style="width: 100px"
+            /><br />
+            <label for="telephone1"> የቤት ስልክ: </label
+            ><input
+              ngModel
+              required
+              type="text"
+              name="telephone1"
+              id="telephone1"
+              style="width: 110px"
+            />
+            <label for="mobileNumber1"> የተንቀሳቃሽ ስልክ: </label>
+            <input
+              ngModel
+              required
+              type="text"
+              id="mobileNumber1"
+              name="mobileNumber1"
+              style="width: 110px"
+            />
+
+            <label for="officeTelephone1"> የቢሮ ስልክ: </label>
+            <input
+              ngModel
+              required
+              type="text"
+              id="officeTelephone1"
+              name="officeTelephone1"
+              style="width: 110px"
+            />
+            <br />
+            <label for="email1"> ኢ-ሜይል: </label>
+            <input
+              ngModel
+              required
+              id="email1"
+              type="text"
+              name="email1"
+              style="width: 250px"
+            />
+
+            <label for="idNo1"> የመ. ዓይነት: </label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="idNo1"
+              id="idNo1"
+              style="width: 150px"
+            /><br />
+            <label for="idRegistrationNumber1">
+              የመ.ቁ. /የምዝገባ ቁ./ID No. :
+            </label>
+            <input
+              ngModel
+              required
+              type="text"
+              id="idRegistrationNumber1"
+              name="idRegistrationNumber1"
+              style="width: 170px"
+            />
+            <label for="tillNo1"> ታ.መ.ቁ.: </label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="tillNo1"
+              id="tillNo1"
+              style="width: 130px"
+            /><br />
+            <label for="issuedBy1"> የሰጠው አካል: </label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="issuedBy1"
+              id="issuedBy1"
+              style="width: 500px"
+            /><br />
+
+            <label for="gender1"> ጾታ: </label>
+            <select name="gender1" id="gender1">
+              <option value="male" id="male1" name="male1" [selected]="true">
+                &nbsp;&nbsp; ወንድ
+              </option>
+              <option value="female" id="female1" name="female1">&nbsp;&nbsp;ሴት</option>
+            </select>
+            <label for="nationality1"> ዜግነት: </label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="nationality1"
+              id="nationality1"
+              style="width: 100px"
+             
+              
+            />
+            <label for="occupation1">የሥራ ዓይነት:</label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="occupation1"
+              id="occupation1"
+              style="width: 150px"
+            />
+            <br />
+            <label for="dob1">የትውልድ ቀን:</label>
+            <input ngModel required type="date" name="dob1" id="dob1" />
+
+            <label for="oes1">የድርጅት ምስረታ ቀን:</label>
+            <input
+              ngModel
+              required
+              type="date"
+              name="oes1"
+              id="oes1"
+              style="width: 100px"
+            />
+            <br />
+
+            <label for="employer1"> ቀጣሪ ድርጅት:</label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="employer1"
+              id="employer1"
+              style="width: 400px"
+            /><br />
+
+            <label for="monthlyIncome1"> ወርሀዊ ገቢ:</label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="monthlyIncome1"
+              id="monthlyIncome1"
+              style="width: 100px"
+            />
+            <label for="annualIncome1"> ዓመታዊ ገቢ : </label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="annualIncome1"
+              id="annualIncome1"
+              style="width: 100px"
+            /><br />
+
+            <label for="accountType1"> የሂሳቡ ዓይነት : </label>
+            <select id="accountType1" name="accountType1">
+              <option value="saving" id="saving1" [selected]="true">
+                &nbsp;&nbsp;Saving
+              </option>
+              <option value="saving">&nbsp;&nbsp;Mobile Wallet</option>
+              <option value="saving">&nbsp;&nbsp;Cheque</option>
+            </select><br><br>
+            <div >
+              ፊርማ : _______________________&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________
+            </div>
+
+            <p
+              style="
+                text-align: center;
+                text-decoration: underline;
+                font-size: smaller;
+                font-weight: bold;
+              "
+            >
+              3rd Applicant
+            </p>
+            <label for="fullName2">
+              ስም ከነ አያት/የድርጅት ስም:
+            </label>
+            <input
+              ngModel
+              required
+              type="text"
+              id="fullName2"
+              name="fullName2"
+              style="width: 500px"
+            /><br />
+
+            <label for="accountNumber2"> የባንክ ሂሣብ ቁጥር:</label>
+            <input
+              ngModel
+              required
+              type="text"
+              id="accountNumber2"
+              name="accountNumber2"
+              style="width: 180px"
+            /><br />
+
+            <label for="city2"> :</label>
+            <input ngModel required type="text" name="city2" id="city2" />
+
+            <label for="subCity2"> ክ/ከተማ: </label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="subCity2"
+              id="subCity2"
+            /><br />
+            <label for="kebele2"> ቀበሌ/ወረዳ: </label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="kebele2"
+              id="kebele2"
+              style="width: 140px"
+            />
+
+            <label for="houseNo2"> የቤትቁ. : </label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="houseNo2"
+              id="houseNo2"
+              style="width: 100px"
+            />
+            <label for="posta2"> የፖ.ሣ.ቁ. : </label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="posta2"
+              id="posta2"
+              style="width: 100px"
+            /><br />
+            <label for="telephone2"> የቤት ስልክ: </label
+            ><input
+              ngModel
+              required
+              type="text"
+              name="telephone2"
+              id="telephone2"
+              style="width: 110px"
+            />
+            <label for="mobileNumber2"> የተንቀሳቃሽ ስልክ: </label>
+            <input
+              ngModel
+              required
+              type="text"
+              id="mobileNumber2"
+              name="mobileNumber2"
+              style="width: 110px"
+            />
+
+            <label for="officeTelephone2"> የቢሮ ስልክ: </label>
+            <input
+              ngModel
+              required
+              type="text"
+              id="officeTelephone2"
+              name="officeTelephone2"
+              style="width: 110px"
+            />
+            <br />
+            <label for="email2"> ኢ-ሜይል: </label>
+            <input
+              ngModel
+              required
+              id="email2"
+              type="text"
+              name="email2"
+              style="width: 250px"
+            />
+
+            <label for="idNo2"> የመ. ዓይነት: </label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="idNo2"
+              id="idNo2"
+              style="width: 150px"
+            /><br />
+            <label for="idRegistrationNumber2">
+              የመ.ቁ. /የምዝገባ ቁ. :
+            </label>
+            <input
+              ngModel
+              required
+              type="text"
+              id="idRegistrationNumber2"
+              name="idRegistrationNumber2"
+              style="width: 170px"
+            />
+            <label for="tillNo2"> ታ.መ.ቁ.: </label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="tillNo2"
+              id="tillNo2"
+              style="width: 130px"
+            /><br />
+            <label for="issuedBy2"> የሰጠው አካል: </label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="issuedBy2"
+              id="issuedBy2"
+              style="width: 500px"
+            /><br />
+
+            <label for="gender2"> ጾታ: </label>
+            <select name="gender2" id="gender2">
+              <option value="male" id="male" name="male" [selected]="true">
+                &nbsp;&nbsp; ወንድ
+              </option>
+              <option value="female">&nbsp;&nbsp;ሴት</option>
+            </select>
+            <label for="nationality2"> ዜግነት: </label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="nationality2"
+              id="nationality2"
+              style="width: 100px"
+             
+            />
+            <label for="occupation2">የሥራ ዓይነት:</label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="occupation2"
+              id="occupation2"
+              style="width: 150px"
+            />
+            <br />
+            <label for="dob2">የትውልድ ቀን:</label>
+            <input ngModel required type="date" name="dob2" id="dob2" />
+
+            <label for="oes2">የድርጅት ምስረታ ቀን:</label>
+            <input
+              ngModel
+              required
+              type="date"
+              name="oes2"
+              id="oes2"
+              style="width: 100px"
+            />
+            <br />
+
+            <label for="employer2"> ቀጣሪ ድርጅት:</label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="employer2"
+              id="employer2"
+              style="width: 400px"
+            /><br />
+
+            <label for="monthlyIncome2"> ወርሀዊ ገቢ:</label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="monthlyIncome2"
+              id="monthlyIncome2"
+              style="width: 100px"
+            />
+            <label for="annualIncome2"> ዓመታዊ ገቢ : </label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="annualIncome2"
+              id="annualIncome2"
+              style="width: 100px"
+            /><br />
+
+            <label for="accountType2"> የሂሳቡ ዓይነት : </label>
+            <select id="accountType2" name="accountType2">
+              <option value="saving" id="saving" [selected]="true">
+                &nbsp;&nbsp;Saving
+              </option>
+              <option value="saving">&nbsp;&nbsp;Mobile Wallet</option>
+              <option value="saving">&nbsp;&nbsp;Cheque</option>
+            </select><br><br>
+            <div >
+              ፊርማ : _______________________&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________
+            </div>
+            <h4>የሂሣብ የማንቀሳቀሻ ትዕዛዝ :</h4>
+
+            <div class="opInstruction">
+              <div class="opInstructionBox">
+                በአንድ ፊርማ የሚንቀሳቀስ :
+                <input
+                  ngModel
+                  required
+                  type="checkbox"
+                  name="Individual"
+                  id="Individual"
+                />
+                <div class="opSignature">ፊርማ :______________</div>
+              </div>
+              <div class="opInstructionBox">
+                በጋራ የሚንቀሳቀስ :
+                <input
+                  ngModel
+                  required
+                  type="checkbox"
+                  name="Individual"
+                  id="Individual"
+                  checked
+                />
+                <div class="opSignature">ፊርማ :_______________</div>
+              </div>
+              <div class="opInstructionBox">
+                የተለየ ትዕዛዝ :
+                <input
+                  ngModel
+                  required
+                  type="checkbox"
+                  name="Individual"
+                  id="Individual"
+                  
+                />
+                <div class="opSignature">ፊርማ :_______________</div>
+              </div>
+            </div>
+          </div>
+         
+
+          <div class="card">
+            <h4>
+              የሚፈልጉትን የኢ-ፐይመንት አገልግሎት ይምረጡ
+            </h4>
+          
+
+            <div class="atm"> 
+              <label for="atm">ኤ.ቲ.ኤም ካርድ/ATM </label> <select name="atm" id="atm">
+                <option value="yes"> &nbsp;&nbsp;እፈልጋለሁ</option>
+                <option value="no"> &nbsp;&nbsp;አልፈልግም</option>
+              </select>
+            </div>
+            <div class="mobile">
+              <label for="internet">ኤሞባይል ባንኪንግ/Mobile Banking</label> <select name="internet" id="internet">
+                <option value="yes">&nbsp;&nbsp;እፈልጋለሁ</option>
+                <option value="no">&nbsp;&nbsp;አልፈልግም</option>
+              </select>
+            </div>
+            <div class="internet">
+              <label for="internet">ኤሞባይል ባንኪንግ/Mobile Banking</label> <select name="internet" id="internet">
+                <option value="yes">&nbsp;&nbsp;እፈልጋለሁ</option>
+                <option value="no">&nbsp;&nbsp;አልፈልግም</option>
+              </select>
+            </div>
+            <label for="initial">የመጀመሪያ ተቀማጭ :</label>
+            <input
+              ngModel
+              required
+              type="text"
+              name="initial"
+              id="initial"
+              style="width: 150px"
+            />
+            ነባር ሂሳብ :
+
+            <select name="existing" id="existing">
+              <option value="yes">&nbsp;&nbsp;አዎ</option>
+              <option value="no">&nbsp;&nbsp;አይ</option>
+            </select>
+            
+          </div>
+        </form>
+        <div class="signature"><br>
+          ሂሳቡን የከፈተችው/ው ስም እና ፊርማ :
+          _________________________________________ <br /><br />
+          ሂሳቡን ያረጋገጠችው/ው ስም እና ፊርማ :
+          _________________________________________  <br /><br />
+
+          የቅርንጫፍ ተቆጣጣሪዋ/ው ስም እና ፊርማ :
+          _________________________________________
+        </div>
+  
+
+
+        
+
+  <button class="btn1" *ngIf="!hideFileInput" (click)="onPrint($event)">
+    Print
+  </button>
+  <button
+    class="btn2"
+    type="button"
+    *ngIf="!hideFileInput"
+    ngModel
+    (click)="onChangeButton()"
+  >
+  ፎርም ጨምር
+  </button>
+  
+  
+ 
+</div>
+</div>
+</div>
+
+
+</div>
+   

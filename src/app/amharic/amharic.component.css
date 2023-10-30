@@ -187,3 +187,6 @@ button:hover{
     option{
       font-weight: bolder;
     }
+    .date{
+      padding: 10px;
+    }

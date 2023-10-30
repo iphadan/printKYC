@@ -179,13 +179,17 @@ button:hover{
     select {
       -webkit-appearance: none;
       -moz-appearance: none;
-      appearance: none;
+      appearance:none;
       border: none;
       font-weight: bolder;
       text-decoration: underline;
     }
     option{
       font-weight: bolder;
+    }
+    option:not(:checked) {
+      background-color: #fff;
+      
     }
     .date{
       padding: 10px;

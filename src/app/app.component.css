@@ -7,10 +7,11 @@
    
     }
 
-    option{
+    option, select{
       font-weight: bolder;
+     
     }
-
+   
 
     
   @media print {

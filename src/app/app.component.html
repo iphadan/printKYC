@@ -8,7 +8,7 @@
 <div class="selectLanguage" *ngIf="!hideFileInput">
 
 <label for="language"> Language</label>
-<select name="language" id="language">
+<select name="language" id="language" (change)="onSelect($event)">
   <option value="English" id="english" name="english" [selected]="true">
     &nbsp;&nbsp;English
   </option>

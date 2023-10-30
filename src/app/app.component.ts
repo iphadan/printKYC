@@ -10,7 +10,7 @@ import { AmharicComponent } from './amharic/amharic.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  language="Oromic";
+  language="English";
   hideFileInput=false;
 
   onSelect(event:any){

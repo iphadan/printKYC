@@ -161,6 +161,10 @@ button:hover{
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
-      
+      font-weight: bolder;
+      border: none;
       text-decoration: underline;
+    }
+    option{
+      font-weight: bolder;
     }

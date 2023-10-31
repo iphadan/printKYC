@@ -60,16 +60,8 @@
         name="branch"
         maxlength="100"
         style="width: 200px"
-      />
-      <label for="customerNumber"> customer No. </label
-      ><input
-        ngModel
-        required
-        type="text"
-        id="customerNumber"
-        name="customerNumber"
-        style="width: 120px"
-      /><br />
+      /><br>
+    
       <label for="fullName">
         Full Name/Name of Organization:
       </label>
@@ -81,6 +73,18 @@
         name="fullName"
         style="width: 500px"
       /><br />
+
+      <label for="mother">
+        Mother Name:
+      </label>
+      <input
+        ngModel
+        required
+        type="text"
+        id="mother"
+        name="mother"
+        style="width: 500px"
+      /><br />
   
       <label for="accountNumber"> Account Number </label>
       <input
@@ -90,10 +94,19 @@
         id="accountNumber"
         name="accountNumber"
         style="width: 180px"
-      /><br />
-  
+      /> <label for="customerNumber"> customer No. </label
+        ><input
+          ngModel
+          required
+          type="text"
+          id="customerNumber"
+          name="customerNumber"
+          style="width: 140px"
+        /><br />
+        <label for="region"> Region </label>
+        <input ngModel required type="text" name="region" id="region" style="width: 150px"/>
       <label for="city"> City </label>
-      <input ngModel required type="text" name="city" id="city" />
+      <input ngModel required type="text" name="city" id="city"style="width: 150px" />
   
       <label for="subCity"> Sub-city </label>
       <input
@@ -102,6 +115,7 @@
         type="text"
         name="subCity"
         id="subCity"
+        style="width: 150px"
       /><br />
       <label for="kebele"> Kebele/Woreda </label>
       <input
@@ -315,7 +329,19 @@
           name="fullName1"
           style="width: 500px"
         /><br />
-  
+        <label for="mother1">
+          Mother Name:
+        </label>
+        <input
+          ngModel
+          required
+          type="text"
+          id="mother1"
+          name="mother1"
+          style="width: 500px"
+        /><br />
+        <label for="region1"> Region </label>
+        <input ngModel required type="text" name="region1" id="region1" style="width: 150px"/>
         <label for="city1"> City </label>
         <input ngModel required type="text" name="city1" id="city1" />
   
@@ -530,8 +556,20 @@
           name="fullName2"
           style="width: 500px"
         /><br />
+        <label for="mother2">
+          Mother Name:
+        </label>
+        <input
+          ngModel
+          required
+          type="text"
+          id="mother2"
+          name="mother2"
+          style="width: 500px"
+        /><br />
   
-  
+        <label for="region2"> Region </label>
+        <input ngModel required type="text" name="region2" id="region2" style="width: 150px"/>
         <label for="city2"> City </label>
         <input ngModel required type="text" name="city2" id="city2" />
   

@@ -67,16 +67,8 @@
             name="branch"
             maxlength="100"
             style="width: 200px"
-          />
-          <label for="customerNumber"> የደንበኛው መለያ ቁጥር</label
-          ><input
-            ngModel
-            required
-            type="text"
-            id="customerNumber"
-            name="customerNumber"
-            style="width: 120px"
-          /><br />
+          /><br>
+        
           <label for="fullName">
             ስም ከነ አያት/የድርጅት ስም
           </label>
@@ -88,6 +80,17 @@
             name="fullName"
             style="width: 500px"
           /><br />
+          <label for="mother">
+            የእናት ስም :
+          </label>
+          <input
+            ngModel
+            required
+            type="text"
+            id="mother"
+            name="mother"
+            style="width: 500px"
+          /><br />
 
           <label for="accountNumber"> የባንክ ሂሣብ ቁጥር </label>
           <input
@@ -97,10 +100,19 @@
             id="accountNumber"
             name="accountNumber"
             style="width: 180px"
-          /><br />
-
+          />  <label for="customerNumber"> የደንበኛው መለያ ቁጥር</label
+            ><input
+              ngModel
+              required
+              type="text"
+              id="customerNumber"
+              name="customerNumber"
+              style="width: 120px"
+            /><br />
+          <label for="region"> ክልል/ግዛት</label>
+          <input ngModel required type="text" name="region" id="region" style="width: 150px"/>
           <label for="city"> ከተማ</label>
-          <input ngModel required type="text" name="city" id="city" />
+          <input ngModel required type="text" name="city" id="city" style="width: 150px" />
 
           <label for="subCity"> ክ/ከተማ</label>
           <input
@@ -109,6 +121,7 @@
             type="text"
             name="subCity"
             id="subCity"
+            style="width: 150px"
           /><br />
           <label for="kebele"> ቀበሌ/ወረዳ</label>
           <input
@@ -319,10 +332,20 @@
               required
               type="text"
               id="fullName1"
-              name="fullName1"
+              name="mother1"
               style="width: 500px"
             /><br />
-
+            <label for="mother1">
+              የእናት ስም :
+            </label>
+            <input
+              ngModel
+              required
+              type="text"
+              id="mother1"
+              name="mother1"
+              style="width: 500px"
+            /><br />
             <label for="accountNumber1"> የባንክ ሂሣብ ቁጥር:</label>
             <input
               ngModel
@@ -332,7 +355,8 @@
               name="accountNumber1"
               style="width: 180px"
             /><br />
-
+            <label for="region1"> ክልል/ግዛት</label>
+            <input ngModel required type="text" name="region1" id="region1" style="width: 150px"/>
             <label for="city1"> ከተማ:</label>
             <input ngModel required type="text" name="city1" id="city1" />
 
@@ -537,7 +561,7 @@
             3ኛ አመልካች
             </p>
             <label for="fullName2">
-              ስም ከነ አያት/የድርጅት ስም:
+              ስም ከነ አያት/የድርጅት ስም :
             </label>
             <input
               ngModel
@@ -547,8 +571,18 @@
               name="fullName2"
               style="width: 500px"
             /><br />
-
-            <label for="accountNumber2"> የባንክ ሂሣብ ቁጥር:</label>
+            <label for="mother2">
+              የእናት ስም :
+            </label>
+            <input
+              ngModel
+              required
+              type="text"
+              id="mother2"
+              name="mother2"
+              style="width: 500px"
+            /><br />
+            <label for="accountNumber2"> የባንክ ሂሣብ ቁጥር :</label>
             <input
               ngModel
               required
@@ -557,7 +591,8 @@
               name="accountNumber2"
               style="width: 180px"
             /><br />
-
+            <label for="region2"> ክልል/ግዛት :</label>
+            <input ngModel required type="text" name="region2" id="region2" style="width: 150px"/>
             <label for="city2"> :</label>
             <input ngModel required type="text" name="city2" id="city2" />
 

@@ -60,16 +60,8 @@
         name="branch"
         maxlength="100"
         style="width: 200px"
-      />
-      <label for="customerNumber"> maamila Lakk. </label
-      ><input
-        ngModel
-        required
-        type="text"
-        id="customerNumber"
-        name="customerNumber"
-        style="width: 120px"
-      /><br />
+      /><br>
+   
       <label for="fullName">
         Maqaa Guutuu/Maqaa Jaarmiyaa:
       </label>
@@ -81,8 +73,18 @@
         name="fullName"
         style="width: 500px"
       /><br />
-  
-      <label for="accountNumber"> Lakkoofsa Herregaa </label>
+      <label for="mother">
+        Maqaa haadha
+      </label>
+      <input
+        ngModel
+        required
+        type="text"
+        id="mother"
+        name="mother"
+        style="width: 500px"
+      /><br />
+      <label for="accountNumber"> Lakk. Herregaa </label>
       <input
         ngModel
         required
@@ -90,10 +92,21 @@
         id="accountNumber"
         name="accountNumber"
         style="width: 180px"
-      /><br />
-  
+      />
+      <label for="customerNumber"> Lakk. maamila  </label
+        ><input
+          ngModel
+          required
+          type="text"
+          id="customerNumber"
+          name="customerNumber"
+          style="width: 120px"
+        /><br />
+        <label for="region2">naannoo </label>
+        <input ngModel required type="text" name="region2" id="region2"  style="width: 150px"/>
       <label for="city">Magaalaa </label>
-      <input ngModel required type="text" name="city" id="city" />
+      <input ngModel required type="text" name="city" id="city"  style="width: 150px"/>
+    
   
       <label for="subCity"> Magaalaa xiqqaa </label>
       <input
@@ -102,6 +115,7 @@
         type="text"
         name="subCity"
         id="subCity"
+        style="width: 150px"
       /><br />
       <label for="kebele"> Kebele/Woredaa</label>
       <input
@@ -113,7 +127,7 @@
         style="width: 140px"
       />
   
-      <label for="houseNo"> Mana.Lakk </label>
+      <label for="houseNo"> Lakk. Mana </label>
       <input
         ngModel
         required
@@ -131,7 +145,7 @@
         id="posta"
         style="width: 100px"
       /><br />
-      <label for="telephone"> mana. Bilbila </label
+      <label for="telephone">Bilbila mana </label
       ><input
         ngModel
         required
@@ -150,7 +164,7 @@
         style="width: 110px"
       />
   
-      <label for="officeTelephone"> Waajjira.Bilbila</label>
+      <label for="officeTelephone"> Bilbila Waajjira</label>
       <input
         ngModel
         required
@@ -190,7 +204,7 @@
         name="idRegistrationNumber"
         style="width: 170px"
       />
-      <label for="tillNo"> TIN Lakk </label>
+      <label for="tillNo"> Lakk. TIN  </label>
       <input
         ngModel
         required
@@ -199,7 +213,7 @@
         id="tillNo"
         style="width: 130px"
       /><br />
-      <label for="issuedBy"> Issued by </label>
+      <label for="issuedBy"> Kan kenne </label>
       <input
         ngModel
         required
@@ -294,7 +308,7 @@
   
       <div class="joint" *ngIf="!hideJoint" ngModel>
         <h6 style="font-size: small">
-          For Joint and/or Account
+          Herrega Waliiniitiif
         </h6>
         <p
           style="
@@ -304,7 +318,7 @@
             font-weight: bold;
           "
         >
-          2nd Applicant
+        Iyyataa 2ffaa
         </p>
         <label for="fullName1">
           Maqaa Guutuu/Maqaa Jaarmiyaa:
@@ -317,7 +331,19 @@
           name="fullName1"
           style="width: 500px"
         /><br />
-  
+        <label for="mother1">
+          Maqaa haadha
+        </label>
+        <input
+          ngModel
+          required
+          type="text"
+          id="mother1"
+          name="mother1"
+          style="width: 500px"
+        /><br />
+        <label for="region">naannoo </label>
+        <input ngModel required type="text" name="region" id="region"  style="width: 150px"/>
         <label for="city1">Magaalaa </label>
         <input ngModel required type="text" name="city1" id="city1" />
   
@@ -339,7 +365,7 @@
           style="width: 140px"
         />
   
-        <label for="houseNo1"> Mana.Lakk </label>
+        <label for="houseNo1"> Lakk. Mana </label>
         <input
           ngModel
           required
@@ -376,7 +402,7 @@
           style="width: 110px"
         />
   
-        <label for="officeTelephone1"> Waajjira.Bilbila</label>
+        <label for="officeTelephone1"> Bilb. Waajjiraila</label>
         <input
           ngModel
           required
@@ -415,7 +441,7 @@
           name="idRegistrationNumber1"
           style="width: 170px"
         />
-        <label for="tillNo1"> TIN Lakk </label>
+        <label for="tillNo1"> Lakk. TIN  </label>
         <input
           ngModel
           required
@@ -424,7 +450,7 @@
           id="tillNo1"
           style="width: 130px"
         /><br />
-        <label for="issuedBy1"> Issued by </label>
+        <label for="issuedBy1"> Kan kenne </label>
         <input
           ngModel
           required
@@ -439,8 +465,7 @@
           <option value="male" id="male1" name="male1" [selected]="true">
             &nbsp;&nbsp; Dhiira
           </option>
-          <option value="female" id="female1" name="female1">&nbsp;&nbsp;Dubartii<
-/option>
+          <option value="female" id="female1" name="female1">&nbsp;&nbsp;Dubartii</option>
         </select>
         <label for="nationality1">Lammummaa
  </label>
@@ -520,7 +545,7 @@
             font-weight: bold;
           "
         >
-          3rd Applicant
+        Iyyataa 3ffaa
         </p>
         <label for="fullName2">
           Maqaa Guutuu/Maqaa Jaarmiyaa:
@@ -533,7 +558,19 @@
           name="fullName2"
           style="width: 500px"
         /><br />
-  
+        <label for="mother2">
+          Maqaa haadha
+        </label>
+        <input
+          ngModel
+          required
+          type="text"
+          id="mother2"
+          name="mother2"
+          style="width: 500px"
+        /><br />
+        <label for="region1">naannoo </label>
+        <input ngModel required type="text" name="region1" id="region1"  style="width: 150px"/>
   
         <label for="city2">Magaalaa </label>
         <input ngModel required type="text" name="city2" id="city2" />
@@ -556,7 +593,7 @@
           style="width: 140px"
         />
   
-        <label for="houseNo2"> Mana.Lakk </label>
+        <label for="houseNo2"> Lakk. Mana </label>
         <input
           ngModel
           required
@@ -574,7 +611,7 @@
           id="posta2"
           style="width: 100px"
         /><br />
-        <label for="telephone2"> mana. Bilbila </label
+        <label for="telephone2">  Bilbila mana </label
         ><input
           ngModel
           required
@@ -593,7 +630,7 @@
           style="width: 110px"
         />
   
-        <label for="officeTelephone2"> Waajjira.Bilb</label>
+        <label for="officeTelephone2"> Bilb. Waajjira</label>
         <input
           ngModel
           required
@@ -632,7 +669,7 @@
           name="idRegistrationNumber2"
           style="width: 170px"
         />
-        <label for="tillNo2"> TIN Lakk :</label>
+        <label for="tillNo2"> Lakk. TIN  :</label>
         <input
           ngModel
           required

@@ -14,7 +14,7 @@
               <img
                 *ngIf="imageURL; else noImage"
                 [src]="imageURL"
-                style="width: 150px"
+           
               />
               <ng-template #noImage> </ng-template>
             </div>
@@ -38,7 +38,7 @@
   <div class="changeLanguage" >
 
     <div class="date" style="margin-left: 70%; text-decoration: underline">
-      <label for="date">date :</label>
+      <div class="flex"></div><label for="date">date :</label>
       <input
         type="date"
         name="date"
@@ -51,7 +51,7 @@
     </h4>
   
     <form #kycForm="ngForm">
-      <label for="branch"> Branch  </label>
+      <div class="flex"></div><label for="branch"> Branch  </label>
       <input
         ngModel
         required
@@ -62,7 +62,7 @@
         style="width: 200px"
       /><br>
     
-      <label for="fullName">
+      <div class="flex"></div><label for="fullName">
         Full Name/Name of Organization:
       </label>
       <input
@@ -74,7 +74,7 @@
         style="width: 500px"
       /><br />
 
-      <label for="mother">
+      <div class="flex"></div><label for="mother">
         Mother Name:
       </label>
       <input
@@ -86,114 +86,148 @@
         style="width: 500px"
       /><br />
   
-      <label for="accountNumber"> Account Number </label>
-      <input
-        ngModel
-        required
-        type="text"
-        id="accountNumber"
-        name="accountNumber"
-        style="width: 180px"
-      /> <label for="customerNumber"> customer No. </label
-        ><input
+      <div class="flex1"><label for="accountNumber"> Account Number </label>
+        <input
           ngModel
           required
           type="text"
-          id="customerNumber"
-          name="customerNumber"
-          style="width: 140px"
-        /><br />
-        <label for="region"> Region </label>
-        <input ngModel required type="text" name="region" id="region" style="width: 150px"/>
-      <label for="city"> City </label>
-      <input ngModel required type="text" name="city" id="city"style="width: 150px" />
+          id="accountNumber"
+          name="accountNumber"
+          style="width: 180px"
+        /></div>
+      
+      
+      
+      <div class="flex2">
+
+        <label for="customerNumber"> customer No. </label
+          ><input
+            ngModel
+            required
+            type="text"
+            id="customerNumber"
+            name="customerNumber"
+            style="width: 140px"
+          />
+      </div>
+        <div class="flex1"><label for="region"> Region </label>
+          <input ngModel required type="text" name="region" id="region"Galii Wag.Giddugaleessaa/></div>
+      <div class="flex2"><label for="city"> City </label>
+      <input ngModel required type="text" name="city" id="city"style="" /></div>
   
-      <label for="subCity"> Sub-city </label>
+      <div class="flex1">
+        <label for="subCity"> Sub-city </label>
       <input
         ngModel
         required
         type="text"
         name="subCity"
         id="subCity"
-        style="width: 150px"
-      /><br />
-      <label for="kebele"> Kebele/Woreda </label>
-      <input
-        ngModel
-        required
-        type="text"
-        name="kebele"
-        id="kebele"
-        style="width: 140px"
+   
       />
+      </div>
+      <div class="flex2">
+        <label for="kebele"> Kebele/Woreda </label>
+        <input
+          ngModel
+          required
+          type="text"
+          name="kebele"
+          id="kebele"
+          style="width: 140px"
+        />
+
+      </div>
   
-      <label for="houseNo"> House.No </label>
-      <input
-        ngModel
-        required
-        type="text"
-        name="houseNo"
-        id="houseNo"
-        style="width: 100px"
-      />
-      <label for="posta">  P.O.Box </label>
+      <div class="flex1">
+        <label for="houseNo"> House.No </label>
+        <input
+          ngModel
+          required
+          type="text"
+          name="houseNo"
+          id="houseNo"
+     
+        />
+
+      </div>
+      <div class="flex2"><label for="posta">  P.O.Box </label>
       <input
         ngModel
         required
         type="text"
         name="posta"
         id="posta"
-        style="width: 100px"
-      /><br />
-      <label for="telephone">  Res. Tel </label
-      ><input
-        ngModel
-        required
-        type="text"
-        name="telephone"
-        id="telephone"
-        style="width: 110px"
-      />
-      <label for="mobileNumber"> Mobile </label>
+   
+      /></div>
+      <div class="flex1">
+        <label for="telephone">  Res. Tel </label
+          ><input
+            ngModel
+            required
+            type="text"
+            name="telephone"
+            id="telephone"
+            
+          />
+
+      </div>
+      
+      
+      
+     
+      <div class="flex2">
+
+        <label for="mobileNumber"> Mobile </label>
       <input
         ngModel
         required
         type="text"
         id="mobileNumber"
         name="mobileNumber"
-        style="width: 110px"
+        
       />
+      </div>
   
-      <label for="officeTelephone"> Off.Tel </label>
-      <input
-        ngModel
-        required
-        type="text"
-        id="officeTelephone"
-        name="officeTelephone"
-        style="width: 110px"
-      />
-      <br />
-      <label for="email">  Email </label>
-      <input
-        ngModel
-        required
-        id="email"
-        type="text"
-        name="email"
-        style="width: 250px"
-      />
-  
-      <label for="idNo"> ID type </label>
+      <div class="flex1">
+        <label for="officeTelephone"> Off.Tel </label>
+        <input
+          ngModel
+          required
+          type="text"
+          id="officeTelephone"
+          name="officeTelephone"
+          
+        />
+
+      </div>
+    
+      <div class="flex2">
+        <label for="email">  Email </label>
+        <input
+          ngModel
+          required
+          id="email"
+          type="text"
+          name="email"
+          style="width: 250px"
+        />
+    
+
+      </div>
+      <div class="flex1">
+
+        <label for="idNo"> ID type </label>
       <input
         ngModel
         required
         type="text"
         name="idNo"
         id="idNo"
-        style="width: 150px"
-      /><br />
-      <label for="idRegistrationNumber">
+   
+      />
+      </div>
+      <div class="flex2"><label for="idRegistrationNumber">
         ID No. /Registration No
       </label>
       <input
@@ -203,17 +237,9 @@
         id="idRegistrationNumber"
         name="idRegistrationNumber"
         style="width: 170px"
-      />
-      <label for="tillNo"> TIN No </label>
-      <input
-        ngModel
-        required
-        type="text"
-        name="tillNo"
-        id="tillNo"
-        style="width: 130px"
-      /><br />
-      <label for="issuedBy"> Issued by </label>
+      /></div>
+    
+      <div class="flex"><label for="issuedBy"> Issued by </label>
       <input
         ngModel
         required
@@ -221,86 +247,103 @@
         name="issuedBy"
         id="issuedBy"
         style="width: 500px"
-      /><br />
+      /></div>
+      <div class="flex1"><label for="tillNo"> TIN No </label>
+        <input
+          ngModel
+          required
+          type="text"
+          name="tillNo"
+          id="tillNo"
+          
+        /></div>
   
-      <label for="gender"> Gende </label>
+      <div class="flex2"><label for="gender"> Gender </label>
       <select name="gender" id="gender">
         <option value="male" id="male" name="male" [selected]="true">
           &nbsp;&nbsp;Male
         </option>
         <option value="female">&nbsp;&nbsp;Female</option>
-      </select>
-      <label for="nationality"> Nationality </label>
+      </select></div><br>
+
+
+
+      <div class="flex1">
+        <label for="nationality"> Nationality </label>
       <input
-        ngModel
+        
         required
         type="text"
         name="nationality"
         id="nationality"
-        style="width: 100px"
         
+ 
     
       />
-      <label for="occupation">Occupation</label>
-      <input
-        ngModel
-        required
-        type="text"
-        name="occupation"
-        id="occupation"
-        style="width: 150px"
-      />
-      <br />
-      <label for="dob">DOB(for Individual)</label>
-      <input ngModel required type="date" name="dob" id="dob" />
+      </div>
+
+      
+      <div class="flex2">
+        <label for="occupation">Occupation</label>
+        <input
+        
+          required
+          type="text"
+          name="occupation"
+          id="occupation"
+        
+        /></div>
+      
+      <div class="flex1"> <label for="dob">DOB(for Individual)</label>
+        <input ngModel required type="date" name="dob" id="dob" /></div>
   
-      <label for="oes">(Org Establishment Date)</label>
+      <div class="flex2"><label for="oes">(Org Establishment Date)</label>
       <input
         ngModel
         required
         type="date"
         name="oes"
         id="oes"
-        style="width: 100px"
-      />
-      <br />
+   
+      /></div>
+      
   
-      <label for="employer"> Employer</label>
-      <input
-        ngModel
-        required
-        type="text"
-        name="employer"
-        id="employer"
-        style="width: 400px"
-      /><br />
+      <div class="flex"><label for="employer"> Employer</label>
+        <input
+          ngModel
+          required
+          type="text"
+          name="employer"
+          id="employer"
+          style="width: 400px"
+        /></div>
   
-      <label for="monthlyIncome"> Average Monthly Income </label>
+      <div class="flex1"><label for="monthlyIncome"> Average Monthly Income </label>
       <input
         ngModel
         required
         type="text"
         name="monthlyIncome"
         id="monthlyIncome"
-        style="width: 100px"
-      />
-      <label for="annualIncome"> Average Annual Income </label>
-      <input
-        ngModel
-        required
-        type="text"
-        name="annualIncome"
-        id="annualIncome"
-        style="width: 100px"
-      /><br />
+   
+      /></div>
+      <div class="flex2"><label for="annualIncome"> Average Annual Income </label>
+        <input
+          ngModel
+          required
+          type="text"
+          name="annualIncome"
+          id="annualIncome"
+     
+        /></div>
   
-      <label for="accountType"> Account Type </label>
-      <select id="accountType" name="accountType">
-        <option value="saving" id="saving" [selected]="true">&nbsp;&nbsp;Saving</option>
-        <option value="saving">&nbsp;&nbsp;Mobile Wallet</option>
-        <option value="saving">&nbsp;&nbsp;Cheque</option>
-      </select><br><br>
-      <div >
+      <div class="flex"><label for="accountType"> Account Type </label>
+        <select id="accountType" name="accountType">
+          <option value="saving" id="saving" [selected]="true">&nbsp;&nbsp;Saving</option>
+          <option value="saving">&nbsp;&nbsp;Mobile Wallet</option>
+          <option value="saving">&nbsp;&nbsp;Cheque</option>
+        </select></div>
+      <div ><br>
         Signature _______________________&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________
       </div>
   
@@ -318,7 +361,7 @@
         >
           2nd Applicant
         </p>
-        <label for="fullName1">
+        <div class="flex"></div><label for="fullName1">
           Full Name/Name of Organization:
         </label>
         <input
@@ -329,7 +372,8 @@
           name="fullName1"
           style="width: 500px"
         /><br />
-        <label for="mother1">
+  
+        <div class="flex"></div><label for="fullName1">
           Mother Name:
         </label>
         <input
@@ -340,96 +384,126 @@
           name="mother1"
           style="width: 500px"
         /><br />
-        <label for="region1"> Region </label>
-        <input ngModel required type="text" name="region1" id="region1" style="width: 150px"/>
-        <label for="city1"> City </label>
-        <input ngModel required type="text" name="city1" id="city1" />
-  
-        <label for="subCity1"> Sub-city </label>
+    
+      
+          <div class="flex1"><label for="region1"> Region </label>
+            <input ngModel required type="text" name="region" id="region1"Galii Wag.Giddugaleessaa/></div>
+        <div class="flex2"><label for="city1"> City </label>
+        <input ngModel required type="text" name="city" id="city1"style="" /></div>
+    
+        <div class="flex1">
+          <label for="subCity1"> Sub-city </label>
         <input
           ngModel
           required
           type="text"
           name="subCity1"
-          id="subCity1"
-        /><br />
-        <label for="kebele1"> Kebele/Woreda </label>
-        <input
-          ngModel
-          required
-          type="text"
-          name="kebele1"
-          id="kebele1"
-          style="width: 140px"
+          id="subCity"
+     
         />
+        </div>
+        <div class="flex2">
+          <label for="kebele1"> Kebele/Woreda </label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="kebele1"
+            id="kebele"
+            style="width: 140px"
+          />
   
-        <label for="houseNo1"> House.No </label>
+        </div>
+    
+        <div class="flex1">
+          <label for="houseNo1"> House.No </label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="houseNo1"
+            id="houseNo1"
+       
+          />
+  
+        </div>
+        <div class="flex2"><label for="posta1">  P.O.Box </label>
         <input
           ngModel
           required
           type="text"
-          name="houseNo1"
-          id="houseNo1"
-          style="width: 100px"
-        />
-        <label for="posta1">  P.O.Box </label>
-        <input
-          ngModel
-          required
-          type="text"
-          name="posta1"
+          name="posta"
           id="posta1"
-          style="width: 100px"
-        /><br />
-        <label for="telephone1"> Res.Tel </label
-        ><input
-          ngModel
-          required
-          type="text"
-          name="telephone1"
-          id="telephone1"
-          style="width: 110px"
-        />
-        <label for="mobileNumber1"> Mobile </label>
+     
+        /></div>
+        <div class="flex1">
+          <label for="telephone1">  Res. Tel </label
+            ><input
+              ngModel
+              required
+              type="text"
+              name="telephone1"
+              id="telephone1"
+              
+            />
+  
+        </div>
+        
+        
+        
+       
+        <div class="flex2">
+  
+          <label for="mobileNumber1"> Mobile </label>
         <input
           ngModel
           required
           type="text"
           id="mobileNumber1"
-          name="mobileNumber1"
-          style="width: 110px"
+          name="mobileNumber"
+          
         />
+        </div>
+    
+        <div class="flex1">
+          <label for="officeTelephone1"> Off.Tel </label>
+          <input
+            ngModel
+            required
+            type="text"
+            id="officeTelephone1"
+            name="officeTelephone"
+            
+          />
   
-        <label for="officeTelephone1"> Off.Tel </label>
-        <input
-          ngModel
-          required
-          type="text"
-          id="officeTelephone1"
-          name="officeTelephone1"
-          style="width: 110px"
-        />
-        <br />
-        <label for="email1">  Email </label>
-        <input
-          ngModel
-          required
-          id="email1"
-          type="text"
-          name="email1"
-          style="width: 250px"
-        />
+        </div>
+      
+        <div class="flex2">
+          <label for="email1">  Email </label>
+          <input
+            ngModel
+            required
+            id="email1"
+            type="text"
+            name="email"
+            style="width: 250px"
+          />
+      
   
-        <label for="idNo1"> ID type </label>
+        </div>
+        <div class="flex1">
+  
+          <label for="idNo1"> ID type </label>
         <input
           ngModel
           required
           type="text"
-          name="idNo1"
+          name="idNo"
           id="idNo1"
-          style="width: 150px"
-        /><br />
-        <label for="idRegistrationNumber1">
+     
+        />
+        </div>
+        <div class="flex2"><label for="idRegistrationNumber1">
           ID No. /Registration No
         </label>
         <input
@@ -437,101 +511,109 @@
           required
           type="text"
           id="idRegistrationNumber1"
-          name="idRegistrationNumber1"
+          name="idRegistrationNumber"
           style="width: 170px"
-        />
-        <label for="tillNo1"> TIN No </label>
+        /></div>
+      
+        <div class="flex"><label for="issuedBy1"> Issued by </label>
         <input
           ngModel
           required
           type="text"
-          name="tillNo1"
-          id="tillNo1"
-          style="width: 130px"
-        /><br />
-        <label for="issuedBy1"> Issued by </label>
-        <input
-          ngModel
-          required
-          type="text"
-          name="issuedBy1"
+          name="issuedBy"
           id="issuedBy1"
           style="width: 500px"
-        /><br />
-  
-        <label for="gender1"> Gende </label>
-        <select name="gender1" id="gender1">
-          <option value="male" id="male1" name="male1" [selected]="true">
-            &nbsp;&nbsp; Male
+        /></div>
+        <div class="flex1"><label for="tillNo1"> TIN No </label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="tillNo"
+            id="tillNo1"
+           
+          /></div>
+    
+        <div class="flex2"><label for="gender1"> Gender </label>
+        <select name="gender" id="gender1">
+          <option value="male" id="male" name="male" [selected]="true">
+            &nbsp;&nbsp;Male
           </option>
-          <option value="female" id="female1" name="female1">&nbsp;&nbsp;Female</option>
-        </select>
-        <label for="nationality1"> Nationality </label>
-        <input
-          ngModel
-          required
-          type="text"
-          name="nationality1"
-          id="nationality1"
-          style="width: 100px"
-         
-          
-        />
-        <label for="occupation1">Occupation</label>
-        <input
-          ngModel
-          required
-          type="text"
-          name="occupation1"
-          id="occupation1"
-          style="width: 150px"
-        />
-        <br />
-        <label for="dob1">DOB(for Individual)</label>
-        <input ngModel required type="date" name="dob1" id="dob1" />
+          <option value="female">&nbsp;&nbsp;Female</option>
+        </select></div><br>
   
-        <label for="oes1">(Org Establishment Date)</label>
+  
+  
+        <div class="flex1">
+          <label for="nationality1"> Nationality </label>
+        <input
+          
+          required
+          type="text"
+          name="nationality"
+          id="nationality1"
+          
+   
+      
+        />
+        </div>
+  
+        
+        <div class="flex2">
+          <label for="occupation1">Occupation</label>
+          <input
+          
+            required
+            type="text"
+            name="occupation"
+            id="occupation1"
+          
+          /></div>
+        
+        <div class="flex1"> <label for="dob1">DOB(for Individual)</label>
+          <input ngModel required type="date" name="dob" id="dob1" /></div>
+    
+        <div class="flex2"><label for="oes1">(Org Establishment Date)</label>
         <input
           ngModel
           required
           type="date"
-          name="oes1"
+          name="oes"
           id="oes1"
-          style="width: 100px"
-        />
-        <br />
-  
-        <label for="employer1"> Employer</label>
+     
+        /></div>
+        
+    
+        <div class="flex"><label for="employer1"> Employer</label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="employer"
+            id="employer1"
+            style="width: 400px"
+          /></div>
+    
+        <div class="flex1"><label for="monthlyIncome1"> Average Monthly Income </label>
         <input
           ngModel
           required
           type="text"
-          name="employer1"
-          id="employer1"
-          style="width: 400px"
-        /><br />
-  
-        <label for="monthlyIncome1"> Average Monthly Income </label>
-        <input
-          ngModel
-          required
-          type="text"
-          name="monthlyIncome1"
+          name="monthlyIncome"
           id="monthlyIncome1"
-          style="width: 100px"
-        />
-        <label for="annualIncome1"> Average Annual Income </label>
-        <input
-          ngModel
-          required
-          type="text"
-          name="annualIncome1"
-          id="annualIncome1"
-          style="width: 100px"
-        /><br />
-  
+     
+        /></div>
+        <div class="flex2"><label for="annualIncome1"> Average Annual Income </label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="annualIncome"
+            id="annualIncome1"
        
-        <div >
+          /></div>
+       
+        <div ><br>
           Signature _______________________&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________
         </div>
   
@@ -545,7 +627,7 @@
         >
           3rd Applicant
         </p>
-        <label for="fullName2">
+        <div class="flex"></div><label for="fullName2">
           Full Name/Name of Organization:
         </label>
         <input
@@ -553,10 +635,11 @@
           required
           type="text"
           id="fullName2"
-          name="fullName2"
+          name="fullName"
           style="width: 500px"
         /><br />
-        <label for="mother2">
+  
+        <div class="flex"></div><label for="mother2">
           Mother Name:
         </label>
         <input
@@ -564,100 +647,129 @@
           required
           type="text"
           id="mother2"
-          name="mother2"
+          name="mother"
           style="width: 500px"
         /><br />
-  
-        <label for="region2"> Region </label>
-        <input ngModel required type="text" name="region2" id="region2" style="width: 150px"/>
-        <label for="city2"> City </label>
-        <input ngModel required type="text" name="city2" id="city2" />
-  
-        <label for="subCity2"> Sub-city </label>
+    
+        
+          <div class="flex1"><label for="region2"> Region </label>
+            <input ngModel required type="text" name="region" id="region2"Galii Wag.Giddugaleessaa/></div>
+        <div class="flex2"><label for="city2"> City </label>
+        <input ngModel required type="text" name="city" id="city2"style="" /></div>
+    
+        <div class="flex1">
+          <label for="subCity2"> Sub-city </label>
         <input
           ngModel
           required
           type="text"
-          name="subCity2"
+          name="subCity"
           id="subCity2"
-        /><br />
-        <label for="kebele2"> Kebele/Woreda </label>
-        <input
-          ngModel
-          required
-          type="text"
-          name="kebele2"
-          id="kebele2"
-          style="width: 140px"
+     
         />
+        </div>
+        <div class="flex2">
+          <label for="kebele2"> Kebele/Woreda </label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="kebele"
+            id="kebele2"
+            style="width: 140px"
+          />
   
-        <label for="houseNo2"> House.No </label>
+        </div>
+    
+        <div class="flex1">
+          <label for="houseNo2"> House.No </label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="houseNo"
+            id="houseNo2"
+       
+          />
+  
+        </div>
+        <div class="flex2"><label for="posta2">  P.O.Box </label>
         <input
           ngModel
           required
           type="text"
-          name="houseNo2"
-          id="houseNo2"
-          style="width: 100px"
-        />
-        <label for="posta2">  P.O.Box </label>
-        <input
-          ngModel
-          required
-          type="text"
-          name="posta2"
+          name="posta"
           id="posta2"
-          style="width: 100px"
-        /><br />
-        <label for="telephone2">  Res. Tel </label
-        ><input
-          ngModel
-          required
-          type="text"
-          name="telephone2"
-          id="telephone2"
-          style="width: 110px"
-        />
-        <label for="mobileNumber2"> Mobile </label>
+     
+        /></div>
+        <div class="flex1">
+          <label for="telephone2">  Res. Tel </label
+            ><input
+              ngModel
+              required
+              type="text"
+              name="telephone2"
+              id="telephone2"
+            
+            />
+  
+        </div>
+        
+        
+        
+       
+        <div class="flex2">
+  
+          <label for="mobileNumber2"> Mobile </label>
         <input
           ngModel
           required
           type="text"
           id="mobileNumber2"
-          name="mobileNumber2"
-          style="width: 110px"
+          name="mobileNumber"
+          
         />
+        </div>
+    
+        <div class="flex1">
+          <label for="officeTelephone2"> Off.Tel </label>
+          <input
+            ngModel
+            required
+            type="text"
+            id="officeTelephone2"
+            name="officeTelephone"
+            
+          />
   
-        <label for="officeTelephone2"> Off.Tel </label>
-        <input
-          ngModel
-          required
-          type="text"
-          id="officeTelephone2"
-          name="officeTelephone2"
-          style="width: 110px"
-        />
-        <br />
-        <label for="email2">  Email </label>
-        <input
-          ngModel
-          required
-          id="email2"
-          type="text"
-          name="email2"
-          style="width: 250px"
-        />
+        </div>
+      
+        <div class="flex2">
+          <label for="email2">  Email </label>
+          <input
+            ngModel
+            required
+            id="email2"
+            type="text"
+            name="email"
+            style="width: 250px"
+          />
+      
   
-        <label for="idNo2"> ID type </label>
+        </div>
+        <div class="flex1">
+  
+          <label for="idNo2"> ID type </label>
         <input
           ngModel
           required
           type="text"
-          name="idNo2"
-          id="idNo2"
-          style="width: 150px"
-        /><br />
-        <label for="idRegistrationNumber2">
+          name="idNo"
+          id="idN2o2"
+     
+        />
+        </div>
+        <div class="flex2"><label for="idRegistrationNumber2">
           ID No. /Registration No
         </label>
         <input
@@ -665,100 +777,110 @@
           required
           type="text"
           id="idRegistrationNumber2"
-          name="idRegistrationNumber2"
+          name="idRegistrationNumber"
           style="width: 170px"
-        />
-        <label for="tillNo2"> TIN No </label>
+        /></div>
+      
+        <div class="flex"><label for="issuedBy2"> Issued by </label>
         <input
           ngModel
           required
           type="text"
-          name="tillNo2"
-          id="tillNo2"
-          style="width: 130px"
-        /><br />
-        <label for="issuedBy2"> Issued by </label>
-        <input
-          ngModel
-          required
-          type="text"
-          name="issuedBy2"
+          name="issuedBy"
           id="issuedBy2"
           style="width: 500px"
-        /><br />
-  
-        <label for="gender2"> Gende </label>
-        <select name="gender2" id="gender2">
+        /></div>
+        <div class="flex1"><label for="tillNo2"> TIN No </label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="tillNo"
+            id="tillNo2"
+          
+          /></div>
+    
+        <div class="flex2"><label for="gender2"> Gender </label>
+        <select name="gender" id="gender2">
           <option value="male" id="male" name="male" [selected]="true">
-            &nbsp;&nbsp; Male
+            &nbsp;&nbsp;Male
           </option>
           <option value="female">&nbsp;&nbsp;Female</option>
-        </select>
-        <label for="nationality2"> Nationality </label>
+        </select></div><br>
+  
+  
+  
+        <div class="flex1">
+          <label for="nationality2"> Nationality </label>
         <input
-          ngModel
+          
           required
           type="text"
           name="nationality2"
           id="nationality2"
-          style="width: 100px"
-         
+          
+   
+      
         />
-        <label for="occupation2">Occupation</label>
-        <input
-          ngModel
-          required
-          type="text"
-          name="occupation2"
-          id="occupation2"
-          style="width: 150px"
-        />
-        <br />
-        <label for="dob2">DOB(for Individual)</label>
-        <input ngModel required type="date" name="dob2" id="dob2" />
+        </div>
   
-        <label for="oes2">(Org Establishment Date)</label>
+        
+        <div class="flex2">
+          <label for="occupation2">Occupation</label>
+          <input
+          
+            required
+            type="text"
+            name="occupation"
+            id="occupation2"
+          
+          /></div>
+        
+        <div class="flex1"> <label for="dob2">DOB(for Individual)</label>
+          <input ngModel required type="date" name="dob2" id="dob2" /></div>
+    
+        <div class="flex2"><label for="oes2">(Org Establishment Date)</label>
         <input
           ngModel
           required
           type="date"
-          name="oes2"
+          name="oes"
           id="oes2"
-          style="width: 100px"
-        />
-        <br />
-  
-        <label for="employer2"> Employer</label>
+     
+        /></div>
+        
+    
+        <div class="flex"><label for="employer2"> Employer</label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="employer"
+            id="employer2"
+            style="width: 400px"
+          /></div>
+    
+        <div class="flex1"><label for="monthlyIncome2"> Average Monthly Income </label>
         <input
           ngModel
           required
           type="text"
-          name="employer2"
-          id="employer2"
-          style="width: 400px"
-        /><br />
-  
-        <label for="monthlyIncome2"> Average Monthly Income </label>
-        <input
-          ngModel
-          required
-          type="text"
-          name="monthlyIncome2"
+          name="monthlyIncome"
           id="monthlyIncome2"
-          style="width: 100px"
-        />
-        <label for="annualIncome2"> Average Annual Income </label>
-        <input
-          ngModel
-          required
-          type="text"
-          name="annualIncome2"
-          id="annualIncome2"
-          style="width: 100px"
-        /><br />
+     
+        /></div>
+        <div class="flex2"><label for="annualIncome2"> Average Annual Income </label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="annualIncome"
+            id="annualIncome2"
+       
+          /></div>
   
      
-        <div >
+        <div ><br>
           Signature _______________________&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________
         </div>
         <h4> Operation Instruction</h4>
@@ -812,43 +934,44 @@
         </h4>
   
   
-        <div class="atm"> 
+        <div class="E-payments"> 
           <label for="atm">ATM </label> <select name="atm" id="atm">
-            <option value="yes"> &nbsp;&nbsp;Yes</option>
-            <option value="no"> &nbsp;&nbsp;No</option>
+            <option value="yes"> &nbsp;&nbsp;Yes&nbsp;&nbsp;&nbsp;&nbsp;</option>
+            <option value="no"> &nbsp;&nbsp;No&nbsp;&nbsp;&nbsp;&nbsp;</option>
           </select>
-        </div>
-        <div class="mobile">
-          <label for="internet">Mobile Banking</label> <select name="internet" id="internet">
-            <option value="yes">&nbsp;&nbsp;Yes</option>
-            <option value="no">&nbsp;&nbsp;No</option>
+      
+    
+         <label for="internet">Mobile Banking</label> <select name="internet" id="internet">
+            <option value="yes">&nbsp;&nbsp;Yes&nbsp;&nbsp;&nbsp;&nbsp;</option>
+            <option value="no">&nbsp;&nbsp;No&nbsp;&nbsp;&nbsp;&nbsp;</option>
           </select>
-        </div>
-        <div class="internet">
-          <label for="internet">Mobile Banking</label> <select name="internet" id="internet">
-            <option value="yes">&nbsp;&nbsp;Yes</option>
-            <option value="no">&nbsp;&nbsp;No</option>
+ 
+       
+         <label for="internet">Internet Banking</label> <select name="internet" id="internet">
+            <option value="yes">&nbsp;&nbsp;Yes&nbsp;&nbsp;&nbsp;&nbsp;</option>
+            <option value="no">&nbsp;&nbsp;No&nbsp;&nbsp;&nbsp;&nbsp;</option>
           </select>
-        </div>
-        <label for="initial">Initial Deposit (Optional) </label>
+        </div><br>
+        <div class="flex1"><label for="initial">Initial Deposit (Optional) </label>
         <input
           ngModel
           required
           type="text"
           name="initial"
           id="initial"
-          style="width: 150px"
-        />
-       Existing Account
+          
+        /></div>
+        <div class="flex1"><label for="existing"> Existing Account</label>
+      
   
         <select name="existing" id="existing">
-          <option value="yes">&nbsp;&nbsp;Yes</option>
-          <option value="no">&nbsp;&nbsp;No</option>
+          <option value="yes">&nbsp;&nbsp;Yes&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="no">&nbsp;&nbsp;No&nbsp;&nbsp;&nbsp;&nbsp;</option>
         </select>
         
-      </div>
-    </form>
-    <div class="signature"><br>
+      </div></div>
+    </form><br><br>
+    <div class="signature">
       Name and Signature of maker
       _________________________________________ <br /><br />
       Name and Signature Checker

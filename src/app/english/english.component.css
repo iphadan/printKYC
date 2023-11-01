@@ -190,3 +190,7 @@ input{
       .date{
         padding: 10px;
       }
+      .flex1{
+        float: left;
+        width: 50%;
+      }

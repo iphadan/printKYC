@@ -131,6 +131,12 @@ input{
       display: none;
       height: 0;
     }
+    .cardj{
+      visibility: hidden;
+      overflow: hidden;
+      display: none;
+      height: 0;
+    }
     .form-group{
       visibility: hidden;
       overflow: hidden;
@@ -168,6 +174,17 @@ input{
         left: 80%;
         bottom: 10%;
       }
+
+      .formNumber{
+        position:fixed;
+          left: 70%;
+          bottom: 11.5%;
+          background-color: hsl(196, 84%, 66%);
+          color: white;
+          font-size: bolder;
+         
+        }
+
       .selectLanguage{
         
         position:fixed;
@@ -193,4 +210,8 @@ input{
       .flex1{
         float: left;
         width: 50%;
+      }
+      .photo-container{
+        float: left;
+        
       }

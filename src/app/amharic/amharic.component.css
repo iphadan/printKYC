@@ -57,7 +57,7 @@ p {
   left: 20px;
   width: 100px;
   height: 100px;
-  border: 1px solid black;
+  border: 1px solid rgb(205, 12, 12);
   padding: 10px;
 }
 
@@ -113,6 +113,7 @@ p{
 }
 
 @media print {
+ 
   #photo.hidden {
     display: none;
     height: 0;
@@ -131,12 +132,19 @@ p{
     display: none;
     height: 0;
   }
+  .cardj{
+    visibility: hidden;
+    overflow: hidden;
+    display: none;
+    height: 0;
+  }
   .form-group{
     visibility: hidden;
     overflow: hidden;
     display: none;
     height: 0;
   }
+ 
 }
 
 .opInstruction{
@@ -165,9 +173,20 @@ button:hover{
   }
   .btn2{
     position:fixed;
-      left: 75%;
+      left: 80%;
       bottom: 10%;
     }
+
+    .formNumber{
+      position:fixed;
+        left: 70%;
+        bottom: 11.5%;
+        background-color: hsl(196, 84%, 66%);
+        color: white;
+        font-size: bolder;
+       
+      }
+
     .selectLanguage{
       
       position:fixed;
@@ -179,7 +198,7 @@ button:hover{
     select {
       -webkit-appearance: none;
       -moz-appearance: none;
-      appearance:none;
+      appearance: none;
       border: none;
       font-weight: bolder;
       text-decoration: underline;
@@ -187,14 +206,41 @@ button:hover{
     option{
       font-weight: bolder;
     }
-    option:not(:checked) {
-      background-color: #fff;
-      
-    }
     .date{
-      padding: 10px;
+      padding: 5px;
     }
     .flex1{
       float: left;
       width: 50%;
     }
+   .onFormNumber .flex1{
+      float: left;
+      width: 38%;
+    }
+    .photo-container{
+      float: left;
+      margin: 10px;
+      
+    }
+    
+
+    @media print {
+      /* Set the paper size */
+      @page {
+        size: A4; /* Specify the desired paper size, e.g., A4, Letter, etc. */
+      }
+
+      @page {
+        @top-center {
+          content: ""; /* Replace with your desired header content */
+        }
+    
+        @bottom-center {
+          content: ""; /* Replace with your desired footer content */
+        }
+      }
+    
+      /* Other print-specific styles */
+      /* Add any additional styles specific to printing */
+    }
+  

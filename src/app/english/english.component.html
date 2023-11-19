@@ -50,7 +50,7 @@
       Account Opening Form 
     </h4>
   
-    <form #kycForm="ngForm">
+    <form  #kycForm="ngForm">
       <div class="flex"></div><label for="branch"> Branch  </label>
       <input
         ngModel
@@ -111,7 +111,7 @@
   
     
         <div class="flex1"><label for="region"> Region </label>
-          <input ngModel required type="text" name="region" id="region"Galii Wag.Giddugaleessaa/></div>
+          <input ngModel required type="text" name="region" id="region"/></div>
       <div class="flex2"><label for="city"> City </label>
       <input ngModel required type="text" name="city" id="city"style="" /></div>
   
@@ -257,6 +257,7 @@
           id="tillNo"
           
         /></div>
+       
   
       <div class="flex2"><label for="gender"> Gender </label>
       <select name="gender" id="gender">
@@ -264,7 +265,7 @@
           &nbsp;&nbsp;Male
         </option>
         <option value="female">&nbsp;&nbsp;Female</option>
-      </select></div><br>
+      </select></div>
 
 
 
@@ -291,6 +292,7 @@
           type="text"
           name="occupation"
           id="occupation"
+          style="width: 300px;"
         
         /></div>
       
@@ -343,21 +345,21 @@
           <option value="saving">&nbsp;&nbsp;Mobile Wallet</option>
           <option value="saving">&nbsp;&nbsp;Cheque</option>
         </select></div>
-      <div ><br>
+      <div ><br><br>
         Signature _______________________&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________
       </div>
   <!-- additional pages -->
 
 
 
-  <div class="onFormNumber" *ngFor="let i of formNumberArray">
+  <div class="onFormNumber" *ngFor="let i of formNumberArray" >
  <p style="font-size: small;font-weight: bolder;margin-left: 40%;text-decoration: underline;">
 Applicant {{i}}
 </p>
 
 <!-- customer photo -->
 
-<div class="photo-container md:w-1/2 m-4" style="margin-left: 80%;float: left;">
+<div class="photo-container md:w-1/2 m-4" style="float: left;">
   <div class="photo-preview">
     <img
       *ngIf="photoURLArray[i]; else noImage"
@@ -377,6 +379,7 @@ Applicant {{i}}
       name="photo{{i}}"
       accept="image/*"
       (change)="onFileSelected($event,i)"
+
       [required]="true"
     />
   </div>
@@ -386,18 +389,7 @@ Applicant {{i}}
 <div class="flexBox">
 
 
-  <div class="flex2">
 
-    <label for="customerNumber{{i}}"> customer No. </label
-      ><input
-        ngModel
-        required
-        type="text"
-        id="customerNumber{{i}}"
-        name="customerNumber"
-        style="width: 140px"
-      />
-  </div>
   <div class="flex"></div><label for="fullName{{i}}">
     Full Name/Name of Organization:
   </label>
@@ -407,7 +399,7 @@ Applicant {{i}}
     type="text"
     id="fullName{{i}}"
     name="fullName"
-   
+    style="width: 300px"
   /><br />
 
   <div class="flex"></div><label for="mother{{i}}">
@@ -419,13 +411,27 @@ Applicant {{i}}
     type="text"
     id="mother{{i}}"
     name="mother"
-    style="width: 500px"
+    style="width: 300px"
+    
   /><br />
+  <div class="flex1">
+
+    <label for="customerNumber{{i}}"> customer No. </label
+      ><input
+        ngModel
+        required
+        type="text"
+        id="customerNumber{{i}}"
+        name="customerNumber"
+        style="width: 140px"
+      />
+  </div>
 
 
     <div class="flex1"><label for="region{{i}}"> Region </label>
       <input ngModel required type="text" name="region" id="region{{i}}"Galii Wag.Giddugaleessaa/></div>
-  <div class="flex2"><label for="city{{i}}"> City </label>
+    
+  <div class="flex1" ><label for="city{{i}}"> City </label>
   <input ngModel required type="text" name="city" id="city{{i}}"style="" /></div>
 
   <div class="flex1">
@@ -527,7 +533,7 @@ Applicant {{i}}
     />
 
 
-  </div>
+  </div><br><br>
   <div class="flex1">
 
     <label for="idNo{{i}}"> ID type </label>
@@ -604,7 +610,7 @@ Applicant {{i}}
       type="text"
       name="occupation"
       id="occupation{{i}}"
-    
+      style="width: 300px;"
     /></div>
   
   <div class="flex1"> <label for="dob{{i}}">DOB(for Individual)</label>
@@ -650,16 +656,12 @@ Applicant {{i}}
  
     /></div>
 
-  <div class="flex"><label for="accountType{{i}}"> Account Type </label>
-    <select id="accountType{{i}}" name="accountType">
-      <option value="saving" id="saving" [selected]="true">&nbsp;&nbsp;Saving</option>
-      <option value="saving">&nbsp;&nbsp;Mobile Wallet</option>
-      <option value="saving">&nbsp;&nbsp;Cheque</option>
-    </select></div>
 
 
 </div>
-     <div ><br>
+
+<br>
+     <div >
       Signature _______________________&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________
     </div>   
   </div>
@@ -684,7 +686,7 @@ Applicant {{i}}
               name="Individual"
               id="Individual"
             />
-            <div class="opSignature">Signature______________</div>
+            <div class="opSignature" style="margin-top: 10px;">Signature______________</div>
           </div>
           <div class="opInstructionBox">
             Joint Signatories
@@ -696,7 +698,7 @@ Applicant {{i}}
               id="Individual"
               checked
             />
-            <div class="opSignature">Signature_______________</div>
+            <div class="opSignature" style="margin-top: 10px;">Signature_______________</div>
           </div>
           <div class="opInstructionBox">
             Others
@@ -708,7 +710,7 @@ Applicant {{i}}
               id="Individual"
               
             />
-            <div class="opSignature">Signature_______________</div>
+            <div class="opSignature" style="margin-top: 10px;">Signature_______________</div>
           </div>
         </div>
       </div>

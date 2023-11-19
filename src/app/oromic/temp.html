@@ -1,0 +1,1003 @@
+
+<div class="div" #content *ngIf="language === 'English'">
+    <div class="container">
+      <div id="content">
+        <div class="header">
+          <div><img width="auto" src="../assets/logo.svg" alt="img" /></div>
+          <div class="title">
+            <h4>Baankii Hojii Gamtaa Oromiyaa</h4>
+            <h6>የኦሮሚያ ኅብረት ሥራ ባንክ</h6>
+          </div>
+  
+          <div class="photo-container md:w-1/2 m-4">
+            <div class="photo-preview">
+              <img
+                *ngIf="imageURL; else noImage"
+                [src]="imageURL"
+           
+              />
+              <ng-template #noImage> </ng-template>
+            </div>
+            <div class="form-group" *ngIf="!hideFileInput">
+              <input
+                ngModel
+                required
+                type="file"
+                class="form-control"
+                class="noPrint"
+                id="photo"
+                name="photo"
+                accept="image/*"
+                (change)="onFileSelected($event)"
+                [required]="true"
+              />
+            </div>
+          </div>
+        </div>
+  <div class="temp">
+  <div class="changeLanguage" >
+  
+    <div class="date" style="margin-left: 70%; text-decoration: underline">
+      <div class="flex"></div><label for="date">guyyaa :</label>
+      <input
+        type="date"
+        name="date"
+        id="date"
+        style="text-decoration: underline; display: flexbox"
+      />
+    </div>
+    <h4 style="text-decoration: underline; text-align: center">
+      Unka Baniinsa Herregaa
+    </h4>
+  
+    <form #kycForm="ngForm">
+      <div class="flex"></div><label for="branch"> Damee :  </label>
+      <input
+        ngModel
+        required
+        id="branch"
+        type="text"
+        name="branch"
+        maxlength="100"
+        style="width: 200px"
+      /><br>
+    
+      <div class="flex1"><label for="accountNumber"> Lakk. Herregaa :</label>
+        <input
+          ngModel
+          required
+          type="text"
+          id="accountNumber"
+          name="accountNumber"
+          style="width: 180px"
+        /></div>
+      
+      
+      
+      <div class="flex2">
+  
+        <label for="customerNumber"> Lakk. maamila :</label
+          ><input
+            ngModel
+            required
+            type="text"
+            id="customerNumber"
+            name="customerNumber"
+            style="width: 140px"
+          />
+      </div>
+      <div class="flex"></div><label for="fullName">
+        Maqaa Guutuu/Maqaa Jaarmiyaa :
+      </label>
+      <input
+        ngModel
+        required
+        type="text"
+        id="fullName"
+        name="fullName"
+        style="width: 500px"
+      /><br />
+  
+      <div class="flex"></div><label for="mother">
+        Maqaa haadha :
+      </label>
+      <input
+        ngModel
+        required
+        type="text"
+        id="mother"
+        name="mother"
+        style="width: 500px"
+      /><br />
+  
+        <div class="flex1"><label for="region"> Naannoo : </label>
+          <input ngModel required type="text" name="region" id="region"Galii Wag.Giddugaleessaa/></div>
+      <div class="flex2"><label for="city"> Magaalaa : </label>
+      <input ngModel required type="text" name="city" id="city"style="" /></div>
+  
+      <div class="flex1">
+        <label for="subCity"> Magaalaa xiqqaa : </label>
+      <input
+        ngModel
+        required
+        type="text"
+        name="subCity"
+        id="subCity"
+   
+      />
+      </div>
+      <div class="flex2">
+        <label for="kebele"> Kebele/Woredaa : </label>
+        <input
+          ngModel
+          required
+          type="text"
+          name="kebele"
+          id="kebele"
+          style="width: 140px"
+        />
+  
+      </div>
+  
+      <div class="flex1">
+        <label for="houseNo">Lakk. Manaa :</label>
+        <input
+          ngModel
+          required
+          type="text"
+          name="houseNo"
+          id="houseNo"
+     
+        />
+  
+      </div>
+      <div class="flex2"><label for="posta">  P.O.Box </label>
+      <input
+        ngModel
+        required
+        type="text"
+        name="posta"
+        id="posta"
+   
+      /></div>
+      <div class="flex1">
+        <label for="telephone"> Bilbila manaa : </label
+          ><input
+            ngModel
+            required
+            type="text"
+            name="telephone"
+            id="telephone"
+            
+          />
+  
+      </div>
+      
+      
+      
+     
+      <div class="flex2">
+  
+        <label for="mobileNumber"> Mobile </label>
+      <input
+        ngModel
+        required
+        type="text"
+        id="mobileNumber"
+        name="mobileNumber"
+        
+      />
+      </div>
+  
+      <div class="flex1">
+        <label for="officeTelephone">Bilbila Waajjira :</label>
+        <input
+          ngModel
+          required
+          type="text"
+          id="officeTelephone"
+          name="officeTelephone"
+          
+        />
+  
+      </div>
+    
+      <div class="flex2">
+        <label for="email">  Email </label>
+        <input
+          ngModel
+          required
+          id="email"
+          type="text"
+          name="email"
+          style="width: 250px"
+        />
+    
+  
+      </div>
+      <div class="flex1">
+  
+        <label for="idNo"> Gosa.waraq.eenyum :</label>
+      <input
+        ngModel
+        required
+        type="text"
+        name="idNo"
+        id="idNo"
+   
+      />
+      </div>
+      <div class="flex2"><label for="idRegistrationNumber">
+        ID No. /Registration No :
+      </label>
+      <input
+        ngModel
+        required
+        type="text"
+        id="idRegistrationNumber"
+        name="idRegistrationNumber"
+        style="width: 170px"
+      /></div>
+    
+      <div class="flex"><label for="issuedBy"> Kan kenne : </label>
+      <input
+        ngModel
+        required
+        type="text"
+        name="issuedBy"
+        id="issuedBy"
+        style="width: 500px"
+      /></div>
+      <div class="flex1"><label for="tillNo"> Lakk. TIN : </label>
+        <input
+          ngModel
+          required
+          type="text"
+          name="tillNo"
+          id="tillNo"
+         
+        /></div>
+  
+      <div class="flex2"><label for="gender"> saalaa : </label>
+      <select name="gender" id="gender">
+        <option value="male" id="male" name="male" [selected]="true">
+          &nbsp;&nbsp;Dhiira&nbsp;&nbsp;
+        </option>
+        <option value="female">&nbsp;&nbsp;Dubartii&nbsp;&nbsp;</option>
+      </select></div><br>
+  
+  
+  
+      <div class="flex1">
+        <label for="nationality"> Lammummaa :</label>
+      <input
+        
+        required
+        type="text"
+        name="nationality"
+        id="nationality"
+        
+  
+    
+      />
+      </div>
+  
+      
+      <div class="flex2">
+        <label for="occupation">Hojii :</label>
+        <input
+        
+          required
+          type="text"
+          name="occupation"
+          id="occupation"
+        
+        /></div>
+      
+      <div class="flex1"> <label for="dob">guyyaa dhalootaa :</label>
+        <input ngModel required type="date" name="dob" id="dob" /></div>
+  
+      <div class="flex2"><label for="oes">guyyaa hundeeffama jaarmiyaa :</label>
+      <input
+        ngModel
+        required
+        type="date"
+        name="oes"
+        id="oes"
+   
+      /></div>
+      
+  
+      <div class="flex"><label for="employer"> Hojjechiisaa :</label>
+        <input
+          ngModel
+          required
+          type="text"
+          name="employer"
+          id="employer"
+          style="width: 400px"
+        /></div>
+  
+      <div class="flex1"><label for="monthlyIncome"> Galii Ji'aa Giddugaleessaa :</label>
+      <input
+        ngModel
+        required
+        type="text"
+        name="monthlyIncome"
+        id="monthlyIncome"
+   
+      /></div>
+      <div class="flex2"><label for="annualIncome"> Galii Wag.Giddugaleessaa :</label>
+        <input
+          ngModel
+          required
+          type="text"
+          name="annualIncome"
+          id="annualIncome"
+     
+        /></div>
+  
+      <div class="flex"><label for="accountType"> Gosa Herregaa </label>
+        <select id="accountType" name="accountType">
+          <option value="saving" id="saving" [selected]="true">&nbsp;&nbsp;Saving</option>
+          <option value="saving">&nbsp;&nbsp;Mobile Wallet&nbsp;&nbsp;</option>
+          <option value="saving">&nbsp;&nbsp;Cheque&nbsp;&nbsp;</option>
+        </select></div>
+      <div ><br>
+        Mallattoo _______________________&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________
+      </div>
+  
+      <div class="joint" *ngIf="!hideJoint" ngModel>
+        <h6 style="font-size: small">
+          Herrega Waliiniitiif
+        </h6>
+        <p
+          style="
+            text-align: center;
+            text-decoration: underline;
+            font-size: smaller;
+            font-weight: bold;
+          "
+        >
+        Iyyataa 2ffaa
+        </p>
+        <div class="flex"></div><label for="fullName1">
+          Maqaa Guutuu/Maqaa Jaarmiyaa :
+        </label>
+        <input
+          ngModel
+          required
+          type="text"
+          id="fullName1"
+          name="fullName"
+          style="width: 500px"
+        /><br />
+    
+        <div class="flex"></div><label for="mother1">
+          Maqaa haadha :
+        </label>
+        <input
+          ngModel
+          required
+          type="text"
+          id="mother1"
+          name="mother"
+          style="width: 500px"
+        /><br />
+    
+        
+          <div class="flex1"><label for="region1"> Naannoo : </label>
+            <input ngModel required type="text" name="region" id="region1"Galii Wag.Giddugaleessaa/></div>
+        <div class="flex2"><label for="city1"> Magaalaa : </label>
+        <input ngModel required type="text" name="city" id="city1"style="" /></div>
+    
+        <div class="flex1">
+          <label for="subCity1"> Magaalaa xiqqaa : </label>
+        <input
+          ngModel
+          required
+          type="text"
+          name="subCity"
+          id="subCity1"
+     
+        />
+        </div>
+        <div class="flex2">
+          <label for="kebele1"> Kebele/Woredaa : </label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="kebele"
+            id="kebele1"
+            style="width: 140px"
+          />
+    
+        </div>
+    
+        <div class="flex1">
+          <label for="houseNo1">Lakk. Manaa :</label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="houseNo"
+            id="houseNo1"
+       
+          />
+    
+        </div>
+        <div class="flex2"><label for="posta1">  P.O.Box </label>
+        <input
+          ngModel
+          required
+          type="text"
+          name="posta"
+          id="posta1"
+     
+        /></div>
+        <div class="flex1">
+          <label for="telephone1"> Bilbila manaa : </label
+            ><input
+              ngModel
+              required
+              type="text"
+              name="telephone"
+              id="telephone1"
+              
+            />
+    
+        </div>
+        
+        
+        
+       
+        <div class="flex2">
+    
+          <label for="mobileNumber1"> Mobile </label>
+        <input
+          ngModel
+          required
+          type="text"
+          id="mobileNumber1"
+          name="mobileNumber"
+          
+        />
+        </div>
+    
+        <div class="flex1">
+          <label for="officeTelephone1">Bilbila Waajjira :</label>
+          <input
+            ngModel
+            required
+            type="text"
+            id="officeTelephone1"
+            name="officeTelephone"
+            
+          />
+    
+        </div>
+      
+        <div class="flex2">
+          <label for="email1">  Email </label>
+          <input
+            ngModel
+            required
+            id="email1"
+            type="text"
+            name="email"
+            style="width: 250px"
+          />
+      
+    
+        </div>
+        <div class="flex1">
+    
+          <label for="idNo1"> Gosa.waraq.eenyum :</label>
+        <input
+          ngModel
+          required
+          type="text"
+          name="idNo"
+          id="idNo1"
+     
+        />
+        </div>
+        <div class="flex2"><label for="idRegistrationNumber1">
+          ID No. /Registration No :
+        </label>
+        <input
+          ngModel
+          required
+          type="text"
+          id="idRegistrationNumber1"
+          name="idRegistrationNumber"
+          style="width: 170px"
+        /></div>
+      
+        <div class="flex"><label for="issuedBy1"> Kan kenne : </label>
+        <input
+          ngModel
+          required
+          type="text"
+          name="issuedBy"
+          id="issuedBy1"
+          style="width: 500px"
+        /></div>
+        <div class="flex1"><label for="tillNo1"> Lakk. TIN : </label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="tillNo"
+            id="tillNo1"
+            style="width: 130px"
+          /></div>
+    
+        <div class="flex2"><label for="gender1"> saalaa : </label>
+        <select name="gender" id="gender1">
+          <option value="male" id="male" name="male" [selected]="true">
+            &nbsp;&nbsp;Dhiira&nbsp;&nbsp;
+          </option>
+          <option value="female">&nbsp;&nbsp;Dubartii&nbsp;&nbsp;</option>
+        </select></div><br>
+    
+    
+    
+        <div class="flex1">
+          <label for="nationality1"> Lammummaa :</label>
+        <input
+          
+          required
+          type="text"
+          name="nationality1"
+          id="nationality1"
+          
+    
+      
+        />
+        </div>
+    
+        
+        <div class="flex2">
+          <label for="occupation1">Hojii :</label>
+          <input
+          
+            required
+            type="text"
+            name="occupation"
+            id="occupation1"
+          
+          /></div>
+        
+        <div class="flex1"> <label for="dob1">guyyaa dhalootaa :</label>
+          <input ngModel required type="date" name="dob" id="dob1" /></div>
+    
+        <div class="flex2"><label for="oes1">guyyaa hundeeffama jaarmiyaa :</label>
+        <input
+          ngModel
+          required
+          type="date"
+          name="oes"
+          id="oes1"
+     
+        /></div>
+        
+    
+        <div class="flex"><label for="employer1"> Hojjechiisaa :</label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="employer"
+            id="employer1"
+            style="width: 400px"
+          /></div>
+    
+        <div class="flex1"><label for="monthlyIncome1"> Galii Ji'aa Giddugaleessaa :</label>
+        <input
+          ngModel
+          required
+          type="text"
+          name="monthlyIncome"
+          id="monthlyIncome1"
+     
+        /></div>
+        <div class="flex2"><label for="annualIncome1"> Galii Wag.Giddugaleessaa :</label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="annualIncome"
+            id="annualIncome1"
+       
+          /></div>
+       
+        <div ><br>
+          Mallattoo _______________________&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________
+        </div>
+  
+        <p
+          style="
+            text-align: center;
+            text-decoration: underline;
+            font-size: smaller;
+            font-weight: bold;
+          "
+        >
+        Iyyataa 3ffaa
+        </p>
+        <div class="flex"></div><label for="fullName2">
+          Maqaa Guutuu/Maqaa Jaarmiyaa :
+        </label>
+        <input
+          ngModel
+          required
+          type="text"
+          id="fullName2"
+          name="fullName"
+          style="width: 500px"
+        /><br />
+    
+        <div class="flex"></div><label for="mother2">
+          Maqaa haadha :
+        </label>
+        <input
+          ngModel
+          required
+          type="text"
+          id="mother2"
+          name="mother"
+          style="width: 500px"
+        /><br />
+    
+          <div class="flex1"><label for="region2"> Naannoo : </label>
+            <input ngModel required type="text" name="region" id="region2"Galii Wag.Giddugaleessaa/></div>
+        <div class="flex2"><label for="city2"> Magaalaa : </label>
+        <input ngModel required type="text" name="city" id="city2"style="" /></div>
+    
+        <div class="flex1">
+          <label for="subCity2"> Magaalaa xiqqaa : </label>
+        <input
+          ngModel
+          required
+          type="text"
+          name="subCity"
+          id="subCity2"
+     
+        />
+        </div>
+        <div class="flex2">
+          <label for="kebele2"> Kebele/Woredaa : </label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="kebele"
+            id="kebele2"
+            style="width: 140px"
+          />
+    
+        </div>
+    
+        <div class="flex1">
+          <label for="houseNo2">Lakk. Manaa :</label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="houseNo"
+            id="houseNo2"
+       
+          />
+    
+        </div>
+        <div class="flex2"><label for="posta2">  P.O.Box </label>
+        <input
+          ngModel
+          required
+          type="text"
+          name="posta"
+          id="posta2"
+     
+        /></div>
+        <div class="flex1">
+          <label for="telephone2"> Bilbila manaa : </label
+            ><input
+              ngModel
+              required
+              type="text"
+              name="telephone"
+              id="telephone2"
+              
+            />
+    
+        </div>
+        
+        
+        
+       
+        <div class="flex2">
+    
+          <label for="mobileNumber2"> Mobile </label>
+        <input
+          ngModel
+          required
+          type="text"
+          id="mobileNumber2"
+          name="mobileNumber"
+          
+        />
+        </div>
+    
+        <div class="flex1">
+          <label for="officeTelephone2">Bilbila Waajjira :</label>
+          <input
+            ngModel
+            required
+            type="text"
+            id="officeTelephone2"
+            name="officeTelephone"
+            
+          />
+    
+        </div>
+      
+        <div class="flex2">
+          <label for="email2">  Email </label>
+          <input
+            ngModel
+            required
+            id="email2"
+            type="text"
+            name="email"
+            style="width: 250px"
+          />
+      
+    
+        </div>
+        <div class="flex1">
+    
+          <label for="idNo2"> Gosa.waraq.eenyum :</label>
+        <input
+          ngModel
+          required
+          type="text"
+          name="idNo2"
+          id="idNo2"
+     
+        />
+        </div>
+        <div class="flex2"><label for="idRegistrationNumber2">
+          ID No. /Registration No :
+        </label>
+        <input
+          ngModel
+          required
+          type="text"
+          id="idRegistrationNumber2"
+          name="idRegistrationNumber"
+          style="width: 170px"
+        /></div>
+      
+        <div class="flex"><label for="issuedBy2"> Kan kenne : </label>
+        <input
+          ngModel
+          required
+          type="text"
+          name="issuedBy"
+          id="issuedBy2"
+          style="width: 500px"
+        /></div>
+        <div class="flex1"><label for="tillNo2"> Lakk. TIN : </label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="tillNo"
+            id="tillNo2"
+            style="width: 130px"
+          /></div>
+    
+        <div class="flex2"><label for="gender2"> saalaa : </label>
+        <select name="gender" id="gender2">
+          <option value="male" id="male" name="male" [selected]="true">
+            &nbsp;&nbsp;Dhiira&nbsp;&nbsp;
+          </option>
+          <option value="female">&nbsp;&nbsp;Dubartii&nbsp;&nbsp;</option>
+        </select></div><br>
+    
+    
+    
+        <div class="flex1">
+          <label for="nationality2"> Lammummaa :</label>
+        <input
+          
+          required
+          type="text"
+          name="nationality"
+          id="nationality2"
+          
+    
+      
+        />
+        </div>
+    
+        
+        <div class="flex2">
+          <label for="occupation2">Hojii :</label>
+          <input
+          
+            required
+            type="text"
+            name="occupation"
+            id="occupation2"
+          
+          /></div>
+        
+        <div class="flex1"> <label for="dob2">guyyaa dhalootaa :</label>
+          <input ngModel required type="date" name="dob" id="dob2" /></div>
+    
+        <div class="flex2"><label for="oes2">guyyaa hundeeffama jaarmiyaa :</label>
+        <input
+          ngModel
+          required
+          type="date"
+          name="oes"
+          id="oes2"
+     
+        /></div>
+        
+    
+        <div class="flex"><label for="employer2"> Hojjechiisaa :</label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="employer"
+            id="employer2"
+            style="width: 400px"
+          /></div>
+    
+        <div class="flex1"><label for="monthlyIncome2"> Galii Ji'aa Giddugaleessaa :</label>
+        <input
+          ngModel
+          required
+          type="text"
+          name="monthlyIncome"
+          id="monthlyIncome2"
+     
+        /></div>
+        <div class="flex2"><label for="annualIncome2"> Galii Wag.Giddugaleessaa :</label>
+          <input
+            ngModel
+            required
+            type="text"
+            name="annualIncome"
+            id="annualIncome2"
+       
+          /></div>
+     
+        <div ><br>
+          Mallattoo _______________________&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________
+        </div>
+  
+        <h4> Ajaja Herrega Kaffaltii</h4>
+    
+        <div class="opInstruction">
+          <div class="opInstructionBox">
+            Mallattoo tokkoon kan socho'u
+            <input
+              ngModel
+              required
+              type="checkbox"
+              name="Individual"
+              id="Individual"
+            />
+            <div class="opSignature">Mallattoo______________</div>
+          </div>
+          <div class="opInstructionBox">
+            Waliin socho'uu
+            <input
+              ngModel
+              required
+              type="checkbox"
+              name="Individual"
+              id="Individual"
+              checked
+            />
+            <div class="opSignature">Mallattoo_______________</div>
+          </div>
+          <div class="opInstructionBox">
+            Ajaja addaa
+            <input
+              ngModel
+              required
+              type="checkbox"
+              name="Individual"
+              id="Individual"
+              
+            />
+            <div class="opSignature">Mallattoo_______________</div>
+          </div>
+        </div>
+      </div>
+    
+     
+  
+  
+      <div class="card">
+        <h4>
+          Tajaajila kaffaltii elektirooniksii barbaadde filadhu
+        </h4>
+  
+  
+        <div class="E-payments"> 
+          <div class="flex"></div><label for="atm">ATM </label> <select name="atm" id="atm">
+            <option value="yes"> &nbsp;&nbsp;Eeyyee&nbsp;&nbsp;</option>
+            <option value="no"> &nbsp;&nbsp;Lakki&nbsp;&nbsp;</option>
+          </select>
+    
+          <div class="flex"></div><label for="mobile">Mobile Banking</label> <select name="mobile" id="mobile">
+            <option value="yes">&nbsp;&nbsp;Eeyyee&nbsp;&nbsp;</option>
+            <option value="no">&nbsp;&nbsp;Lakki&nbsp;&nbsp;</option>
+          </select>
+       
+          <div class="flex"></div><label for="internet">Internet Banking&nbsp;&nbsp;</label> <select name="internet" id="internet">
+            <option value="yes">&nbsp;&nbsp;Eeyyee&nbsp;&nbsp;</option>
+            <option value="no">&nbsp;&nbsp;Lakki&nbsp;&nbsp;</option>
+          </select>
+        </div><br>
+        <div class="flex"></div><label for="initial">Kuufama Jalqabaa (Dirqama kan hinta'in) </label>
+        <input
+          ngModel
+          required
+          type="text"
+          name="initial"
+          id="initial"
+     
+        />
+        <div class="flex"></div><label for="existing">Herrega Jiru</label>
+        
+  
+        <select name="existing" id="existing">
+          <option value="yes">&nbsp;&nbsp;Eeyyee</option>
+          <option value="no">&nbsp;&nbsp;Lakki</option>
+        </select>
+        
+      </div>
+    </form>
+    <div class="signature"><br>
+      Maqaa fi mallattoo nama akkaawuntii bane
+      _________________________________________ <br /><br />
+      Maqaa fi mallattoo nama labsii mirkaneesse
+      _________________________________________  <br /><br />
+  
+      Maqaa fi mallattoo supparvaayizara damee
+      _________________________________________
+    </div>
+  
+  </div>
+  
+  
+  <button class="btn1" *ngIf="!hideFileInput" (click)="onPrint($event)">
+    Print
+  </button>
+  <button
+    class="btn2"
+    type="button"
+    *ngIf="!hideFileInput"
+    ngModel
+    (click)="onChangeButton()"
+  >
+  unka dabaluu
+  </button>
+  
+  
+  </div>
+  </div>
+  </div>
+  
+  
+  </div>
+  

@@ -57,7 +57,7 @@ input{
     left: 20px;
     width: 100px;
     height: 100px;
-    border: 1px solid black;
+    border: 1px solid rgb(205, 12, 12);
     padding: 10px;
   }
   
@@ -205,13 +205,39 @@ input{
         font-weight: bolder;
       }
       .date{
-        padding: 10px;
+        padding: 5px;
       }
       .flex1{
         float: left;
         width: 50%;
       }
+     .onFormNumber .flex1{
+        float: left;
+        width: 38%;
+      }
       .photo-container{
         float: left;
+        margin: 10px;
         
+      }
+      
+
+      @media print {
+        /* Set the paper size */
+        @page {
+          size: A4; /* Specify the desired paper size, e.g., A4, Letter, etc. */
+        }
+
+        @page {
+          @top-center {
+            content: ""; /* Replace with your desired header content */
+          }
+      
+          @bottom-center {
+            content: ""; /* Replace with your desired footer content */
+          }
+        }
+      
+        /* Other print-specific styles */
+        /* Add any additional styles specific to printing */
       }

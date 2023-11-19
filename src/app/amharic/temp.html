@@ -38,7 +38,7 @@
 <div class="changeLanguage" >
 
   <div class="date" style="margin-left: 70%; text-decoration: underline">
-    <div class="flex"></div><label for="date">guyyaa :</label>
+    <div class="flex"></div><label for="date">ቀን :</label>
     <input
       type="date"
       name="date"
@@ -47,11 +47,11 @@
     />
   </div>
   <h4 style="text-decoration: underline; text-align: center">
-    Unka Baniinsa Herregaa
+    የአካውንት መክፈቻ ፎርም
   </h4>
 
   <form #kycForm="ngForm">
-    <div class="flex"></div><label for="branch"> Damee :  </label>
+    <div class="flex"></div><label for="branch"> የባንክ ቅርንጫፍ  </label>
     <input
       ngModel
       required
@@ -62,31 +62,7 @@
       style="width: 200px"
     /><br>
   
-    <div class="flex"></div><label for="fullName">
-      Maqaa Guutuu/Maqaa Jaarmiyaa :
-    </label>
-    <input
-      ngModel
-      required
-      type="text"
-      id="fullName"
-      name="fullName"
-      style="width: 500px"
-    /><br />
-
-    <div class="flex"></div><label for="mother">
-      Maqaa haadha :
-    </label>
-    <input
-      ngModel
-      required
-      type="text"
-      id="mother"
-      name="mother"
-      style="width: 500px"
-    /><br />
-
-    <div class="flex1"><label for="accountNumber"> Lakk. Herregaa :</label>
+    <div class="flex1"><label for="accountNumber"> የባንክ ሂሣብ ቁጥር : </label>
       <input
         ngModel
         required
@@ -100,7 +76,7 @@
     
     <div class="flex2">
 
-      <label for="customerNumber"> Lakk. maamila :</label
+      <label for="customerNumber"> የደንበኛው መለያ ቁጥር : </label
         ><input
           ngModel
           required
@@ -110,13 +86,37 @@
           style="width: 140px"
         />
     </div>
-      <div class="flex1"><label for="region"> Naannoo : </label>
+    <div class="flex"></div><label for="fullName">
+      ስም ከነ አያት/የድርጅት ስም :
+    </label>
+    <input
+      ngModel
+      required
+      type="text"
+      id="fullName"
+      name="fullName"
+      style="width: 500px"
+    /><br />
+
+    <div class="flex"></div><label for="mother">
+      የእናት ስም :
+    </label>
+    <input
+      ngModel
+      required
+      type="text"
+      id="mother"
+      name="mother"
+      style="width: 500px"
+    /><br />
+
+      <div class="flex1"><label for="region"> Rክልል/ግዛት : </label>
         <input ngModel required type="text" name="region" id="region"Galii Wag.Giddugaleessaa/></div>
-    <div class="flex2"><label for="city"> Magaalaa : </label>
+    <div class="flex2"><label for="city"> ከተማ : </label>
     <input ngModel required type="text" name="city" id="city"style="" /></div>
 
     <div class="flex1">
-      <label for="subCity"> Magaalaa xiqqaa : </label>
+      <label for="subCity"> ክ/ከተማ : </label>
     <input
       ngModel
       required
@@ -127,7 +127,7 @@
     />
     </div>
     <div class="flex2">
-      <label for="kebele"> Kebele/Woredaa : </label>
+      <label for="kebele">  ቀበሌ/ወረዳ : </label>
       <input
         ngModel
         required
@@ -140,7 +140,7 @@
     </div>
 
     <div class="flex1">
-      <label for="houseNo">Lakk. Manaa :</label>
+      <label for="houseNo"> የቤትቁ: </label>
       <input
         ngModel
         required
@@ -151,7 +151,7 @@
       />
 
     </div>
-    <div class="flex2"><label for="posta">  P.O.Box </label>
+    <div class="flex2"><label for="posta">  የፖ.ሣ.ቁ. </label>
     <input
       ngModel
       required
@@ -161,7 +161,7 @@
  
     /></div>
     <div class="flex1">
-      <label for="telephone"> Bilbila manaa : </label
+      <label for="telephone">  የቤት ስልክ :</label
         ><input
           ngModel
           required
@@ -178,7 +178,7 @@
    
     <div class="flex2">
 
-      <label for="mobileNumber"> Mobile </label>
+      <label for="mobileNumber"> የተንቀሳቃሽ ስልክ : </label>
     <input
       ngModel
       required
@@ -190,7 +190,7 @@
     </div>
 
     <div class="flex1">
-      <label for="officeTelephone">Bilbila Waajjira :</label>
+      <label for="officeTelephone">  የቢሮ ስልክ :</label>
       <input
         ngModel
         required
@@ -203,7 +203,7 @@
     </div>
   
     <div class="flex2">
-      <label for="email">  Email </label>
+      <label for="email">  ኢ-ሜይል : </label>
       <input
         ngModel
         required
@@ -217,7 +217,7 @@
     </div>
     <div class="flex1">
 
-      <label for="idNo"> Gosa.waraq.eenyum :</label>
+      <label for="idNo"> የመ. ዓይነት :</label>
     <input
       ngModel
       required
@@ -228,7 +228,7 @@
     />
     </div>
     <div class="flex2"><label for="idRegistrationNumber">
-      ID No. /Registration No :
+      የመ.ቁ. /የምዝገባ ቁ.
     </label>
     <input
       ngModel
@@ -239,7 +239,7 @@
       style="width: 170px"
     /></div>
   
-    <div class="flex"><label for="issuedBy"> Kan kenne : </label>
+    <div class="flex"><label for="issuedBy"> የሰጠው አካል : </label>
     <input
       ngModel
       required
@@ -248,28 +248,28 @@
       id="issuedBy"
       style="width: 500px"
     /></div>
-    <div class="flex1"><label for="tillNo"> Lakk. TIN : </label>
+    <div class="flex1"><label for="tillNo"> ታ.መ.ቁ.</label>
       <input
         ngModel
         required
         type="text"
         name="tillNo"
         id="tillNo"
-        style="width: 130px"
+       
       /></div>
 
-    <div class="flex2"><label for="gender"> saalaa : </label>
+    <div class="flex2"><label for="gender"> ጾታ :</label>
     <select name="gender" id="gender">
       <option value="male" id="male" name="male" [selected]="true">
-        &nbsp;&nbsp;Dhiira&nbsp;&nbsp;
+        &nbsp;&nbsp;ወንድ&nbsp;&nbsp;
       </option>
-      <option value="female">&nbsp;&nbsp;Dubartii&nbsp;&nbsp;</option>
+      <option value="female">&nbsp;&nbsp;ሴት&nbsp;&nbsp;</option>
     </select></div><br>
 
 
 
     <div class="flex1">
-      <label for="nationality"> Lammummaa :</label>
+      <label for="nationality"> ዜግነት :</label>
     <input
       
       required
@@ -284,7 +284,7 @@
 
     
     <div class="flex2">
-      <label for="occupation">Hojii :</label>
+      <label for="occupation">የሥራ ዓይነት :</label>
       <input
       
         required
@@ -294,10 +294,10 @@
       
       /></div>
     
-    <div class="flex1"> <label for="dob">guyyaa dhalootaa :</label>
+    <div class="flex1"> <label for="dob">የትውልድ ቀን :</label>
       <input ngModel required type="date" name="dob" id="dob" /></div>
 
-    <div class="flex2"><label for="oes">guyyaa hundeeffama jaarmiyaa :</label>
+    <div class="flex2"><label for="oes">የድርጅት ምስረታ ቀን :</label>
     <input
       ngModel
       required
@@ -308,7 +308,7 @@
     /></div>
     
 
-    <div class="flex"><label for="employer"> Hojjechiisaa :</label>
+    <div class="flex"><label for="employer"> ቀጣሪ ድርጅት :</label>
       <input
         ngModel
         required
@@ -318,7 +318,7 @@
         style="width: 400px"
       /></div>
 
-    <div class="flex1"><label for="monthlyIncome"> Galii Ji'aa Giddugaleessaa :</label>
+    <div class="flex1"><label for="monthlyIncome"> ወርሀዊ ገቢ :</label>
     <input
       ngModel
       required
@@ -327,7 +327,7 @@
       id="monthlyIncome"
  
     /></div>
-    <div class="flex2"><label for="annualIncome"> Galii Waggaa Giddugaleessaa :</label>
+    <div class="flex2"><label for="annualIncome"> ዓመታዊ ገቢ  :</label>
       <input
         ngModel
         required
@@ -337,19 +337,19 @@
    
       /></div>
 
-    <div class="flex"><label for="accountType"> Gosa Herregaa </label>
+    <div class="flex"><label for="accountType"> የሂሳቡ ዓይነት : </label>
       <select id="accountType" name="accountType">
-        <option value="saving" id="saving" [selected]="true">&nbsp;&nbsp;Saving</option>
+        <option value="saving" id="saving" [selected]="true">&nbsp;&nbsp;Saving&nbsp;&nbsp;</option>
         <option value="saving">&nbsp;&nbsp;Mobile Wallet&nbsp;&nbsp;</option>
         <option value="saving">&nbsp;&nbsp;Cheque&nbsp;&nbsp;</option>
       </select></div>
     <div ><br>
-      Mallattoo _______________________&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________
+      ፊርማ : _______________________&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________
     </div>
 
     <div class="joint" *ngIf="!hideJoint" ngModel>
       <h6 style="font-size: small">
-        Herrega Waliiniitiif
+        አካውንት በጋራ  ለመክፈት
       </h6>
       <p
         style="
@@ -359,98 +359,77 @@
           font-weight: bold;
         "
       >
-      Iyyataa 2ffaa
+      2ኛ አመልካች
       </p>
       <div class="flex"></div><label for="fullName1">
-        Maqaa Guutuu/Maqaa Jaarmiyaa :
+          ስም ከነ አያት/የድርጅት ስም:
       </label>
       <input
         ngModel
         required
         type="text"
         id="fullName1"
-        name="fullName"
+        name="fullName1"
         style="width: 500px"
       /><br />
-  
-      <div class="flex"></div><label for="mother1">
-        Maqaa haadha :
+
+      <div class="flex"></div><label for="fullName1">
+          የእናት ስም :
       </label>
       <input
         ngModel
         required
         type="text"
         id="mother1"
-        name="mother"
+        name="mother1"
         style="width: 500px"
       /><br />
   
-      <div class="flex1"><label for="accountNumber1"> Lakk. Herregaa :</label>
-        <input
-          ngModel
-          required
-          type="text"
-          id="accountNumber1"
-          name="accountNumber"
-          style="width: 180px"
-        /></div>
       
       
-      
-      <div class="flex2">
-  
-        <label for="customerNumber1"> Lakk. maamila :</label
-          ><input
-            ngModel
-            required
-            type="text"
-            id="customerNumber1"
-            name="customerNumber"
-            style="width: 140px"
-          />
-      </div>
-        <div class="flex1"><label for="region1"> Naannoo : </label>
+     
+        <div class="flex1"><label for="region1"> ክልል/ግዛት : </label>
           <input ngModel required type="text" name="region" id="region1"Galii Wag.Giddugaleessaa/></div>
-      <div class="flex2"><label for="city1"> Magaalaa : </label>
+      <div class="flex2"><label for="city1"> ከተማ : </label>
       <input ngModel required type="text" name="city" id="city1"style="" /></div>
   
       <div class="flex1">
-        <label for="subCity1"> Magaalaa xiqqaa : </label>
+        <label for="subCity1"> ክ/ከተማ : </label>
       <input
         ngModel
         required
         type="text"
-        name="subCity"
+        name="subCity1"
         id="subCity1"
    
       />
       </div>
       <div class="flex2">
-        <label for="kebele1"> Kebele/Woredaa : </label>
+        <label for="kebele1"> ቀበሌ/ወረዳ : </label>
         <input
           ngModel
           required
           type="text"
-          name="kebele"
-          id="kebele1"
+          name="kebele1"
+          id="kebele"
           style="width: 140px"
         />
-  
+
       </div>
   
       <div class="flex1">
-        <label for="houseNo1">Lakk. Manaa :</label>
+        <label for="houseNo1"> የቤትቁ. </label>
         <input
           ngModel
           required
           type="text"
-          name="houseNo"
+          name="houseNo1"
           id="houseNo1"
      
         />
-  
+
       </div>
-      <div class="flex2"><label for="posta1">  P.O.Box </label>
+      <div class="flex2"><label for="posta1">  የፖ.ሣ.ቁ.  </label>
       <input
         ngModel
         required
@@ -460,24 +439,24 @@
    
       /></div>
       <div class="flex1">
-        <label for="telephone1"> Bilbila manaa : </label
+        <label for="telephone1">   የቤት ስልክ :  </label
           ><input
             ngModel
             required
             type="text"
-            name="telephone"
+            name="telephone1"
             id="telephone1"
             
           />
-  
+
       </div>
       
       
       
      
       <div class="flex2">
-  
-        <label for="mobileNumber1"> Mobile </label>
+
+        <label for="mobileNumber1"> የተንቀሳቃሽ ስልክ :</label>
       <input
         ngModel
         required
@@ -489,7 +468,7 @@
       </div>
   
       <div class="flex1">
-        <label for="officeTelephone1">Bilbila Waajjira :</label>
+        <label for="officeTelephone1"> የቢሮ ስልክ :</label>
         <input
           ngModel
           required
@@ -498,11 +477,11 @@
           name="officeTelephone"
           
         />
-  
+
       </div>
     
       <div class="flex2">
-        <label for="email1">  Email </label>
+        <label for="email1">  ኢ-ሜይል :</label>
         <input
           ngModel
           required
@@ -512,11 +491,11 @@
           style="width: 250px"
         />
     
-  
+
       </div>
       <div class="flex1">
-  
-        <label for="idNo1"> Gosa.waraq.eenyum :</label>
+
+        <label for="idNo1"> የመ. ዓይነት :</label>
       <input
         ngModel
         required
@@ -527,7 +506,7 @@
       />
       </div>
       <div class="flex2"><label for="idRegistrationNumber1">
-        ID No. /Registration No :
+          የመ.ቁ. /የምዝገባ ቁ./ID No. 
       </label>
       <input
         ngModel
@@ -538,7 +517,7 @@
         style="width: 170px"
       /></div>
     
-      <div class="flex"><label for="issuedBy1"> Kan kenne : </label>
+      <div class="flex"><label for="issuedBy1"> የሰጠው አካል : </label>
       <input
         ngModel
         required
@@ -547,43 +526,43 @@
         id="issuedBy1"
         style="width: 500px"
       /></div>
-      <div class="flex1"><label for="tillNo1"> Lakk. TIN : </label>
+      <div class="flex1"><label for="tillNo1">  ታ.መ.ቁ. </label>
         <input
           ngModel
           required
           type="text"
           name="tillNo"
           id="tillNo1"
-          style="width: 130px"
+         
         /></div>
   
-      <div class="flex2"><label for="gender1"> saalaa : </label>
+      <div class="flex2"><label for="gender1"> ጾታ :   </label>
       <select name="gender" id="gender1">
         <option value="male" id="male" name="male" [selected]="true">
-          &nbsp;&nbsp;Dhiira&nbsp;&nbsp;
+          &nbsp;&nbsp;ወንድ&nbsp;&nbsp;
         </option>
-        <option value="female">&nbsp;&nbsp;Dubartii&nbsp;&nbsp;</option>
+        <option value="female">&nbsp;&nbsp;ሴት&nbsp;&nbsp;</option>
       </select></div><br>
-  
-  
-  
+
+
+
       <div class="flex1">
-        <label for="nationality1"> Lammummaa :</label>
+        <label for="nationality1"> ዜግነት : </label>
       <input
         
         required
         type="text"
-        name="nationality1"
+        name="nationality"
         id="nationality1"
         
-  
+ 
     
       />
       </div>
-  
+
       
       <div class="flex2">
-        <label for="occupation1">Hojii :</label>
+        <label for="occupation1">የሥራ ዓይነት :</label>
         <input
         
           required
@@ -593,10 +572,10 @@
         
         /></div>
       
-      <div class="flex1"> <label for="dob1">guyyaa dhalootaa :</label>
+      <div class="flex1"> <label for="dob1">የትውልድ ቀን :</label>
         <input ngModel required type="date" name="dob" id="dob1" /></div>
   
-      <div class="flex2"><label for="oes1">guyyaa hundeeffama jaarmiyaa :</label>
+      <div class="flex2"><label for="oes1">የድርጅት ምስረታ ቀን :</label>
       <input
         ngModel
         required
@@ -607,7 +586,7 @@
       /></div>
       
   
-      <div class="flex"><label for="employer1"> Hojjechiisaa :</label>
+      <div class="flex"><label for="employer1"> ቀጣሪ ድርጅት :</label>
         <input
           ngModel
           required
@@ -617,7 +596,7 @@
           style="width: 400px"
         /></div>
   
-      <div class="flex1"><label for="monthlyIncome1"> Galii Ji'aa Giddugaleessaa :</label>
+      <div class="flex1"><label for="monthlyIncome1"> ወርሀዊ ገቢ :</label>
       <input
         ngModel
         required
@@ -626,7 +605,7 @@
         id="monthlyIncome1"
    
       /></div>
-      <div class="flex2"><label for="annualIncome1"> Galii Waggaa Giddugaleessaa :</label>
+      <div class="flex2"><label for="annualIncome1"> ዓመታዊ ገቢ :</label>
         <input
           ngModel
           required
@@ -637,7 +616,7 @@
         /></div>
      
       <div ><br>
-        Mallattoo _______________________&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________
+        ፊርማ : _______________________&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________
       </div>
 
       <p
@@ -648,98 +627,75 @@
           font-weight: bold;
         "
       >
-      Iyyataa 3ffaa
+      3ኛ አመልካች
       </p>
       <div class="flex"></div><label for="fullName2">
-        Maqaa Guutuu/Maqaa Jaarmiyaa :
+          ስም ከነ አያት/የድርጅት ስም:
       </label>
       <input
         ngModel
         required
         type="text"
         id="fullName2"
-        name="fullName"
+        name="fullName1"
         style="width: 500px"
       /><br />
-  
+
       <div class="flex"></div><label for="mother2">
-        Maqaa haadha :
+          የእናት ስም :
       </label>
       <input
         ngModel
         required
         type="text"
         id="mother2"
-        name="mother"
+        name="mother1"
         style="width: 500px"
       /><br />
   
-      <div class="flex1"><label for="accountNumber2"> Lakk. Herregaa :</label>
-        <input
-          ngModel
-          required
-          type="text"
-          id="accountNumber2"
-          name="accountNumber"
-          style="width: 180px"
-        /></div>
-      
-      
-      
-      <div class="flex2">
-  
-        <label for="customerNumber2"> Lakk. maamila :</label
-          ><input
-            ngModel
-            required
-            type="text"
-            id="customerNumber2"
-            name="customerNumber"
-            style="width: 140px"
-          />
-      </div>
-        <div class="flex1"><label for="region2"> Naannoo : </label>
+     
+        <div class="flex1"><label for="region2"> ክልል/ግዛት : </label>
           <input ngModel required type="text" name="region" id="region2"Galii Wag.Giddugaleessaa/></div>
-      <div class="flex2"><label for="city2"> Magaalaa : </label>
+      <div class="flex2"><label for="city2"> ከተማ : </label>
       <input ngModel required type="text" name="city" id="city2"style="" /></div>
   
       <div class="flex1">
-        <label for="subCity2"> Magaalaa xiqqaa : </label>
+        <label for="subCity2"> ክ/ከተማ : </label>
       <input
         ngModel
         required
         type="text"
-        name="subCity"
+        name="subCity1"
         id="subCity2"
    
       />
       </div>
       <div class="flex2">
-        <label for="kebele2"> Kebele/Woredaa : </label>
+        <label for="kebele2"> ቀበሌ/ወረዳ : </label>
         <input
           ngModel
           required
           type="text"
-          name="kebele"
+          name="kebele1"
           id="kebele2"
           style="width: 140px"
         />
-  
+
       </div>
   
       <div class="flex1">
-        <label for="houseNo2">Lakk. Manaa :</label>
+        <label for="houseNo2"> የቤትቁ. </label>
         <input
           ngModel
           required
           type="text"
-          name="houseNo"
+          name="houseNo1"
           id="houseNo2"
      
         />
-  
+
       </div>
-      <div class="flex2"><label for="posta2">  P.O.Box </label>
+      <div class="flex2"><label for="posta2">  የፖ.ሣ.ቁ.  </label>
       <input
         ngModel
         required
@@ -749,24 +705,24 @@
    
       /></div>
       <div class="flex1">
-        <label for="telephone2"> Bilbila manaa : </label
+        <label for="telephone2">   የቤት ስልክ :  </label
           ><input
             ngModel
             required
             type="text"
-            name="telephone"
+            name="telephone1"
             id="telephone2"
             
           />
-  
+
       </div>
       
       
       
      
       <div class="flex2">
-  
-        <label for="mobileNumber2"> Mobile </label>
+
+        <label for="mobileNumber2"> የተንቀሳቃሽ ስልክ :</label>
       <input
         ngModel
         required
@@ -778,7 +734,7 @@
       </div>
   
       <div class="flex1">
-        <label for="officeTelephone2">Bilbila Waajjira :</label>
+        <label for="officeTelephone2"> የቢሮ ስልክ :</label>
         <input
           ngModel
           required
@@ -787,11 +743,11 @@
           name="officeTelephone"
           
         />
-  
+
       </div>
     
       <div class="flex2">
-        <label for="email2">  Email </label>
+        <label for="email2">  ኢ-ሜይል :</label>
         <input
           ngModel
           required
@@ -801,22 +757,22 @@
           style="width: 250px"
         />
     
-  
+
       </div>
       <div class="flex1">
-  
-        <label for="idNo2"> Gosa.waraq.eenyum :</label>
+
+        <label for="idNo2"> የመ. ዓይነት :</label>
       <input
         ngModel
         required
         type="text"
-        name="idNo2"
+        name="idNo"
         id="idNo2"
    
       />
       </div>
       <div class="flex2"><label for="idRegistrationNumber2">
-        ID No. /Registration No :
+          የመ.ቁ. /የምዝገባ ቁ./ID No. 
       </label>
       <input
         ngModel
@@ -827,7 +783,7 @@
         style="width: 170px"
       /></div>
     
-      <div class="flex"><label for="issuedBy2"> Kan kenne : </label>
+      <div class="flex"><label for="issuedBy2"> የሰጠው አካል : </label>
       <input
         ngModel
         required
@@ -836,28 +792,28 @@
         id="issuedBy2"
         style="width: 500px"
       /></div>
-      <div class="flex1"><label for="tillNo2"> Lakk. TIN : </label>
+      <div class="flex1"><label for="tillNo2">  ታ.መ.ቁ. </label>
         <input
           ngModel
           required
           type="text"
           name="tillNo"
           id="tillNo2"
-          style="width: 130px"
+          
         /></div>
   
-      <div class="flex2"><label for="gender2"> saalaa : </label>
+      <div class="flex2"><label for="gender2"> ጾታ :   </label>
       <select name="gender" id="gender2">
         <option value="male" id="male" name="male" [selected]="true">
-          &nbsp;&nbsp;Dhiira&nbsp;&nbsp;
+          &nbsp;&nbsp;ወንድ&nbsp;&nbsp;
         </option>
-        <option value="female">&nbsp;&nbsp;Dubartii&nbsp;&nbsp;</option>
+        <option value="female">&nbsp;&nbsp;ሴት&nbsp;&nbsp;</option>
       </select></div><br>
-  
-  
-  
+
+
+
       <div class="flex1">
-        <label for="nationality2"> Lammummaa :</label>
+        <label for="nationality2"> ዜግነት : </label>
       <input
         
         required
@@ -865,14 +821,14 @@
         name="nationality"
         id="nationality2"
         
-  
+ 
     
       />
       </div>
-  
+
       
       <div class="flex2">
-        <label for="occupation2">Hojii :</label>
+        <label for="occupation2">የሥራ ዓይነት :</label>
         <input
         
           required
@@ -882,10 +838,10 @@
         
         /></div>
       
-      <div class="flex1"> <label for="dob2">guyyaa dhalootaa :</label>
+      <div class="flex1"> <label for="dob2">የትውልድ ቀን :</label>
         <input ngModel required type="date" name="dob" id="dob2" /></div>
   
-      <div class="flex2"><label for="oes2">guyyaa hundeeffama jaarmiyaa :</label>
+      <div class="flex2"><label for="oes2">የድርጅት ምስረታ ቀን :</label>
       <input
         ngModel
         required
@@ -896,7 +852,7 @@
       /></div>
       
   
-      <div class="flex"><label for="employer2"> Hojjechiisaa :</label>
+      <div class="flex"><label for="employer2"> ቀጣሪ ድርጅት :</label>
         <input
           ngModel
           required
@@ -906,7 +862,7 @@
           style="width: 400px"
         /></div>
   
-      <div class="flex1"><label for="monthlyIncome2"> Galii Ji'aa Giddugaleessaa :</label>
+      <div class="flex1"><label for="monthlyIncome2"> ወርሀዊ ገቢ :</label>
       <input
         ngModel
         required
@@ -915,7 +871,7 @@
         id="monthlyIncome2"
    
       /></div>
-      <div class="flex2"><label for="annualIncome2"> Galii Waggaa Giddugaleessaa :</label>
+      <div class="flex2"><label for="annualIncome2"> ዓመታዊ ገቢ :</label>
         <input
           ngModel
           required
@@ -924,121 +880,121 @@
           id="annualIncome2"
      
         /></div>
-   
-      <div ><br>
-        Mallattoo _______________________&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________
+  
+       
+        <div >
+          ፊርማ : _______________________&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________
+        </div>
+        <h4>የሂሣብ የማንቀሳቀሻ ትዕዛዝ :</h4>
+
+        <div class="opInstruction">
+          <div class="opInstructionBox">
+            በአንድ ፊርማ የሚንቀሳቀስ :
+            <input
+              ngModel
+              required
+              type="checkbox"
+              name="Individual"
+              id="Individual"
+            />
+            <div class="opSignature">ፊርማ :______________</div>
+          </div>
+          <div class="opInstructionBox">
+            በጋራ የሚንቀሳቀስ :
+            <input
+              ngModel
+              required
+              type="checkbox"
+              name="Individual"
+              id="Individual"
+              checked
+            />
+            <div class="opSignature">ፊርማ :_______________</div>
+          </div>
+          <div class="opInstructionBox">
+            የተለየ ትዕዛዝ :
+            <input
+              ngModel
+              required
+              type="checkbox"
+              name="Individual"
+              id="Individual"
+              
+            />
+            <div class="opSignature">ፊርማ :_______________</div>
+          </div>
+        </div>
       </div>
-
-      <h4> Ajaja Herrega Kaffaltii</h4>
-  
-      <div class="opInstruction">
-        <div class="opInstructionBox">
-          Mallattoo tokkoon kan socho'u
-          <input
-            ngModel
-            required
-            type="checkbox"
-            name="Individual"
-            id="Individual"
-          />
-          <div class="opSignature">Mallattoo______________</div>
-        </div>
-        <div class="opInstructionBox">
-          Waliin socho'uu
-          <input
-            ngModel
-            required
-            type="checkbox"
-            name="Individual"
-            id="Individual"
-            checked
-          />
-          <div class="opSignature">Mallattoo_______________</div>
-        </div>
-        <div class="opInstructionBox">
-          Ajaja addaa
-          <input
-            ngModel
-            required
-            type="checkbox"
-            name="Individual"
-            id="Individual"
-            
-          />
-          <div class="opSignature">Mallattoo_______________</div>
-        </div>
-      </div>
-    </div>
-  
-   
-
-
-    <div class="card">
-      <h4>
-        Tajaajila kaffaltii elektirooniksii barbaadde filadhu
-      </h4>
-
-
-      <div class="E-payments"> 
-        <div class="flex"></div><label for="atm">ATM </label> <select name="atm" id="atm">
-          <option value="yes"> &nbsp;&nbsp;Eeyyee&nbsp;&nbsp;</option>
-          <option value="no"> &nbsp;&nbsp;Lakki&nbsp;&nbsp;</option>
-        </select>
-  
-        <div class="flex"></div><label for="mobile">Mobile Banking</label> <select name="mobile" id="mobile">
-          <option value="yes">&nbsp;&nbsp;Eeyyee&nbsp;&nbsp;</option>
-          <option value="no">&nbsp;&nbsp;Lakki&nbsp;&nbsp;</option>
-        </select>
      
-        <div class="flex"></div><label for="internet">Internet Banking&nbsp;&nbsp;</label> <select name="internet" id="internet">
-          <option value="yes">&nbsp;&nbsp;Eeyyee&nbsp;&nbsp;</option>
-          <option value="no">&nbsp;&nbsp;Lakki&nbsp;&nbsp;</option>
-        </select>
-      </div><br>
-      <div class="flex"></div><label for="initial">Kuufama Jalqabaa (Dirqama kan hinta'in) </label>
-      <input
-        ngModel
-        required
-        type="text"
-        name="initial"
-        id="initial"
+
+      <div class="card">
+        <h4>
+          የሚፈልጉትን የኢ-ፐይመንት አገልግሎት ይምረጡ
+        </h4>
+      
+
+        <div class="E-payments"> 
+          <label for="atm">ኤ.ቲ.ኤም ካርድ</label> <select name="atm" id="atm">
+            <option value="yes"> &nbsp;&nbsp;እፈልጋለሁ&nbsp;&nbsp;&nbsp;&nbsp;</option>
+            <option value="no"> &nbsp;&nbsp;አልፈልግም&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          </select>
+       
+     <label for="internet">ኤሞባይል ባንኪንግ</label> <select name="internet" id="internet">
+            <option value="yes">&nbsp;&nbsp;እፈልጋለሁ&nbsp;&nbsp;&nbsp;&nbsp;</option>
+            <option value="no">&nbsp;&nbsp;አልፈልግም&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          </select>
    
-      />
-      <div class="flex"></div><label for="existing">Herrega Jiru</label>
-      
+          <label for="internet">ኢንተርኔት ባንክ</label> <select name="internet" id="internet">
+            <option value="yes">&nbsp;&nbsp;እፈልጋለሁ&nbsp;&nbsp;&nbsp;&nbsp;</option>
+            <option value="no">&nbsp;&nbsp;አልፈልግም&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          </select>
+        </div><br>
+        <div class="flex1"><label for="initial">የመጀመሪያ ተቀማጭ :</label>
+        <input
+          ngModel
+          required
+          type="text"
+          name="initial"
+          id="initial"
+     
+        /></div>
+        <div class="flex2"><label for="existing"> ነባር ሂሳብ :</label>
+       
 
-      <select name="existing" id="existing">
-        <option value="yes">&nbsp;&nbsp;Eeyyee</option>
-        <option value="no">&nbsp;&nbsp;Lakki</option>
-      </select>
-      
+        <select name="existing" id="existing">
+          <option value="yes">&nbsp;&nbsp;አዎ</option>
+          <option value="no">&nbsp;&nbsp;አይ</option>
+        </select></div>
+        
+      </div>
+    </form>
+    <div class="signature"><br>
+      ሂሳቡን የከፈተችው/ው ስም እና ፊርማ :
+      _________________________________________ <br /><br />
+      ሂሳቡን ያረጋገጠችው/ው ስም እና ፊርማ :
+      _________________________________________  <br /><br />
+
+      የቅርንጫፍ ተቆጣጣሪዋ/ው ስም እና ፊርማ :
+      _________________________________________
     </div>
-  </form>
-  <div class="signature"><br>
-    Maqaa fi mallattoo nama akkaawuntii bane
-    _________________________________________ <br /><br />
-    Maqaa fi mallattoo nama labsii mirkaneesse
-    _________________________________________  <br /><br />
 
-    Maqaa fi mallattoo supparvaayizara damee
-    _________________________________________
-  </div>
 
-</div>
 
+    
 
 <button class="btn1" *ngIf="!hideFileInput" (click)="onPrint($event)">
-  Print
+Print
 </button>
 <button
-  class="btn2"
-  type="button"
-  *ngIf="!hideFileInput"
-  ngModel
-  (click)="onChangeButton()"
+class="btn2"
+type="button"
+*ngIf="!hideFileInput"
+ngModel
+(click)="onChangeButton()"
 >
-unka dabaluu
+ፎርም ጨምር
 </button>
+
 
 
 </div>

@@ -1,7 +1,5 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { NgForm, FormsModule } from '@angular/forms';
-import html2canvas from 'html2canvas';
-import jsPDF from 'jspdf';
 import { AmharicComponent } from '../amharic/amharic.component';
 import { AppComponent } from '../app.component';
 
@@ -56,10 +54,15 @@ onSelect(event:any){
 }
 
   onChangeButton(formNumber : String) {
+    if (Number(formNumber  )>=3){
+      return
+    }
     if (Number(formNumber) && this.hideJoint == true && Number(formNumber) >0){
 this.hideJoint=false
+
+
     }
-  else {
+  else if (Number(formNumber) == 0){
     this.hideJoint=true
   }
     this.formNumberArray=Array(0).fill(0)
@@ -83,9 +86,7 @@ console.log(this.formNumberArray)
 
   onPrint(event: MouseEvent) {
     event.preventDefault(); // Prevent default browser print behavior
-  
     this.hideFileInput = true;
-
     // Wait for the next event loop cycle to ensure the DOM is updated
     setTimeout(() => {
       window.print();

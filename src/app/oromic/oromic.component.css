@@ -1,198 +1,245 @@
 input{
-    font-size:small ;
-    border: none;
-  margin-bottom: 1px;
-  
-  font-weight: bolder;
-    letter-spacing: 0.5px;
-    background-color:white;
-    border: 0;
-    /* border-bottom: 1px solid rgb(26, 25, 25); */
-    text-decoration: underline;
-    display: inline-block;
-  
-  
-  }
-  label{
-    display: inline-block;
-    text-align: start;
-  }
-  
-  #content{
-  
-    font-size: 14.3px;
-  
-  
-  
-  
-  }
-  .header{
-    display: flex;
-    margin: 0px;
-  
-  
-  }
-  
-  .title{
-    font-size: 20px;
-    text-align: center;
-  }
-  
-  /* Increase font size for specific elements */
-  
-  
-  p {
-    font-size: 24px; /* Increase the font size to 14 pixels */
-  }
-  
-  /* Increase spacing between elements */
-  
-  
-  
-  /* Adjust other styles as needed */
-  
-  .photo{
-    position:sticky;
-    top: 20px;
-    left: 20px;
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-    padding: 10px;
-  }
-  
-  .photo img {
-    width: 40%;
-    height: 2%;
-    object-fit: cover;
-  }
-  .header{
-    display: flex;
-    justify-content: space-between;
-  }
-  .underline{
-    text-align: center;
-    text-decoration: underline;
-    font-size: 18px;
-  }
-  p{
-    font-size:smaller;
-  }
-  .container{
-    display: flex;
-    justify-content: center;
-  
-  
-  
-  
-  }
-  .form-group input{
-    background-color:white;
-    border: 0;
-    border-bottom: none;
-  }
-  .photo-container {
-    width: 150px;
-    height: 150px;
-  }
-  
-  .photo-preview {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #000000;
-    padding: 0px;
-    height: calc(100% - 16px);
-  }
-  
-  .photo-preview img {
-    max-width: 100%;
-    max-height: 100%;
-    width: 150px;
-    height: 150px;
-  }
-  
-  @media print {
-    #photo.hidden {
-      display: none;
-      height: 0;
-      overflow: hidden;
-      visibility: hidden;
-    }
-    .btn1{
-      visibility: hidden;
-      overflow: hidden;
-      display: none;
-      height: 0;
-    }
-    .btn2{
-      visibility: hidden;
-      overflow: hidden;
-      display: none;
-      height: 0;
-    }
-    .form-group{
-      visibility: hidden;
-      overflow: hidden;
-      display: none;
-      height: 0;
-    }
-  }
-  
-  .opInstruction{
-    display: flex;
-  }
-  button {
-    background-color: hsl(196, 89%, 48%);
-  border: #000000;
-    border-radius: 100px;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 19px;
-    
-   
-  }
-  button:hover{
-    background-color: hsl(196, 84%, 66%);
+  font-size:small ;
+  border: none;
+margin-bottom: 1px;
+
+font-weight: bolder;
+  letter-spacing: 0.5px;
+  background-color:white;
+  border: 0;
+  /* border-bottom: 1px solid rgb(26, 25, 25); */
+  text-decoration: underline;
+  display: inline-block;
+
+
+}
+label{
+  display: inline-block;
+  text-align: start;
+}
+
+#content{
+
+  font-size: 14.3px;
+
+
+
+
+}
+.header{
+  display: flex;
+  margin: 0px;
+
+
+}
+
+.title{
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Increase font size for specific elements */
+
+
+p {
+  font-size: 24px; /* Increase the font size to 14 pixels */
+}
+
+/* Increase spacing between elements */
+
+
+
+/* Adjust other styles as needed */
+
+.photo{
+  position:sticky;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgb(205, 12, 12);
+  padding: 10px;
+}
+
+.photo img {
+  width: 40%;
+  height: 2%;
+  object-fit: cover;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+.underline{
+  text-align: center;
+  text-decoration: underline;
+  font-size: 18px;
+}
+p{
+  font-size:smaller;
+}
+.container{
+  display: flex;
+  justify-content: center;
+
+
+
+
+}
+.form-group input{
+  background-color:white;
+  border: 0;
+  border-bottom: none;
+}
+.photo-container {
+  width: 150px;
+  height: 150px;
+}
+
+.photo-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000000;
+  padding: 0px;
+  height: calc(100% - 16px);
+}
+
+.photo-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 150px;
+  height: 150px;
+}
+
+@media print {
+  #photo.hidden {
+    display: none;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
   }
   .btn1{
+    visibility: hidden;
+    overflow: hidden;
+    display: none;
+    height: 0;
+  }
+  .btn2{
+    visibility: hidden;
+    overflow: hidden;
+    display: none;
+    height: 0;
+  }
+  .cardj{
+    visibility: hidden;
+    overflow: hidden;
+    display: none;
+    height: 0;
+  }
+  .form-group{
+    visibility: hidden;
+    overflow: hidden;
+    display: none;
+    height: 0;
+  }
+ 
+}
+
+.opInstruction{
+  display: flex;
+}
+button {
+  background-color: hsl(196, 89%, 48%);
+border: #000000;
+  border-radius: 100px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 19px;
+  
+ 
+}
+button:hover{
+  background-color: hsl(196, 84%, 66%);
+}
+.btn1{
+  position:fixed;
+    left: 90%;
+    bottom: 10%;
+  }
+  .btn2{
     position:fixed;
-      left: 90%;
+      left: 80%;
       bottom: 10%;
     }
-    .btn2{
+
+    .formNumber{
       position:fixed;
-        left: 75%;
-        bottom: 10%;
-      }
-      .selectLanguage{
-        
-        position:fixed;
-          left: 5%;
-          bottom: 10%;
-         
+        left: 70%;
+        bottom: 11.5%;
+        background-color: hsl(196, 84%, 66%);
+        color: white;
+        font-size: bolder;
        
+      }
+
+    .selectLanguage{
+      
+      position:fixed;
+        left: 5%;
+        bottom: 10%;
+       
+     
+      }
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: none;
+      font-weight: bolder;
+      text-decoration: underline;
+    }
+    option{
+      font-weight: bolder;
+    }
+    .date{
+      padding: 5px;
+    }
+    .flex1{
+      float: left;
+      width: 50%;
+    }
+   .onFormNumber .flex1{
+      float: left;
+      width: 38%;
+    }
+    .photo-container{
+      float: left;
+      margin: 10px;
+      
+    }
+    
+
+    @media print {
+      /* Set the paper size */
+      @page {
+        size: A4; /* Specify the desired paper size, e.g., A4, Letter, etc. */
+      }
+
+      @page {
+        @top-center {
+          content: ""; /* Replace with your desired header content */
         }
-      select {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border: none;
-        font-weight: bolder;
-        text-decoration: underline;
+    
+        @bottom-center {
+          content: ""; /* Replace with your desired footer content */
+        }
       }
-      option{
-        font-weight: bolder;
-      }
-
-      .date{
-        padding: 10px;
-      }
-
-      .flex1{
-        float: left;
-        width: 50%;
-      }
+    
+      /* Other print-specific styles */
+      /* Add any additional styles specific to printing */
+    }
+  

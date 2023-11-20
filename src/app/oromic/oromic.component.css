@@ -172,13 +172,13 @@ button:hover{
   }
   .btn2{
     position:fixed;
-      left: 80%;
+      left: 77%;
       bottom: 10%;
     }
 
     .formNumber{
       position:fixed;
-        left: 70%;
+        left: 68%;
         bottom: 11.5%;
         background-color: hsl(196, 84%, 66%);
         color: white;

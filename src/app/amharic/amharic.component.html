@@ -218,14 +218,13 @@
     <div class="flex1">
 
       <label for="idNo"> የመ. ዓይነት :</label>
-    <input
-      ngModel
-      required
-      type="text"
-      name="idNo"
-      id="idNo"
- 
-    />
+      <select name="ID Type" id="idNo">
+        <option  name="kebele_ID" [selected]="true">
+          &nbsp;&nbsp;Kebele መታወቂያ
+        </option>
+        <option value="passport">&nbsp;&nbsp;ፓስፖርት</option>
+        <option value="National ID">&nbsp;&nbsp;ብሔራዊ መታወቂያ</option>
+      </select>
     </div>
     <div class="flex2"><label for="idRegistrationNumber">
       የመ.ቁ. /የምዝገባ ቁ.
@@ -347,6 +346,8 @@
         <option value="saving" id="saving" [selected]="true">&nbsp;&nbsp;Saving</option>
         <option value="saving">&nbsp;&nbsp;Mobile Wallet</option>
         <option value="saving">&nbsp;&nbsp;Cheque</option>
+        <option value="saving">&nbsp;&nbsp;Sinqe</option>
+        <option value="saving">&nbsp;&nbsp;Game</option>
       </select></div>
     <div ><br><br>
       ፊርማ : _______________________&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________
@@ -540,14 +541,13 @@
 <div class="flex1">
 
   <label for="idNo{{i}}">የመ. ዓይነት :</label>
-<input
-  ngModel
-  required
-  type="text"
-  name="idNo"
-  id="idNo{{i}}"
-
-/>
+  <select name="ID Type" id="idNo{{i}}">
+    <option  name="kebele_ID" [selected]="true">
+      &nbsp;&nbsp;Kebele መታወቂያ
+    </option>
+    <option value="passport">&nbsp;&nbsp;ፓስፖርት</option>
+    <option value="National ID">&nbsp;&nbsp;ብሔራዊ መታወቂያ</option>
+  </select>
 </div>
 <div class="flex1"><label for="idRegistrationNumber{{i}}">
   የመ.ቁ. /የምዝገባ ቁ./ID No. 

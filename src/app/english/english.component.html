@@ -218,14 +218,13 @@
       <div class="flex1">
 
         <label for="idNo"> ID type </label>
-      <input
-        ngModel
-        required
-        type="text"
-        name="idNo"
-        id="idNo"
-   
-      />
+        <select name="ID Type" id="idNo">
+          <option  name="kebele_ID" [selected]="true">
+            &nbsp;&nbsp;kebele ID
+          </option>
+          <option value="passport">&nbsp;&nbsp;Passport</option>
+          <option value="National ID">&nbsp;&nbsp;National ID</option>
+        </select>
       </div>
       <div class="flex2"><label for="idRegistrationNumber">
         ID No. /Regis.No
@@ -344,6 +343,8 @@
           <option value="saving" id="saving" [selected]="true">&nbsp;&nbsp;Saving</option>
           <option value="saving">&nbsp;&nbsp;Mobile Wallet</option>
           <option value="saving">&nbsp;&nbsp;Cheque</option>
+          <option value="saving">&nbsp;&nbsp;Sinqe</option>
+          <option value="saving">&nbsp;&nbsp;Game</option>
         </select></div>
       <div ><br><br>
         Signature _______________________&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_______________________
@@ -537,14 +538,13 @@ Applicant {{i}}
   <div class="flex1">
 
     <label for="idNo{{i}}"> ID type </label>
-  <input
-    ngModel
-    required
-    type="text"
-    name="idNo"
-    id="idNo{{i}}"
-
-  />
+    <select name="ID Type" id="idNo{{i}}">
+      <option  name="kebele_ID" [selected]="true">
+        &nbsp;&nbsp;Kebele ID
+      </option>
+      <option value="passport">&nbsp;&nbsp;Passport</option>
+      <option value="National ID">&nbsp;&nbsp;National ID</option>
+    </select>
   </div>
   <div class="flex2"><label for="idRegistrationNumber{{i}}">
     ID No. /Regis.No
